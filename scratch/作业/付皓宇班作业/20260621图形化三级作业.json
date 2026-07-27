@@ -1,0 +1,218 @@
+{
+  "title": "20260621图形化三级作业",
+  "description": "20260621图形化三级作业",
+  "time_limit": 90,
+  "pass_score": 60,
+  "questions": [
+    {
+      "title": "第 1 题",
+      "content": "下面程序执行一次之后，角色说出的内容不可能是？（ ）\n![程序](media/20260621/image1.png)",
+      "question_type": "single",
+      "options": {
+        "A": "1",
+        "B": "11",
+        "C": "20",
+        "D": "2"
+      },
+      "correct_answer": "C",
+      "score": 10,
+      "explanation": "被减数取得最大值是20，减数能够取得最小值是1，所以差不可能等于20。"
+    },
+    {
+      "title": "第 2 题",
+      "content": "在跑步比赛中，起点裁判发布消息\"预备\"，等待终点裁判准备就绪后，起点裁判才会下达\"开始\"的命令。下面哪个选项可以实现这个功能？（ ）",
+      "question_type": "single",
+      "options": {
+        "A": "![选项A](media/20260621/image2.png)",
+        "B": "![选项B](media/20260621/image3.png)",
+        "C": "![选项C](media/20260621/image4.png)",
+        "D": "![选项D](media/20260621/image5.png)"
+      },
+      "correct_answer": "B",
+      "score": 10,
+      "explanation": "\"广播（）并等待\"会等接收此广播的角色执行完相应的动作之后再继续执行之后的程序，而\"广播（）\"是发完广播之后马上执行之后的程序。题目中需要等待终点裁判返回信息后才执行之后的程序。"
+    },
+    {
+      "title": "第 3 题",
+      "content": "下面程序绘制的图形是？（ ）\n![程序](media/20260621/image6.png)",
+      "question_type": "single",
+      "options": {
+        "A": "只能绘制正四边形",
+        "B": "只能绘制正五边形",
+        "C": "可以绘制任意长度的多边形",
+        "D": "改变变量边数的值，可以绘制不同的正多边形"
+      },
+      "correct_answer": "D",
+      "score": 10,
+      "explanation": "程序中的\"边数\"变量控制重复执行次数和旋转角度（360/边数），改变边数值可绘制不同正多边形。"
+    },
+    {
+      "title": "第 4 题",
+      "content": "角色A的程序如左图所示，角色B的程序如右图所示。点击绿旗，什么时候说\"真棒\"？（ ）\n![左图](media/20260621/image7.png)  ![右图](media/20260621/image8.png)",
+      "question_type": "single",
+      "options": {
+        "A": "角色A开始切换造型时",
+        "B": "角色A造型切换十次完成后",
+        "C": "角色B造型切换十次完成后",
+        "D": "不会说此句"
+      },
+      "correct_answer": "B",
+      "score": 10,
+      "explanation": "角色A使用\"广播消息并等待\"发送消息，角色B收到后切换造型10次，完成后角色A才继续执行，说\"真棒\"。"
+    },
+    {
+      "title": "第 5 题",
+      "content": "下图中的程序执行一次之后，变量a、b的值分别是多少？（ ）\n![程序](media/20260621/image9.png)",
+      "question_type": "single",
+      "options": {
+        "A": "50 60",
+        "B": "50 61",
+        "C": "51 60",
+        "D": "51 61"
+      },
+      "correct_answer": "C",
+      "score": 10,
+      "explanation": "当变量a=51时满足大于50的条件，则执行停止这个脚本，所以a不再增加；而变量b重复执行60次，每次增加1，当执行完60次时停止重复，所以变量b=60。"
+    },
+    {
+      "title": "第 6 题",
+      "content": "默认小猫角色，初始位置在舞台中心，下面程序执行一次后，下面哪个选项是正确的？（ ）\n![程序](media/20260621/image10.png)",
+      "question_type": "single",
+      "options": {
+        "A": "小猫走动一段距离后，停下来，但是没有颜色变化",
+        "B": "小猫原地不动，但颜色发生变化",
+        "C": "小猫来回走动，同时颜色发生变化",
+        "D": "小猫走动一段距离后，停下来，接着颜色不停的发生变化"
+      },
+      "correct_answer": "D",
+      "score": 10,
+      "explanation": "重复执行10次，每次移动10步，小猫走动一段距离；之后重复执行颜色特效增加25，颜色不停变化。"
+    },
+    {
+      "title": "第 7 题",
+      "content": "执行下面程序，角色会说？（ ）\n![程序](media/20260621/image11.png)",
+      "question_type": "single",
+      "options": {
+        "A": "34",
+        "B": "28",
+        "C": "51",
+        "D": "42"
+      },
+      "correct_answer": "A",
+      "score": 10,
+      "explanation": ""
+    },
+    {
+      "title": "第 8 题",
+      "content": "小猫和小伙伴玩扔骰子走格子游戏。在游戏中小猫和小伙伴会根据背景中的方格指示运动和并能自动转向，且移动一步刚好是一个方格。游戏背景图如下第一张图所示，那么按照第二张图中的程序，重复执行直到里的程序最少执行多少次，小猫能够到达终点？（ ）\n![背景](media/20260621/image12.png)  ![程序](media/20260621/image13.png)",
+      "question_type": "single",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "A",
+      "score": 10,
+      "explanation": "当第一次重复移动5步，第二次重复移动6步，就可以到达终点。"
+    },
+    {
+      "title": "第 9 题",
+      "content": "下面程序画出的图形是？（ ）\n![程序](media/20260621/image14.png)",
+      "question_type": "single",
+      "options": {
+        "A": "![选项A](media/20260621/image15.png)",
+        "B": "![选项B](media/20260621/image16.png)",
+        "C": "![选项C](media/20260621/image17.png)",
+        "D": "![选项D](media/20260621/image18.png)"
+      },
+      "correct_answer": "C",
+      "score": 10,
+      "explanation": ""
+    },
+    {
+      "title": "第 10 题",
+      "content": "小猫和角色bell在舞台左侧边缘，如下图所示。小猫的程序如下图所示，角色bell没有任何程序，执行下面程序一次后，舞台上出现的内容是？（ ）\n![场景](media/20260621/image19.png)  ![程序](media/20260621/image20.png)",
+      "question_type": "single",
+      "options": {
+        "A": "![选项A](media/20260621/image21.png)",
+        "B": "![选项B](media/20260621/image22.png)",
+        "C": "![选项C](media/20260621/image23.png)",
+        "D": "![选项D](media/20260621/image24.png)"
+      },
+      "correct_answer": "B",
+      "score": 10,
+      "explanation": "角色可以克隆自己也可以克隆别的角色，但\"当作为克隆体启动时\"只能针对自己的克隆体。小猫克隆bell，bell克隆体出现后旋转。"
+    },
+    {
+      "title": "第 11 题",
+      "content": "广播和变量都能起到在角色之间进行信息传递的作用。",
+      "question_type": "true_false",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "correct_answer": "T",
+      "score": 10,
+      "explanation": "变量可以通过值的变化在角色间传递信息。"
+    },
+    {
+      "title": "第 12 题",
+      "content": "在程序编写中，只要使用了\"重复执行\"就会造成死循环。",
+      "question_type": "true_false",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "correct_answer": "F",
+      "score": 10,
+      "explanation": "\"重复执行（）次\"和\"重复执行直到（）\"都是循环语句，在满足条件时会跳出循环；\"重复执行\"也可通过\"停止全部脚本\"跳出循环。"
+    },
+    {
+      "title": "第 13 题",
+      "content": "使用画笔中的落笔积木后必须使用抬笔，才能够在舞台上画出痕迹。",
+      "question_type": "true_false",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "correct_answer": "F",
+      "score": 10,
+      "explanation": "只要使用了落笔，移动时即可画出痕迹，不必须使用抬笔。"
+    },
+    {
+      "title": "第 14 题",
+      "content": "广播也可以像变量一样设定其作用范围为\"适用于所有角色\"和\"仅适用于当前角色\"两种状态。",
+      "question_type": "true_false",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "correct_answer": "F",
+      "score": 10,
+      "explanation": "广播适用于整个程序中包含自己在内的所有角色以及舞台，其作用范围不可像变量那样设定。"
+    },
+    {
+      "title": "第 15 题",
+      "content": "角色可以克隆自己也可以克隆别的角色及舞台。",
+      "question_type": "true_false",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "correct_answer": "F",
+      "score": 10,
+      "explanation": "不能克隆舞台。"
+    },
+    {
+      "title": "第 16 题",
+      "content": "绘制图形\n\n**1. 准备工作**\n（1）默认的白色背景；\n（2）默认的小猫角色。\n\n**2. 功能实现**\n（1）画笔的颜色为黑色，画笔的粗细为3；\n（2）绘制如下的图形，边长自定义，图形不能超出舞台范围。\n\n![图示](media/20260621/image28.png)",
+      "question_type": "programming",
+      "url": "http://fslong.iok.la:32411/scratch/edit",
+      "correct_answer": "参考代码见解析",
+      "options": {},
+      "score": 20,
+      "explanation": "评分标准：\n（1）程序开始全部擦除、设置笔的颜色和粗细；（3分）有一项没做扣1分\n（2）画出一个正12边形；（4分）\n（3）画出两个套在一起的正12边形；（4分）\n（4）旋转6次画出图形；（4分）\n（5）图形没有超出舞台。（5分）"
+    }
+  ]
+}
