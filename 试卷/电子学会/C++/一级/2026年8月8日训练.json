@@ -1,0 +1,293 @@
+{
+ "title": "字符串的应用",
+ "description": "2026年8月8日训练（单选10×10分 + 判断5×10分 = 150分，编程5道另计）——顺序结构、循环结构、字符串的应用",
+ "time_limit": 120,
+ "pass_score": 60,
+ "questions": [
+  {
+   "content": "### 第 1 题 小美的每一段程序都从同一个\"大门\"开始执行，这个大门是？（ ）\n\n- A. print()\n- B. main()\n- C. start()\n- D. begin()",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 1 题",
+   "correct_answer": "B",
+   "score": 10,
+   "explanation": "程序总是从 main() 函数开始执行，它是程序的入口大门。",
+   "options": {
+    "A": "print()",
+    "B": "main()",
+    "C": "start()",
+    "D": "begin()"
+   }
+  },
+  {
+   "content": "### 第 2 题 小红想用程序存下一串文字\"hello\"，装这串文字应该用什么类型的变量？（ ）\n\n- A. int\n- B. char\n- C. string\n- D. double",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 2 题",
+   "correct_answer": "C",
+   "score": 10,
+   "explanation": "string 类型专门存放一串字符。char 只能存一个字符，int/double 存数字。",
+   "options": {
+    "A": "int",
+    "B": "char",
+    "C": "string",
+    "D": "double"
+   }
+  },
+  {
+   "content": "### 第 3 题 以下变量名，哪个写法是对的？（ ）\n\n- A. int 123num = 10;\n- B. double class = 3.14;\n- C. float my_score = 95.5;\n- D. bool a-b = true;",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 3 题",
+   "correct_answer": "C",
+   "score": 10,
+   "explanation": "变量名不能以数字开头、不能是关键字、不能含减号。my_score 合规。",
+   "options": {
+    "A": "int 123num = 10;",
+    "B": "double class = 3.14;",
+    "C": "float my_score = 95.5;",
+    "D": "bool a-b = true;"
+   }
+  },
+  {
+   "content": "### 第 4 题 算式 15 - 6 / 2 * 3 的计算结果是？（ ）\n\n- A. 6\n- B. 9\n- C. 14\n- D. 0",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 4 题",
+   "correct_answer": "A",
+   "score": 10,
+   "explanation": "*、/ 优先级高于 -，同级从左到右：6/2=3，3*3=9，15-9=6。",
+   "options": {
+    "A": "6",
+    "B": "9",
+    "C": "14",
+    "D": "0"
+   }
+  },
+  {
+   "content": "### 第 5 题 小刚写 int a; cin >> a; cout << a * 3 + 5;，输入 20 回车，输出是？（ ）\n\n- A. 60\n- B. 65\n- C. 20*3+5=65\n- D. 报错",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 5 题",
+   "correct_answer": "B",
+   "score": 10,
+   "explanation": "a 得 20，20*3+5=65。cout 只输出数值，不输出算式文本。",
+   "options": {
+    "A": "60",
+    "B": "65",
+    "C": "20*3+5=65",
+    "D": "报错"
+   }
+  },
+  {
+   "content": "### 第 6 题 密信内容是\"abcde\"，小华想知道这串字母有几个。s.length() 会告诉他？（ ）\n\n- A. 5\n- B. 4\n- C. 6\n- D. 3",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 6 题",
+   "correct_answer": "A",
+   "score": 10,
+   "explanation": "length() 返回字符串中字符的个数。\"abcde\" 共 5 个字符。",
+   "options": {
+    "A": "5",
+    "B": "4",
+    "C": "6",
+    "D": "3"
+   }
+  },
+  {
+   "content": "### 第 7 题 string s = \"hello\";，那么 s[0] 的值是？（ ）\n\n- A. 'e'\n- B. \"h\"\n- C. 'h'\n- D. h",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 7 题",
+   "correct_answer": "C",
+   "score": 10,
+   "explanation": "s[0] 取第 0 个字符（下标从 0 开始），是字符 'h'。字符要加单引号。",
+   "options": {
+    "A": "'e'",
+    "B": "\"h\"",
+    "C": "'h'",
+    "D": "h"
+   }
+  },
+  {
+   "content": "### 第 8 题 字符 'a' 的 ASCII 码是 97，'A' 是 65，那么 'a' - 'A' 等于？（ ）\n\n- A. 1\n- B. 0\n- C. 32\n- D. 26",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 8 题",
+   "correct_answer": "C",
+   "score": 10,
+   "explanation": "97 - 65 = 32。小写字母比对应大写字母的 ASCII 码大 32。",
+   "options": {
+    "A": "1",
+    "B": "0",
+    "C": "32",
+    "D": "26"
+   }
+  },
+  {
+   "content": "### 第 9 题 int i = 1; while(i <= 20){ i += 4; } 循环体执行几次？（ ）\n\n- A. 6 次\n- B. 4 次\n- C. 5 次\n- D. 无限次",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 9 题",
+   "correct_answer": "C",
+   "score": 10,
+   "explanation": "i 依次 1、5、9、13、17 进循环共 5 次；下次 21 退出。",
+   "options": {
+    "A": "6 次",
+    "B": "4 次",
+    "C": "5 次",
+    "D": "无限次"
+   }
+  },
+  {
+   "content": "### 第 10 题 要读入一行可能含空格的字符串（如\"hello world\"），该用？（ ）\n\n- A. cin >> s;\n- B. getline(cin, s);\n- C. scanf(\"%s\", s);\n- D. cout << s;",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 10 题",
+   "correct_answer": "B",
+   "score": 10,
+   "explanation": "cin >> 和 scanf(\"%s\") 读到空格就停，读不全\"hello world\"。getline 读完整行含空格。",
+   "options": {
+    "A": "cin >> s;",
+    "B": "getline(cin, s);",
+    "C": "scanf(\"%s\", s);",
+    "D": "cout << s;"
+   }
+  },
+  {
+   "content": "### 第 11 题 7 % 3 的计算结果是 1，代表 7 除以 3 的余数。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 11 题",
+   "correct_answer": "T",
+   "score": 10,
+   "explanation": "7 ÷ 3 = 2 余 1，故 7 % 3 = 1。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 12 题 顺序结构是一种程序结构，\"逆序结构\"也是一种程序结构。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 12 题",
+   "correct_answer": "F",
+   "score": 10,
+   "explanation": "程序基本结构只有顺序、选择、循环三种。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 13 题 5 > 3 && 2 > 7 的逻辑运算结果为 true。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 13 题",
+   "correct_answer": "F",
+   "score": 10,
+   "explanation": "&& 是且，一假即假。2>7 为假，整体 false。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 14 题 do-while 循环的循环体至少会执行一次，无论条件是否成立。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 14 题",
+   "correct_answer": "T",
+   "score": 10,
+   "explanation": "do-while 先执行一次再判断条件。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 15 题 for(int i = 0; ; i++) 是一个无限循环。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 15 题",
+   "correct_answer": "T",
+   "score": 10,
+   "explanation": "for 条件为空恒为真，循环永不结束。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### zkh36 圆桌的面积（12 分）\n\n**【题目描述】**\n\n学校活动室要铺一张圆形桌布。老师量出圆桌半径，想算桌布面积。\n\n输入圆桌半径 r，输出桌布面积，保留两位小数。圆周率取 3.1415926。\n\n**【输入格式】**\n\n一行，一个小数 r，表示圆桌半径（单位：米）。\n\n**【输出格式】**\n\n一行，一个小数，表示桌布面积，保留两位小数。\n\n**【样例输入】**\n\n```\n2.5\n```\n\n**【样例输出】**\n\n```\n19.63\n```\n\n**【样例说明】**\n\n面积 = 3.1415926 × 2.5 × 2.5 = 19.63495375，保留两位为 19.63。\n\n**【数据范围】**\n\n0 < r ≤ 10⁶。",
+   "question_type": "programming",
+   "pid": "zkh36",
+   "url": "https://fslong.iok.la/problem/zkh36",
+   "title": "圆桌的面积",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "面积 = πr² = 3.1415926 × r × r，用 double 存，printf(\"%.2lf\") 输出。注意 r 可能是小数，乘法要用浮点。"
+  },
+  {
+   "content": "### zkh37 跳绳达标（12 分）\n\n**【题目描述】**\n\n体育老师记录全班 n 个同学一分钟跳绳的个数。每分钟跳满 100 个（含 100）算达标。\n\n数一数：有多少个同学达标？\n\n**【输入格式】**\n\n第一行，一个整数 n。\n\n第二行，n 个整数，表示每个同学的跳绳个数。\n\n**【输出格式】**\n\n一行，一个整数，表示达标人数。\n\n**【样例输入】**\n\n```\n6\n95 100 120 88 100 76\n```\n\n**【样例输出】**\n\n```\n3\n```\n\n**【样例说明】**\n\n100、120、100 三个达标，共 3 人。\n\n**【数据范围】**\n\n1 ≤ n ≤ 1000，0 ≤ 跳绳个数 ≤ 300。",
+   "question_type": "programming",
+   "pid": "zkh37",
+   "url": "https://fslong.iok.la/problem/zkh37",
+   "title": "跳绳达标",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "循环读入每个数，用 if 判断是否 ≥ 100，达标计数累加。"
+  },
+  {
+   "content": "### zkh38 信里藏了几个字（12 分）\n\n**【题目描述】**\n\n小华收到一封密信，里面是一行由小写字母和空格组成的字符串。老师说：数一数字母 s 在这封信里出现了几次，答案就是暗号的线索。\n\n请你数一数，给定的字符在字符串中出现了几次。\n\n**【输入格式】**\n\n第一行，一个字符 c，保证是小写字母。\n\n第二行，一行字符串（可能含空格），只含小写字母和空格。\n\n**【输出格式】**\n\n一行，一个整数，表示字符 c 在字符串中出现的次数。\n\n**【样例输入】**\n\n```\ns\nthis is a secret\n```\n\n**【样例输出】**\n\n```\n3\n```\n\n**【样例说明】**\n\ns 出现在 this、is、secret 中，共 3 次。\n\n**【数据范围】**\n\n字符串长度 ≤ 1000。",
+   "question_type": "programming",
+   "pid": "zkh38",
+   "url": "https://fslong.iok.la/problem/zkh38",
+   "title": "信里藏了几个字",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "读入字符 c，再 getline 读整行，遍历每个字符与 c 比较计数。注意第二行可能含空格，须用 getline。"
+  },
+  {
+   "content": "### zkh39 报数器（12 分）\n\n**【题目描述】**\n\n密码箱的转盘上一串字母，管理员想把所有小写字母变成大写字母，大写字母与空格保持不变。\n\n输入一行字符串（含大小写字母与空格），输出变大写后的结果。\n\n**【输入格式】**\n\n一行字符串，只含英文字母与空格。\n\n**【输出格式】**\n\n一行，输出小写变大写后的字符串。\n\n**【样例输入】**\n\n```\nHello World\n```\n\n**【样例输出】**\n\n```\nHELLO WORLD\n```\n\n**【样例说明】**\n\n小写 ello、orld 变大写；已有大写 H、W 不变。\n\n**【数据范围】**\n\n字符串长度 ≤ 1000。",
+   "question_type": "programming",
+   "pid": "zkh39",
+   "url": "https://fslong.iok.la/problem/zkh39",
+   "title": "报数器",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "遍历每个字符，若是小写（a~z）则减 32 转大写，其余原样输出。"
+  },
+  {
+   "content": "### zkh40 魔法置换（12 分）\n\n**【题目描述】**\n\n小精灵有一本魔法书，书上的每个小写字母都被置换成字母表里它后面的第 k 个字母（z 的后面绕回 a）。\n\n比如 k=1 时，a→b，z→a；k=3 时，a→d，y→b。\n\n输入 k 和一行小写字母组成的字符串，输出置换后的结果。\n\n**【输入格式】**\n\n第一行，一个整数 k。\n\n第二行，一行小写字母组成的字符串（无空格）。\n\n**【输出格式】**\n\n一行，输出置换后的字符串。\n\n**【样例输入】**\n\n```\n1\nzzaz\n```\n\n**【样例输出】**\n\n```\naaba\n```\n\n**【样例说明】**\n\nk=1：z→a，z→a，a→b，z→a，故 zzaz → aaba。\n\n**【数据范围】**\n\n1 ≤ k ≤ 25，字符串长度 ≤ 1000。",
+   "question_type": "programming",
+   "pid": "zkh40",
+   "url": "https://fslong.iok.la/problem/zkh40",
+   "title": "魔法置换",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "每个字符 ch 变为 (ch - 'a' + k) % 26 + 'a'，取模实现 z 绕回 a。"
+  }
+ ]
+}

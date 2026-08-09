@@ -1,0 +1,363 @@
+{
+ "title": "2026 年 8 月 7 日训练：二分专项",
+ "description": "2026年8月7日训练（单选10 + 判断10 + 编程5）——二分查找/二分答案、递归、分治、贪心、链表、数论、高精度",
+ "time_limit": 120,
+ "pass_score": 60,
+ "questions": [
+  {
+   "content": "### 第 1 题 小美在有序数组里查成绩，用二分查找。若数组里根本没有这个分数，循环结束时左右指针的状态是？（ ）\n\n- A. l 和 r 始终相等\n- B. l > r\n- C. l < r\n- D. 指针卡在中间不动",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 1 题",
+   "correct_answer": "B",
+   "score": 2,
+   "explanation": "二分查找循环条件是 `l <= r`，查不到时最终 `l > r` 退出。小美查无此人，只好回去重考。",
+   "options": {
+    "A": "l 和 r 始终相等",
+    "B": "l > r",
+    "C": "l < r",
+    "D": "指针卡在中间不动"
+   }
+  },
+  {
+   "content": "### 第 2 题 二分答案能用\"试一个答案、检查可行\"的前提是？（ ）\n\n- A. 答案必须是整数\n- B. 答案随检验值单调（越大越可行或越小越可行）\n- C. 数据必须已经排序\n- D. 答案必须唯一",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 2 题",
+   "correct_answer": "B",
+   "score": 2,
+   "explanation": "二分答案依赖单调性：可行/不可行随猜测值单调变化，才能缩区间。不单调就二分不了，只能枚举。",
+   "options": {
+    "A": "答案必须是整数",
+    "B": "答案随检验值单调（越大越可行或越小越可行）",
+    "C": "数据必须已经排序",
+    "D": "答案必须唯一"
+   }
+  },
+  {
+   "content": "### 第 3 题 `lower_bound(a, x)` 和 `upper_bound(a, x)` 的区别是？（ ）\n\n- A. 前者找第一个 ≥ x，后者找第一个 > x\n- B. 前者找第一个 > x，后者找第一个 ≥ x\n- C. 二者完全相同\n- D. 前者要求降序，后者要求升序",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 3 题",
+   "correct_answer": "A",
+   "score": 2,
+   "explanation": "lower_bound 找第一个不小于 x 的位置，upper_bound 找第一个大于 x 的位置。夹中间正好是等于 x 的区间。",
+   "options": {
+    "A": "前者找第一个 ≥ x，后者找第一个 > x",
+    "B": "前者找第一个 > x，后者找第一个 ≥ x",
+    "C": "二者完全相同",
+    "D": "前者要求降序，后者要求升序"
+   }
+  },
+  {
+   "content": "### 第 4 题 一个递归函数必须拥有的部分是？（ ）\n\n- A. 递归出口（终止条件）\n- B. 至少三个参数\n- C. 全局变量\n- D. 循环语句",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 4 题",
+   "correct_answer": "A",
+   "score": 2,
+   "explanation": "递归必须有终止条件，否则无限套娃、栈溢出崩溃。递归 = 递下去 + 归回来，出口是底线。",
+   "options": {
+    "A": "递归出口（终止条件）",
+    "B": "至少三个参数",
+    "C": "全局变量",
+    "D": "循环语句"
+   }
+  },
+  {
+   "content": "### 第 5 题 归并排序的时间复杂度是？（ ）\n\n- A. O(n)\n- B. O(n log n)\n- C. O(n²)\n- D. O(log n)",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 5 题",
+   "correct_answer": "B",
+   "score": 2,
+   "explanation": "归并每层 O(n)、共 log n 层，总 O(n log n)。分而治之，合而为一。",
+   "options": {
+    "A": "O(n)",
+    "B": "O(n log n)",
+    "C": "O(n²)",
+    "D": "O(log n)"
+   }
+  },
+  {
+   "content": "### 第 6 题 食堂打饭，小刚每次都选\"当前排队最短的窗口\"，这种每步取当前最优的策略叫？（ ）\n\n- A. 贪心\n- B. 二分\n- C. 递归\n- D. 分治",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 6 题",
+   "correct_answer": "A",
+   "score": 2,
+   "explanation": "每步选当前最优即贪心。但贪心不一定全局最优——小刚排了最短窗口，窗口前面的人可能都打四菜一汤。",
+   "options": {
+    "A": "贪心",
+    "B": "二分",
+    "C": "递归",
+    "D": "分治"
+   }
+  },
+  {
+   "content": "### 第 7 题 链表和数组比，链表在哪个操作上明显更快？（ ）\n\n- A. 按下标随机访问第 i 个元素\n- B. 在已知位置后插入/删除节点\n- C. 连续内存遍历缓存友好\n- D. 直接计算第 i 个元素地址",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 7 题",
+   "correct_answer": "B",
+   "score": 2,
+   "explanation": "链表插入/删除只需改指针，O(1)；数组插入/删除要搬元素 O(n)。但链表随机访问要从头走，O(n)。",
+   "options": {
+    "A": "按下标随机访问第 i 个元素",
+    "B": "在已知位置后插入/删除节点",
+    "C": "连续内存遍历缓存友好",
+    "D": "直接计算第 i 个元素地址"
+   }
+  },
+  {
+   "content": "### 第 8 题 求 gcd(a, b)，欧几里得算法（辗转相除法）的核心式子是？（ ）\n\n- A. gcd(a, b) = gcd(b, a mod b)\n- B. gcd(a, b) = a + b\n- C. gcd(a, b) = a × b\n- D. gcd(a, b) = max(a, b)",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 8 题",
+   "correct_answer": "A",
+   "score": 2,
+   "explanation": "辗转相除法反复用 `gcd(a,b) = gcd(b, a%b)`，直到余数为 0。算完 GCD，天下太平。",
+   "options": {
+    "A": "gcd(a, b) = gcd(b, a mod b)",
+    "B": "gcd(a, b) = a + b",
+    "C": "gcd(a, b) = a × b",
+    "D": "gcd(a, b) = max(a, b)"
+   }
+  },
+  {
+   "content": "### 第 9 题 C++ 处理超 long long 的大整数时，通常用什么方式存储？（ ）\n\n- A. double\n- B. 字符串/数组逐位存\n- C. unsigned long long\n- D. float",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 9 题",
+   "correct_answer": "B",
+   "score": 2,
+   "explanation": "超 64 位的大数只能逐位存进数组/字符串，逐位模拟加减乘。double 存不下精确整数，float 更是弟弟。",
+   "options": {
+    "A": "double",
+    "B": "字符串/数组逐位存",
+    "C": "unsigned long long",
+    "D": "float"
+   }
+  },
+  {
+   "content": "### 第 10 题 \"最大值最小化\"或\"最小值最大化\"类问题，常用的求解思路是？（ ）\n\n- A. 直接排序输出\n- B. 二分答案 + 贪心检验\n- C. 纯递归暴力\n- D. 高精度模拟",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 10 题",
+   "correct_answer": "B",
+   "score": 2,
+   "explanation": "这类问题答案有单调性，先猜一个答案、贪心检查能否满足，再缩区间。二分答案 + 贪心是黄金搭档。",
+   "options": {
+    "A": "直接排序输出",
+    "B": "二分答案 + 贪心检验",
+    "C": "纯递归暴力",
+    "D": "高精度模拟"
+   }
+  },
+  {
+   "content": "### 第 11 题 递归函数嵌套调用自己时，每次调用都会占用额外内存（保存现场），调用层数过多可能导致？（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 11 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "递归每次调用压栈保存局部变量与返回地址，层数过深会耗尽栈空间，导致\"栈溢出\"崩溃。递归有深度，别硬闯。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 12 题 递归一定比循环慢，所以竞赛中永远不该用递归。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 12 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "递归代码简洁、思想清晰（如分治、树的遍历），是否慢取决于实现与栈深度。该用还得用。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 13 题 快速排序在\"已排序数组\"上的时间复杂度退化为 O(n²)。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 13 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "快排每次选的基准若总在端点，分区极不均匀，退化为 O(n²)。随机化选基准可缓解。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 14 题 归并排序是稳定的排序算法（相等元素排序后相对顺序不变）。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 14 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "归并合并时相等元素优先取左半，维持原相对顺序，故稳定。快排、选择排序则不稳定。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 15 题 链表支持 O(1) 时间复杂度按序号访问第 i 个元素。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 15 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "链表随机访问需从头遍历，O(n)。O(1) 访问是数组的本事，链表擅长的是插入删除。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 16 题 如果 gcd(a, b) = 1，则称 a 与 b 互质。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 16 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "最大公约数为 1 即互质。互质的两个数，谁也整除不了谁，只能和平共处。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 17 题 高精度加法中，从最高位开始相加更方便处理进位。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 17 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "进位是向高位的，所以从最低位（个位）开始相加，进位逐位传递。从高位加，进位会打乱前面的结果。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 18 题 二分答案的检验函数（check）通常用贪心实现，且复杂度远低于枚举所有答案。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 18 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "check 用贪心判断该答案是否可行，配合二分把\"枚举答案\"的 O(答案范围) 降到 O(log 范围 × check 复杂度)。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 19 题 递归可以转化为循环实现（用栈模拟），二者最终计算结果一致。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 19 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "递归本质是隐式用系统栈，显式用栈模拟即可改写为循环。写法不同，结果相同。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### 第 20 题 二分查找每次排除一半，其时间复杂度是 O(log n)。（ ）\n\n- T. 正确\n- F. 错误",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 20 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "每步区间减半，最多 log₂n 次。O(log n)，快到飞起。",
+   "options": {
+    "T": "正确",
+    "F": "错误"
+   }
+  },
+  {
+   "content": "### cxy0026 数数有几人★★（12 分）\n\n**【题目描述】**\n\n老师在黑板上写下 n 个学生的成绩（按从小到大排好，可能有相同分数）。同学想知道：成绩恰好等于 x 的学生有几个？\n\n**【输入格式】**\n\n第一行，两个整数 n 和 x。\n\n第二行，n 个整数，表示成绩单（已按升序给出，可含相同值）。\n\n**【输出格式】**\n\n一行，一个整数，表示成绩等于 x 的学生人数。\n\n**【样例输入】**\n\n```\n8 5\n1 2 3 5 5 7 9 9\n```\n\n**【样例输出】**\n\n```\n2\n```\n\n**【样例说明】**\n\n成绩恰为 5 的有 2 人（第 4、5 位）。\n\n**【数据范围】**\n\n1 ≤ n ≤ 10⁵，1 ≤ x 与成绩 ≤ 10⁹。",
+   "question_type": "programming",
+   "pid": "cxy0026",
+   "url": "https://fslong.iok.la/problem/cxy0026",
+   "title": "数数有几人",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "lower_bound 求第一个 ≥x 的位置，upper_bound 求第一个 >x 的位置，二者之差即等于 x 的个数。也可手写两个二分。"
+  },
+  {
+   "content": "### cxy0027 切电缆★★（12 分）\n\n**【题目描述】**\n\n工地有几根电缆，第 i 根长 Lᵢ 厘米（可能有小数）。师傅需要把它们截成 k 段等长电缆（每段长可为小数），问每段最长能是多少？\n\n**【输入格式】**\n\n第一行，两个整数 n 和 k。\n\n第二行，n 个浮点数，表示每根电缆长度 L₁, L₂, …, Lₙ。\n\n**【输出格式】**\n\n一行，一个数，表示每段电缆的最大可能长度（保留两位小数，向下取整）。\n\n**【样例输入】**\n\n```\n3 7\n10.0 24.0 15.0\n```\n\n**【样例输出】**\n\n```\n6.00\n```\n\n**【样例说明】**\n\n每段 6：10.0→1 段、24.0→4 段、15.0→2 段，共 7 段；再大就凑不齐 7 段。\n\n**【数据范围】**\n\n1 ≤ n ≤ 10⁵，1 ≤ k ≤ 10⁹，1 ≤ Lᵢ ≤ 10⁹。",
+   "question_type": "programming",
+   "pid": "cxy0027",
+   "url": "https://fslong.iok.la/problem/cxy0027",
+   "title": "切电缆",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "二分答案（浮点二分）。每段长度越大，能截出的段数越少，单调。二分 mid，检查 Σ⌊Lᵢ/mid⌋ ≥ k；输出保留两位小数（printf %.2f）。"
+  },
+  {
+   "content": "### cxy0028 卡路里达标★★★（12 分）\n\n**【题目描述】**\n\n小明每天要吃若干种零食来补充热量，第 i 种零食热量为 aᵢ。他想挑出至少 k 种零食，使它们的热量都**不低于**某个值 X。为了让这顿饭吃得够爽，他希望 X 越大越好。\n\n请你算出：这个尽量大的 X 是多少？（即求热量从大到小排第 k 的热量值）\n\n**【输入格式】**\n\n第一行，两个整数 n 和 k。\n\n第二行，n 个整数，表示每种零食的热量 a₁, a₂, …, aₙ。\n\n**【输出格式】**\n\n一行，一个整数，表示最大的 X。\n\n**【样例输入】**\n\n```\n5 3\n9 3 5 1 7\n```\n\n**【样例输出】**\n\n```\n5\n```\n\n**【样例说明】**\n\n热量 ≥ 5 的有 9、5、7 共 3 种，恰满足 k=3；取 X=6 则只剩 9、7 两种，不足。故最大为 5。\n\n**【数据范围】**\n\n1 ≤ k ≤ n ≤ 10⁵，1 ≤ aᵢ ≤ 10⁹。",
+   "question_type": "programming",
+   "pid": "cxy0028",
+   "url": "https://fslong.iok.la/problem/cxy0028",
+   "title": "卡路里达标",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "二分答案：X 越大，≥X 的个数越少，单调。二分 X，检查统计 ≥X 的元素个数是否 ≥k；也可先排序直接取第 k 大的数，但二分+计数是考点所在。"
+  },
+  {
+   "content": "### cxy0029 连续吃瓜★★★（12 分）\n\n**【题目描述】**\n\n卖瓜摊摆着 n 块西瓜排成一行，第 i 块重 wᵢ 克。小明想买一段**连续**的西瓜，总重量不少于 x 克，但西瓜越少越好（吃得完）。\n\n请问：满足总重 ≥ x 的连续段，最少需要几块西瓜？如果所有西瓜加起来都不足 x 克，输出 -1。\n\n**【输入格式】**\n\n第一行，两个整数 n 和 x。\n\n第二行，n 个整数，表示每块西瓜重量 w₁, w₂, …, wₙ。\n\n**【输出格式】**\n\n一行，一个整数，表示满足条件的最短连续段长度；不存在则输出 -1。\n\n**【样例输入】**\n\n```\n5 7\n2 3 1 2 4\n```\n\n**【样例输出】**\n\n```\n3\n```\n\n**【样例说明】**\n\n连续段 [2,3,1,2] 重 8、[1,2,4] 重 7、[3,1,2,4] 重 10，均满足 ≥ 7；最短的是 [1,2,4] 长 3。任何 2 块的连续段都达不到 7。故最短为 3。\n\n**【数据范围】**\n\n1 ≤ n ≤ 10⁵，1 ≤ x ≤ 10¹⁸，1 ≤ wᵢ ≤ 10⁹。",
+   "question_type": "programming",
+   "pid": "cxy0029",
+   "url": "https://fslong.iok.la/problem/cxy0029",
+   "title": "连续吃瓜",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "前缀和 + 二分：构造前缀和 S（单调递增），对每个左端点 l，二分找最小的 r 使 S[r]−S[l−1] ≥ x，更新最短长度。O(n log n)。"
+  },
+  {
+   "content": "### cxy0030 猜数字★★（12 分）\n\n**【题目描述】**\n\n老师在黑板上写了一个秘密整数 ans（1 ≤ ans ≤ 10⁹）。每次提问可以问\"x 是否 ≥ 某个数\"，老师回答是/否。小明想用最少的提问次数确定 ans。\n\n请问：小明的提问次数最多不超过多少次？\n\n**【输入格式】**\n\n本题无输入。\n\n**【输出格式】**\n\n输出一个整数，表示最多需要的提问次数。\n\n**【样例输入】**\n\n```\n（无）\n```\n\n**【样例输出】**\n\n```\n30\n```\n\n**【样例说明】**\n\n范围 1 ~ 10⁹ 共 10⁹ 个数，每次提问折半，需 ⌈log₂10⁹⌉ = 30 次。\n\n**【数据范围】**\n\n无。",
+   "question_type": "programming",
+   "pid": "cxy0030",
+   "url": "https://fslong.iok.la/problem/cxy0030",
+   "title": "猜数字",
+   "options": {},
+   "correct_answer": "见解析",
+   "score": 12,
+   "explanation": "⌈log₂10⁹⌉ = 30。每次提问把候选区间折半，1~10⁹ 经 30 次二分即可锁定唯一值；严格计算 2²⁹ < 10⁹ < 2³⁰，故需 30 次。"
+  }
+ ]
+}
