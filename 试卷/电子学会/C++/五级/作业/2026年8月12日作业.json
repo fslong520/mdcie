@@ -1,7 +1,7 @@
 {
  "title": "2026 年 8 月 12 日作业：贪心入门·STL 容器",
  "description": "2026年8月12日作业（单选10 + 判断10 + 编程5）——快速幂、递推、贪心（硬币找零反例、打包包裹、奶茶订单、刮奖号码）、前缀和、差分、二分（upper_bound/防溢出）、双指针（滑动窗口复杂度）、STL（priority_queue/multiset/vector/map/string）；编程题：打包包裹（贪心+小根堆）、奶茶订单（贪心+反悔大根堆）、刮奖号码（贪心+单调栈）、倍数数组（NKOJ逆向贪心）、小偷（vjudge贪心multiset）",
- "time_limit": 120,
+ "time_limit": 40,
  "pass_score": 60,
  "questions": [
   {

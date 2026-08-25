@@ -1,7 +1,7 @@
 {
  "title": "2026 年 8 月 6 日作业：二分专项",
  "description": "2026年8月6日作业（单选10 + 判断10 + 编程5）——递推、贪心、前缀和、差分、二分与双指针、STL、快速幂",
- "time_limit": 120,
+ "time_limit": 40,
  "pass_score": 60,
  "questions": [
   {

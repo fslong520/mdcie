@@ -1,7 +1,7 @@
 {
  "title": "2026 年 8 月 9 日作业：活动安排贪心",
  "description": "2026年8月9日作业（单选10 + 判断10 + 编程5）——快速幂、递推、贪心（活动安排/反悔贪心）、前缀和、差分、二分、双指针、STL（priority_queue/set）",
- "time_limit": 120,
+ "time_limit": 40,
  "pass_score": 60,
  "questions": [
   {

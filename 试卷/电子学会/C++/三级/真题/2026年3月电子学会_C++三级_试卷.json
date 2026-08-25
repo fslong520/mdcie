@@ -5,7 +5,7 @@
   "pass_score": 100,
   "questions": [
     {
-      "content": "### 第 1 题（电子学会三级·函数概念）\n以下关于C++函数的说法，正确的？（ ）\n\n- A. 函数必须有返回整数值，否则无法通过编译\n- B. 函数可以嵌套定义，即在一个函数内部定义另一个函数\n- C. 函数可以没有参数，也可以有多个参数\n- D. 函数声明和函数定义必须写在同一个文件中\n\n**答案：C**\n\n**解析：** 选项A错误，C++函数可以有多种返回值类型，如 void（无返回值）；\n选项B错误，C++ 不支持 在函数内部定义另一个函数（即嵌套定义）；\n选项D错误，函数声明可以放在头文件（.h）中，定义（实现）放在源文件（.cpp）中。",
+      "content": "### 第 1 题（电子学会三级·函数概念）\n以下关于C++函数的说法，正确的？（ ）\n\n- A. 函数必须有返回整数值，否则无法通过编译\n- B. 函数可以嵌套定义，即在一个函数内部定义另一个函数\n- C. 函数可以没有参数，也可以有多个参数\n- D. 函数声明和函数定义必须写在同一个文件中",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "content": "### 第 2 题（电子学会三级·函数调用）\n函数定义为 int func(int a, int b)，以下调用方式正确的？（ ）\n\n- A. func(5);\n- B. func(5, 3);\n- C. func(\"5\", \"3\");\n- D. int func(5,3);\n\n**答案：B**\n\n**解析：** 参数a和b都是整型，因此调用也需要参数类型为整型。",
+      "content": "### 第 2 题（电子学会三级·函数调用）\n函数定义为 int func(int a, int b)，以下调用方式正确的？（ ）\n\n- A. func(5);\n- B. func(5, 3);\n- C. func(\"5\", \"3\");\n- D. int func(5,3);",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "content": "### 第 3 题（电子学会三级·值传递）\n以下函数，采用值传递方式的？（ ）\n\n- A. void func(int &x)\n- B. void func(int *x)\n- C. void func(int x)\n- D. void func(int x[])\n\n**答案：C**\n\n**解析：** 选项A是引用传递，B是指针传递，C是值传递，D虽然看起来是数组，会被编译器视为 int *x，也是指针。",
+      "content": "### 第 3 题（电子学会三级·值传递）\n以下函数，采用值传递方式的？（ ）\n\n- A. void func(int &x)\n- B. void func(int *x)\n- C. void func(int x)\n- D. void func(int x[])",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "content": "### 第 4 题（电子学会三级·值传递执行）\n执行以下代码，输出结果？（ ）\n\n\n\n```cpp\n\n#include <iostream>\n\nvoid func(int x) {\n\n    x = 100;\n\n}\n\nint main() {\n\n    int a = 10;\n\n    func(a);\n\n    std::cout << a;\n\n    return 0;\n\n}\n\n```\n\n- A. 10\n- B. 100\n- C. 0\n- D. 编译报错\n\n**答案：A**\n\n**解析：** 函数func的参数x是值传递，函数内修改形参x不会影响实参a的值，输出a仍为10。",
+      "content": "### 第 4 题（电子学会三级·值传递执行）\n执行以下代码，输出结果？（ ）\n\n\n\n```cpp\n\n#include <iostream>\n\nvoid func(int x) {\n\n    x = 100;\n\n}\n\nint main() {\n\n    int a = 10;\n\n    func(a);\n\n    std::cout << a;\n\n    return 0;\n\n}\n\n```\n\n- A. 10\n- B. 100\n- C. 0\n- D. 编译报错",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "content": "### 第 5 题（电子学会三级·递归阶乘）\n以下递归函数用于计算 n 的阶乘，横线处应填入的代码？（ ）\n\n\n\n```cpp\n\nint fact(int n) {\n\n    if(n <= 1) return 1;\n\n    _________\n\n}\n\n```\n\n- A. return fact(n-1);\n- B. return n * fact(n-1);\n- C. return n + fact(n-1);\n- D. return fact(n) * fact(n-1);\n\n**答案：B**\n\n**解析：** 递归调用的出口：n<=1时，直接返回1；\n计算n的阶乘，即：n*(n-1)*(n-2)*……*1，递归调用为：\nreturn n * fact(n-1);",
+      "content": "### 第 5 题（电子学会三级·递归阶乘）\n以下递归函数用于计算 n 的阶乘，横线处应填入的代码？（ ）\n\n\n\n```cpp\n\nint fact(int n) {\n\n    if(n <= 1) return 1;\n\n    _________\n\n}\n\n```\n\n- A. return fact(n-1);\n- B. return n * fact(n-1);\n- C. return n + fact(n-1);\n- D. return fact(n) * fact(n-1);",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "content": "### 第 6 题（电子学会三级·strlen长度）\n以下哪个函数可以获取C风格字符串的长度？（ ）\n\n- A. strlen()\n- B. strcpy()\n- C. strcat()\n- D. strcmp()\n\n**答案：A**\n\n**解析：** C语言的strlen()函数返回字符串的长度。",
+      "content": "### 第 6 题（电子学会三级·strlen长度）\n以下哪个函数可以获取C风格字符串的长度？（ ）\n\n- A. strlen()\n- B. strcpy()\n- C. strcat()\n- D. strcmp()",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "content": "### 第 7 题（电子学会三级·strcmp比较）\n执行 strcmp(\"apple\", \"banana\")，返回值的情况？（ ）\n\n- A. 大于0\n- B. 等于0\n- C. 小于0\n- D. 不确定\n\n**答案：C**\n\n**解析：** C语言字符串比较函数 strcmp(const char *s1, const char *s2)，s1和s2相等是返回0，s1小于s2返回负数，s1大于s2返回正数。\n字符串比较大小则是逐个字符比较，\"apple\"和\"banana\"第一个字符 'a'<'b'，故结果为：\"apple\" < \"banana\" ，所以结果为一个负数。",
+      "content": "### 第 7 题（电子学会三级·strcmp比较）\n执行 strcmp(\"apple\", \"banana\")，返回值的情况？（ ）\n\n- A. 大于0\n- B. 等于0\n- C. 小于0\n- D. 不确定",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "content": "### 第 8 题（电子学会三级·枚举法）\n要找出 1000 以内所有不能被 7 整除且个位数位不为 7 的正数，最适合使用的算法？（ ）\n\n- A. 递归法\n- B. 枚举法\n- C. 分治法\n- D. 动态规划\n\n**答案：B**\n\n**解析：** 枚举法枚举1-1000的所有数，逐个验证即可。",
+      "content": "### 第 8 题（电子学会三级·枚举法）\n要找出 1000 以内所有不能被 7 整除且个位数位不为 7 的正数，最适合使用的算法？（ ）\n\n- A. 递归法\n- B. 枚举法\n- C. 分治法\n- D. 动态规划",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "content": "### 第 9 题（电子学会三级·质因数分解）\n阅读以下程序，输入整数 60 时，程序的输出结果？（ ）\n\n\n\n```cpp\n\n#include<iostream>\n\nint main() {\n\n    int n;\n\n    std::cin >> n;\n\n    for (int p = 2; p*p <= n; ++p) {\n\n        while (n % p == 0) {\n\n            n = n / p;\n\n            std::cout << p << \" \";\n\n        }\n\n    }\n\n    if (n > 1)\n\n        std::cout << n;\n\n}\n\n```\n\n- A. 2 2 3 5\n- B. 2 3 5\n- C. 2 3 3 60\n- D. 2 5\n\n**答案：A**\n\n**解析：** 输入60，n为60。\n执行for循环，p初始为2，循环条件为p*p<=n；\n当p为2时，2*2<60，执行循环体内while循环：\nwhile循环第1次，60%2为0，n变为60/2=30，输出p的值2；\nwhile循环第2次，30%2为0，n变为30/2=15，输出p的值2；\n此时，15%2不为0，while循环结束；\np加1后为3，3*3<15，执行循环体内while循环：\nwhile循环第1次，15%3为0，n变为15/3=5，输出p的值3；\n此时，5%2不为0，while循环结束；\np加1后为4，4*4<5不成立，for循环结束。\n最后n为5，满足n>1，输出n的值5。\n故总的输出为：2 2 3 5。",
+      "content": "### 第 9 题（电子学会三级·质因数分解）\n阅读以下程序，输入整数 60 时，程序的输出结果？（ ）\n\n\n\n```cpp\n\n#include<iostream>\n\nint main() {\n\n    int n;\n\n    std::cin >> n;\n\n    for (int p = 2; p*p <= n; ++p) {\n\n        while (n % p == 0) {\n\n            n = n / p;\n\n            std::cout << p << \" \";\n\n        }\n\n    }\n\n    if (n > 1)\n\n        std::cout << n;\n\n}\n\n```\n\n- A. 2 2 3 5\n- B. 2 3 5\n- C. 2 3 3 60\n- D. 2 5",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -149,7 +149,7 @@
       }
     },
     {
-      "content": "### 第 10 题（电子学会三级·取模统计）\n以下代码用于统计1~100中，个位数字是 3 的数的个数，横线处应填入的代码？（ ）\n\n\n\n```cpp\n\n#include <iostream>\n\nint main() {\n\n    int cnt = 0;\n\n    for(int i=1;i<=100;i++) {\n\n        if(_________)\n\n            cnt++;\n\n    }\n\n    std::cout << cnt;\n\n}\n\n```\n\n- A. i % 3 == 0\n- B. i / 10 == 3\n- C. i % 10 == 3\n- D. i / 3 == 0\n\n**答案：C**\n\n**解析：** 程序枚举1-100的数，个位数字是 3 的数，需要取出 i 的个位数：i % 10，判断是否为3即可。",
+      "content": "### 第 10 题（电子学会三级·取模统计）\n以下代码用于统计1~100中，个位数字是 3 的数的个数，横线处应填入的代码？（ ）\n\n\n\n```cpp\n\n#include <iostream>\n\nint main() {\n\n    int cnt = 0;\n\n    for(int i=1;i<=100;i++) {\n\n        if(_________)\n\n            cnt++;\n\n    }\n\n    std::cout << cnt;\n\n}\n\n```\n\n- A. i % 3 == 0\n- B. i / 10 == 3\n- C. i % 10 == 3\n- D. i / 3 == 0",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -165,7 +165,7 @@
       }
     },
     {
-      "content": "### 第 11 题（电子学会三级·void与return）\n函数的返回值类型为 void 时，函数内不能使用 return 语句。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 函数的返回值类型为 void 时，可以直接 return 不带返回值。",
+      "content": "### 第 11 题（电子学会三级·void与return）\n函数的返回值类型为 void 时，函数内不能使用 return 语句。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -179,7 +179,7 @@
       }
     },
     {
-      "content": "### 第 12 题（电子学会三级·函数重载）\nC++中，函数支持重载，即同名函数可以有不同的参数列表。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，函数重载 是 C++ 的一项重要特性，允许在同一作用域内定义多个同名函数，只要它们的参数列表不同即可。",
+      "content": "### 第 12 题（电子学会三级·函数重载）\nC++中，函数支持重载，即同名函数可以有不同的参数列表。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "content": "### 第 13 题（电子学会三级·引用传递）\n引用传递方式下，函数内对形参的修改会影响到实参。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，引用参数实际是实参的别名，修改形参会影响到实参。",
+      "content": "### 第 13 题（电子学会三级·引用传递）\n引用传递方式下，函数内对形参的修改会影响到实参。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -207,7 +207,7 @@
       }
     },
     {
-      "content": "### 第 14 题（电子学会三级·递归终止条件）\n递归函数必须有明确的终止条件，否则会出现无限递归，导致栈溢出。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，递归函数必须有明确的终止条件（出口），否则会出现无限递归，导致栈溢出。",
+      "content": "### 第 14 题（电子学会三级·递归终止条件）\n递归函数必须有明确的终止条件，否则会出现无限递归，导致栈溢出。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -221,7 +221,7 @@
       }
     },
     {
-      "content": "### 第 15 题（电子学会三级·递归效率）\n递归算法的执行效率一定高于非递归算法。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 错误，一般递归算法因为有函数调用堆栈开销，效率比较低。",
+      "content": "### 第 15 题（电子学会三级·递归效率）\n递归算法的执行效率一定高于非递归算法。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -235,7 +235,7 @@
       }
     },
     {
-      "content": "### 第 16 题（电子学会三级·strcpy越界）\nstrcpy(a, b) 会将字符串 b 的内容复制到字符串 a 中，无需考虑 a 的空间大小。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** strcpy(a, b) 中 a 是目标字符串，拷贝时 b 的长度不能超过a，否则会越界访问数组a。",
+      "content": "### 第 16 题（电子学会三级·strcpy越界）\nstrcpy(a, b) 会将字符串 b 的内容复制到字符串 a 中，无需考虑 a 的空间大小。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -249,7 +249,7 @@
       }
     },
     {
-      "content": "### 第 17 题（电子学会三级·C风格字符串结束符）\nC风格字符串以 '\\0' 作为结束标志。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，C风格字符串以 '\\0' 作为结束标志。",
+      "content": "### 第 17 题（电子学会三级·C风格字符串结束符）\nC风格字符串以 '\\0' 作为结束标志。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "content": "### 第 18 题（电子学会三级·枚举法思想）\n枚举法的核心是遍历所有可能的情况，逐一验证是否符合条件。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，正是枚举的核心思想。",
+      "content": "### 第 18 题（电子学会三级·枚举法思想）\n枚举法的核心是遍历所有可能的情况，逐一验证是否符合条件。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "content": "### 第 19 题（电子学会三级·枚举效率）\n枚举法的时间复杂度通常很低，适用于所有数据范围的问题。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 枚举法的核心是遍历所有可能的情况，逐一验证是否符合条件，效率通常较低，但只适合数据规模较小的情况。",
+      "content": "### 第 19 题（电子学会三级·枚举效率）\n枚举法的时间复杂度通常很低，适用于所有数据范围的问题。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -291,7 +291,7 @@
       }
     },
     {
-      "content": "### 第 20 题（电子学会三级·模拟法）\n模拟法是通过代码模拟问题的实际执行过程，从而得到结果。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，模拟法是通过代码模拟问题的实际执行过程，从而得到结果。",
+      "content": "### 第 20 题（电子学会三级·模拟法）\n模拟法是通过代码模拟问题的实际执行过程，从而得到结果。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",

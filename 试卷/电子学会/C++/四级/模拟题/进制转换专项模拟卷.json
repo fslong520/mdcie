@@ -1,7 +1,7 @@
 {
   "title": "进制转换专项模拟卷",
   "description": " 进制转换专项模拟卷（单选10 + 判断10 + 编程5，专注进制转换）",
-  "time_limit": 120,
+  "time_limit": 40,
   "pass_score": 100,
   "questions": [
     {

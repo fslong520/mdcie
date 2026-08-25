@@ -1,7 +1,7 @@
 {
  "title": "二维数组的遍历",
  "description": "2026年8月11日训练（单选10×10分 + 判断5×10分 = 150分，编程5道另计）——一级真题巩固、二维数组的遍历",
- "time_limit": 120,
+ "time_limit": 40,
  "pass_score": 60,
  "questions": [
   {

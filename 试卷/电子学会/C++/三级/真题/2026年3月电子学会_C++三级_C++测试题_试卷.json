@@ -5,7 +5,7 @@
   "pass_score": 100,
   "questions": [
     {
-      "content": "### 第 1 题（电子学会三级·vector索引）\n以下代码的输出是？（ ）\n\n\n\n```cpp\n\nvector<int> v = {5, 15, 25};\n\ncout << v[1];\n\n```\n\n- A. 5\n- B. 10\n- C. 15\n- D. 25\n\n**答案：C**\n\n**解析：** vector即向量数组，索引从0开始，v[1]即第二个值：15。",
+      "content": "### 第 1 题（电子学会三级·vector索引）\n以下代码的输出是？（ ）\n\n\n\n```cpp\n\nvector<int> v = {5, 15, 25};\n\ncout << v[1];\n\n```\n\n- A. 5\n- B. 10\n- C. 15\n- D. 25",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "content": "### 第 2 题（电子学会三级·vector操作front）\n以下代码的输出是？（ ）\n\n\n\n```cpp\n\nvector<int> a = {2, 4, 6, 8};\n\na.push_back(10);\n\ncout << a.front();\n\n```\n\n- A. 2\n- B. 4\n- C. 6\n- D. 8\n\n**答案：A**\n\n**解析：** vector的push_back在数组后面追加一个元素，追加后数组为：{2, 4, 6, 8, 10}。\nfront()则是返回数组的第一个元素，值为：2。",
+      "content": "### 第 2 题（电子学会三级·vector操作front）\n以下代码的输出是？（ ）\n\n\n\n```cpp\n\nvector<int> a = {2, 4, 6, 8};\n\na.push_back(10);\n\ncout << a.front();\n\n```\n\n- A. 2\n- B. 4\n- C. 6\n- D. 8",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "content": "### 第 3 题（电子学会三级·栈的特点）\n栈的特点是？（ ）\n\n- A. 先进先出\n- B. 先进后出\n- C. 随机存取\n- D. 有序\n\n**答案：B**\n\n**解析：** 栈的特点是先进后出或者后进先出。",
+      "content": "### 第 3 题（电子学会三级·栈的特点）\n栈的特点是？（ ）\n\n- A. 先进先出\n- B. 先进后出\n- C. 随机存取\n- D. 有序",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "content": "### 第 4 题（电子学会三级·栈的操作）\n以下代码的输出是？（ ）\n\n\n\n```cpp\n\nstack<int> st;\n\nfor (int i=1; i<=3; i++) st.push(i);\n\nwhile (!st.empty()) {\n\n    cout << st.top() << \" \";\n\n    st.pop();\n\n}\n\n```\n\n- A. 1 2 3\n- B. 3 2 1\n- C. 1 1 1\n- D. 无输出\n\n**答案：B**\n\n**解析：** for循环依次把1、2、3压入栈st，此时栈为：1 2 3， 栈底 1，栈顶 3。\n栈的特点是后进先出，在while循环中，依次弹出栈顶：3 2 1，输出并删除栈顶元素。",
+      "content": "### 第 4 题（电子学会三级·栈的操作）\n以下代码的输出是？（ ）\n\n\n\n```cpp\n\nstack<int> st;\n\nfor (int i=1; i<=3; i++) st.push(i);\n\nwhile (!st.empty()) {\n\n    cout << st.top() << \" \";\n\n    st.pop();\n\n}\n\n```\n\n- A. 1 2 3\n- B. 3 2 1\n- C. 1 1 1\n- D. 无输出",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "content": "### 第 5 题（电子学会三级·队列back）\n以下代码的输出是？（ ）\n\n\n\n```cpp\n\nqueue<string> que;\n\nque.push(\"Hello\");\n\nque.push(\"World\");\n\ncout << que.back();\n\n```\n\n- A. Hello\n- B. World\n- C. HelloWorld\n- D. 编译错误\n\n**答案：B**\n\n**解析：** 队列是先进先出，\"Hello\"和\"World\"依次入队，此时队首是：\"Hello\"，队尾是：\"World\"。\nback()返回队尾元素，即 \"World\"。",
+      "content": "### 第 5 题（电子学会三级·队列back）\n以下代码的输出是？（ ）\n\n\n\n```cpp\n\nqueue<string> que;\n\nque.push(\"Hello\");\n\nque.push(\"World\");\n\ncout << que.back();\n\n```\n\n- A. Hello\n- B. World\n- C. HelloWorld\n- D. 编译错误",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "content": "### 第 6 题（电子学会三级·队列front）\n获取队首元素但不删除的函数是？（ ）\n\n- A. top()\n- B. front()\n- C. peek()\n- D. first()\n\n**答案：B**\n\n**解析：** 获取队首元素：front()，删除队首元素：pop()。",
+      "content": "### 第 6 题（电子学会三级·队列front）\n获取队首元素但不删除的函数是？（ ）\n\n- A. top()\n- B. front()\n- C. peek()\n- D. first()",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "content": "### 第 7 题（电子学会三级·数组判重）\n已知一个数组 nums 中的元素均为 1~100 之间的整数，若判断该数组是否存在重复元素，以下C++代码片段中正确的是？（ ）\n\n\n- A.\n\n```cpp\nbool check(int nums[], int n) {\n    bool mark[100] = {false};\n    for (int i=0; i<n; i++) {\n        mark[nums[i]]=true;\n    }\n    return true;\n}\n```\n\n- B.\n\n```cpp\nbool check(int nums[], int n) {\n    bool mark[101] = {false};\n    for (int i=0; i<n; i++) {\n        if (mark[nums[i]]) return true;\n        mark[nums[i]] = true;\n    }\n    return false;\n}\n```\n\n- C.\n\n```cpp\nbool check(int nums[], int n) {\n    bool mark[100] = {false};\n    for (int i=0; i<n; i++) {\n        if (mark[nums[i]]) return true;\n        mark[nums[i]] = true;\n    }\n    return false;\n}\n```\n\n- D.\n\n```cpp\nbool check(int nums[], int n) {\n    bool mark[101] = {true};\n    for (int i=0; i<n; i++) {\n        if (mark[nums[i]]) return true;\n        mark[nums[i]] = false;\n    }\n    return false;\n}\n```\n\n**答案：C**\n\n**解析：** ",
+      "content": "### 第 7 题（电子学会三级·数组判重）\n已知一个数组 nums 中的元素均为 1~100 之间的整数，若判断该数组是否存在重复元素，以下C++代码片段中正确的是？（ ）\n\n\n- A.\n\n```cpp\nbool check(int nums[], int n) {\n    bool mark[100] = {false};\n    for (int i=0; i<n; i++) {\n        mark[nums[i]]=true;\n    }\n    return true;\n}\n```\n\n- B.\n\n```cpp\nbool check(int nums[], int n) {\n    bool mark[101] = {false};\n    for (int i=0; i<n; i++) {\n        if (mark[nums[i]]) return true;\n        mark[nums[i]] = true;\n    }\n    return false;\n}\n```\n\n- C.\n\n```cpp\nbool check(int nums[], int n) {\n    bool mark[100] = {false};\n    for (int i=0; i<n; i++) {\n        if (mark[nums[i]]) return true;\n        mark[nums[i]] = true;\n    }\n    return false;\n}\n```\n\n- D.\n\n```cpp\nbool check(int nums[], int n) {\n    bool mark[101] = {true};\n    for (int i=0; i<n; i++) {\n        if (mark[nums[i]]) return true;\n        mark[nums[i]] = false;\n    }\n    return false;\n}\n```",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "content": "### 第 8 题（电子学会三级·数组越界）\n对于定义为 int arr[100]; 的数组，下列访问方式中不存在数组越界风险的是？（ ）\n\n- A. arr[-1]\n- B. arr[100]\n- C. arr[arr[1]]\n- D. arr[40]\n\n**答案：D**\n\n**解析：** C++数组索引从0开始，且不支持负数索引，故A、B越界；\n选项C，arr[1]的值有可能不在数组索引0到99直接，有越界风险；\n本题答案为选项D。",
+      "content": "### 第 8 题（电子学会三级·数组越界）\n对于定义为 int arr[100]; 的数组，下列访问方式中不存在数组越界风险的是？（ ）\n\n- A. arr[-1]\n- B. arr[100]\n- C. arr[arr[1]]\n- D. arr[40]",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "content": "### 第 9 题（电子学会三级·枚举乘积对）\n以下代码的功能是？（ ）\n\n\n\n```cpp\n\nfor (int a = 1; a <= 9; a++) {\n\n    for (int b = 1; b <= 9; b++) {\n\n        if (a*b == 24) {\n\n            cout << a << \" \" << b << endl;\n\n        }\n\n    }\n\n}\n\n```\n\n- A. 找出乘积为 24 的整数对\n- B. 计算 24 的因数\n- C. 打印乘法表\n- D. A 和 B 均正确\n\n**答案：A**\n\n**解析：** 程序枚举 1 ~ 9 的数字，根据条件：a*b == 24，可知找出乘积为 24 的整数对。\n24 的因数并不全在1到9之间，程序并不能枚举24的所有因数。",
+      "content": "### 第 9 题（电子学会三级·枚举乘积对）\n以下代码的功能是？（ ）\n\n\n\n```cpp\n\nfor (int a = 1; a <= 9; a++) {\n\n    for (int b = 1; b <= 9; b++) {\n\n        if (a*b == 24) {\n\n            cout << a << \" \" << b << endl;\n\n        }\n\n    }\n\n}\n\n```\n\n- A. 找出乘积为 24 的整数对\n- B. 计算 24 的因数\n- C. 打印乘法表\n- D. A 和 B 均正确",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -149,7 +149,7 @@
       }
     },
     {
-      "content": "### 第 10 题（电子学会三级·substr截取）\ns.substr(2, 3) 表示？（ ）\n\n- A. 用索引2开始取3个字符\n- B. 从索引3开始取2个字符\n- C. 从索引2开始取到索引3\n- D. 从第2个字符开始到第3个字符\n\n**答案：A**\n\n**解析：** substr(2, 3) 中：\n第一个参数 2 是起始位置（索引从 0 开始）\n第二个参数 3 是要提取的子串长度\n所以是：从索引 2 开始，取 3 个字符。",
+      "content": "### 第 10 题（电子学会三级·substr截取）\ns.substr(2, 3) 表示？（ ）\n\n- A. 用索引2开始取3个字符\n- B. 从索引3开始取2个字符\n- C. 从索引2开始取到索引3\n- D. 从第2个字符开始到第3个字符",
       "question_type": "single",
       "pid": "",
       "url": "",
@@ -165,7 +165,7 @@
       }
     },
     {
-      "content": "### 第 11 题（电子学会三级·vector动态数组）\nvector 是动态数组，可以自动扩展容量。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，vector 是 C++ 标准库中的动态数组，可以根据元素的增加自动分配内存空间来扩展容量，无需手动管理内存。",
+      "content": "### 第 11 题（电子学会三级·vector动态数组）\nvector 是动态数组，可以自动扩展容量。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -179,7 +179,7 @@
       }
     },
     {
-      "content": "### 第 12 题（电子学会三级·vector的clear）\nvector 的 clear() 会释放所有内存。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 错误，vector::clear() 的作用是删除所有元素，但不会释放数组底层的内存。",
+      "content": "### 第 12 题（电子学会三级·vector的clear）\nvector 的 clear() 会释放所有内存。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "content": "### 第 13 题（电子学会三级·stack容量）\nstack 不需要指定长度上限。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 栈的容量是动态管理，不需要在定义时指定长度上限。",
+      "content": "### 第 13 题（电子学会三级·stack容量）\nstack 不需要指定长度上限。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -207,7 +207,7 @@
       }
     },
     {
-      "content": "### 第 14 题（电子学会三级·stack随机访问）\nstack 不支持随机访问。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，仅支持访问栈顶元素：top()。",
+      "content": "### 第 14 题（电子学会三级·stack随机访问）\nstack 不支持随机访问。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -221,7 +221,7 @@
       }
     },
     {
-      "content": "### 第 15 题（电子学会三级·queue下标访问）\nqueue 可以通过下标访问中间元素。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 队列仅支持访问队首元素和访问队尾元素。",
+      "content": "### 第 15 题（电子学会三级·queue下标访问）\nqueue 可以通过下标访问中间元素。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -235,7 +235,7 @@
       }
     },
     {
-      "content": "### 第 16 题（电子学会三级·queue队头插入）\nqueue 可以在队头进行插入。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 队列的插入操作（push）只能在队尾（back）进行。",
+      "content": "### 第 16 题（电子学会三级·queue队头插入）\nqueue 可以在队头进行插入。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -249,7 +249,7 @@
       }
     },
     {
-      "content": "### 第 17 题（电子学会三级·计数数组清零）\n统计各项元素出现数量时，必须把计数数组清零。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，计数数组如果不初始化，内容是随机的，会导致统计结果错误。",
+      "content": "### 第 17 题（电子学会三级·计数数组清零）\n统计各项元素出现数量时，必须把计数数组清零。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "content": "### 第 18 题（电子学会三级·判重算法效率）\n判断数组是否有重复元素出现，最快的算法是双重循环。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 对于大规模数据，排序或哈希表远快于双重循环。",
+      "content": "### 第 18 题（电子学会三级·判重算法效率）\n判断数组是否有重复元素出现，最快的算法是双重循环。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "content": "### 第 19 题（电子学会三级·string的find）\nstring 的 find()函数在找不到子串时返回 -1。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 在 C++ 中，string::find() 返回类型是 size_t（无符号整数），当找不到子串时，返回 string::npos，该值并不是-1。",
+      "content": "### 第 19 题（电子学会三级·string的find）\nstring 的 find()函数在找不到子串时返回 -1。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",
@@ -291,7 +291,7 @@
       }
     },
     {
-      "content": "### 第 20 题（电子学会三级·substr单参）\nsubstr() 函数的参数可以只有一个参数。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 在 C++ 中，string::substr() 有两种重载形式：\nsubstr(pos)：从 pos 开始一直取到字符串末尾；\nsubstr(pos, count)：从 pos 开始取 count 个字符；\n本题答案为正确。",
+      "content": "### 第 20 题（电子学会三级·substr单参）\nsubstr() 函数的参数可以只有一个参数。（ ）\n\n- T. 正确\n- F. 错误",
       "question_type": "judge",
       "pid": "",
       "url": "",

@@ -1,7 +1,7 @@
 {
   "title": "2026 年 3 月 电子学会 C/C++ 五级 真题",
   "description": "2026年3月 电子学会青少年软件编程等级考试 C/C++ 五级 真题（单选10 + 判断10 + 编程2）",
-  "time_limit": 120,
+  "time_limit": 40,
   "pass_score": 100,
   "questions": [
     {

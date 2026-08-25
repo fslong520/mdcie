@@ -1,7 +1,7 @@
 {
  "title": "2026 年 8 月 13 日作业：STL 实战·排序与计数",
  "description": "2026年8月13日作业（单选10 + 判断10 + 编程5）——快速幂（应用/取模）、递推（滚动数组）、贪心（部分背包）、前缀和（二维）、差分（数组边界）、二分（upper_bound/死循环）、双指针（对撞指针）、STL（map遍历/set下标/sort复杂度/multiset erase/stack）；编程题：水果销量榜（map+sort）、健身打卡（set）、默契配对（sort+双指针）、香肠（vjudge GCD数学）、整数变换（NKOJ数学推导）",
- "time_limit": 120,
+ "time_limit": 40,
  "pass_score": 60,
  "questions": [
   {

@@ -1,7 +1,7 @@
 {
   "title": "位运算与进制转换专项模拟卷",
   "description": " 位运算与进制转换专项模拟卷（单选10 + 判断10 + 编程5，位运算与二↔八进制互转）",
-  "time_limit": 120,
+  "time_limit": 40,
   "pass_score": 100,
   "questions": [
     {

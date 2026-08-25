@@ -1,7 +1,7 @@
 {
  "title": "字符串的应用",
  "description": "2026年8月8日训练（单选10×10分 + 判断5×10分 = 150分，编程5道另计）——顺序结构、循环结构、字符串的应用",
- "time_limit": 120,
+ "time_limit": 40,
  "pass_score": 60,
  "questions": [
   {
