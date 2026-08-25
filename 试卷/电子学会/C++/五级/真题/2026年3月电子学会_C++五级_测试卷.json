@@ -307,8 +307,8 @@
     {
       "content": "### 第 1 题 字符串的不同子串 ★★★（30 分）\n\n**【题目描述】**\n\n给定一个由小写英文字母组成的字符串 s。请问 s 的不同非空子串有多少种？\n子串是指字符串中连续的一段字符。例如，xxx 是 yxxxy 的子串，但不是 xxyxx 的子串。\n\n**【输入格式】**\n\n输入一行，包含一个字符串 s。\n\n**【输出格式】**\n\n输出一个整数，表示 s 的不同非空子串的数量。\n\n**【数据范围】**\n\ns 仅由小写英文字母组成。1 ≤ |s| ≤ 100，其中 |s| 表示字符串的长度。",
       "question_type": "programming",
-      "pid": "",
-      "url": "",
+      "pid": "CIE202603L5TEST1",
+      "url": "https://fslong.iok.la/problem/CIE202603L5TEST1",
       "title": "字符串的不同子串",
       "options": {},
       "correct_answer": "参考代码见解析",
@@ -318,13 +318,13 @@
     {
       "content": "### 第 2 题 坐标选点 ★★★（30 分）\n\n**【题目描述】**\n\n修建了一条长度为 m 公里的铁路，起点和终点已经建有火车站。铁路沿线有 n 座城市（城市不位于起点或终点），第 i 座城市到铁路起点的距离为 aᵢ 公里。\n现在计划在这 n 座城市中选择 c 座修建火车站，使得所有火车站（包括起点和终点的火车站）之间的最小相邻距离尽可能大。请你计算这个最小相邻距离的最大可能值。\n\n**【输入格式】**\n\n第一行包含三个正整数 n、c、m，分别表示城市数量、计划修建的火车站数量以及铁路总长度。\n第二行包含 n 个正整数 a₁, a₂, ..., aₙ，表示每座城市到铁路起点的距离。\n\n**【输出格式】**\n\n输出一个整数，表示最小相邻距离的最大可能值。\n\n**【数据范围】**\n\n1 ≤ c ≤ n ≤ 10⁶，1 ≤ aᵢ < m ≤ 10⁹，输入中的所有数值均为整数。",
       "question_type": "programming",
-      "pid": "",
-      "url": "",
+      "pid": "CIE202603L5TEST2",
+      "url": "https://fslong.iok.la/problem/CIE202603L5TEST2",
       "title": "坐标选点",
       "options": {},
       "correct_answer": "参考代码见解析",
       "score": 30,
-      "explanation": "二分答案 D（最小相邻距离），校验能否选出至少 c 座城市，使所有相邻火车站（含起点 0 与终点 m）间距均 ≥ D。贪心：从 0 出发，能放则放，最后检查终点 m 是否可达。参考程序：\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\ntypedef long long ll;\nint n, c; ll m;\nll a[1000005];\n\nbool check(ll D) {\n    ll last = 0;      // 起点 0 处已建站\n    int placed = 0;   // 已选中间城市数\n    for (int i = 0; i < n; i++)\n        if (a[i] - last >= D) { last = a[i]; placed++; }\n    if (m - last < D) return false; // 终点 m 必须可达\n    return placed >= c;\n}\n\nint main() {\n    ios::sync_with_stdio(false); cin.tie(0);\n    cin >> n >> c >> m;\n    for (int i = 0; i < n; i++) cin >> a[i];\n    sort(a, a + n);\n    ll lo = 1, hi = m, ans = 0;\n    while (lo <= hi) {\n        ll mid = (lo + hi) / 2;\n        if (check(mid)) { ans = mid; lo = mid + 1; }\n        else hi = mid - 1;\n    }\n    cout << ans << \"\\n\";\n    return 0;\n}\n```"
+      "explanation": "二分答案 D（最小相邻距离），校验能否选出至少 c 座城市，使所有相邻火车站（含起点 0 与终点 m）间距均 ≥ D。贪心：从 0 出发选站，每站须距上一站 ≥ D，且选后仍能保证终点 m 可达（m-a[i] ≥ D）才选，最后检查终点可达与选站数。参考程序：\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\ntypedef long long ll;\nint n, c; ll m;\nll a[1000005];\n\nbool check(ll D) {\n    ll last = 0;      // 起点 0 处已建站\n    int placed = 0;   // 已选中间城市数\n    for (int i = 0; i < n; i++)\n        // 距上一站 ≥ D 且选后仍能到达终点才选\n        if (a[i] - last >= D && m - a[i] >= D) { last = a[i]; placed++; }\n    if (m - last < D) return false; // 终点 m 必须可达\n    return placed >= c;\n}\n\nint main() {\n    ios::sync_with_stdio(false); cin.tie(0);\n    cin >> n >> c >> m;\n    for (int i = 0; i < n; i++) cin >> a[i];\n    sort(a, a + n);\n    ll lo = 1, hi = m, ans = 0;\n    while (lo <= hi) {\n        ll mid = (lo + hi) / 2;\n        if (check(mid)) { ans = mid; lo = mid + 1; }\n        else hi = mid - 1;\n    }\n    cout << ans << \"\n\";\n    return 0;\n}\n```"
     }
   ]
 }

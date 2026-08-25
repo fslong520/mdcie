@@ -1,0 +1,330 @@
+{
+  "title": "2026 年 8 月 电子学会 C/C++ 四级 模拟卷2",
+  "description": "2026年8月 电子学会青少年软件编程等级考试 C/C++ 四级 模拟卷2（单选10 + 判断10 + 编程2）",
+  "time_limit": 120,
+  "pass_score": 100,
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会四级模拟·指针）执行以下代码，输出结果是？（ ）\n\n```cpp\nint a[5] = {1, 2, 3, 4, 5};\nint *p = a;\np++;\ncout << *p;\n```\n\n- A. 1\n- B. 5\n- C. 3\n- D. 2\n\n**答案：D**\n\n**解析：** `p` 初始指向数组首元素 `a[0]`（值为 1），执行 `p++` 后 `p` 指向下一个元素 `a[1]`，`*p` 取值为 2。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 1 题（电子学会四级）指针",
+      "correct_answer": "D",
+      "score": 2,
+      "explanation": "`p` 初始指向数组首元素 `a[0]`（值为 1），执行 `p++` 后 `p` 指向下一个元素 `a[1]`，`*p` 取值为 2。",
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "3",
+        "D": "2"
+      }
+    },
+    {
+      "content": "### 第 2 题（电子学会四级模拟·指针）执行以下代码，输出结果是？（ ）\n\n```cpp\nvoid f(int *p) { *p = 100; }\nint x = 5;\nf(&x);\ncout << x;\n```\n\n- A. 5\n- B. 0\n- C. 随机值\n- D. 100\n\n**答案：D**\n\n**解析：** `f(&x)` 将 `x` 的地址传给形参 `p`，`*p = 100` 通过指针把实参 `x` 的值改为 100，故输出 100。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 2 题（电子学会四级）指针",
+      "correct_answer": "D",
+      "score": 2,
+      "explanation": "`f(&x)` 将 `x` 的地址传给形参 `p`，`*p = 100` 通过指针把实参 `x` 的值改为 100，故输出 100。",
+      "options": {
+        "A": "5",
+        "B": "0",
+        "C": "随机值",
+        "D": "100"
+      }
+    },
+    {
+      "content": "### 第 3 题（电子学会四级模拟·结构体）有结构体定义如下，访问变量 `b` 中 `A` 类型成员 `a` 的成员 `x`，写法正确的是？（ ）\n\n```cpp\nstruct A {\n    int x;\n};\nstruct B {\n    A a;\n    int y;\n};\nB b;\n```\n\n- A. `b.x`\n- B. `B.a.x`\n- C. `b.a.x`\n- D. `a.x`\n\n**答案：C**\n\n**解析：** 嵌套结构体逐层访问：先通过 `b.a` 取得 `A` 类型成员，再访问其成员 `x`，写作 `b.a.x`。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 3 题（电子学会四级）结构体",
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": "嵌套结构体逐层访问：先通过 `b.a` 取得 `A` 类型成员，再访问其成员 `x`，写作 `b.a.x`。",
+      "options": {
+        "A": "`b.x`",
+        "B": "`B.a.x`",
+        "C": "`b.a.x`",
+        "D": "`a.x`"
+      }
+    },
+    {
+      "content": "### 第 4 题（电子学会四级模拟·类）以下关于 C++ 构造函数说法，正确的是？（ ）\n\n- A. 构造函数与类同名，可以有返回值\n- B. 构造函数在对象创建时自动调用\n- C. 一个类只能定义一个构造函数\n- D. 构造函数必须由程序员显式调用\n\n**答案：B**\n\n**解析：** 构造函数与类同名且无返回值（A 错）；可重载定义多个（C 错）；创建对象时自动调用、无需显式调用（D 错）。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 4 题（电子学会四级）类",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "构造函数与类同名且无返回值（A 错）；可重载定义多个（C 错）；创建对象时自动调用、无需显式调用（D 错）。",
+      "options": {
+        "A": "构造函数与类同名，可以有返回值",
+        "B": "构造函数在对象创建时自动调用",
+        "C": "一个类只能定义一个构造函数",
+        "D": "构造函数必须由程序员显式调用"
+      }
+    },
+    {
+      "content": "### 第 5 题（电子学会四级模拟·进制转换）将二进制数 `10111101` 转换为十六进制数，结果是？（ ）\n\n- A. 9D\n- B. BD\n- C. B3\n- D. 8F\n\n**答案：B**\n\n**解析：** 从右向左每 4 位一组：`1011 1101`，对应十六进制 `B` 与 `D`，故为 `BD`₁₆。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 5 题（电子学会四级）进制转换",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "从右向左每 4 位一组：`1011 1101`，对应十六进制 `B` 与 `D`，故为 `BD`₁₆。",
+      "options": {
+        "A": "9D",
+        "B": "BD",
+        "C": "B3",
+        "D": "8F"
+      }
+    },
+    {
+      "content": "### 第 6 题（电子学会四级模拟·位运算）32 位系统中，执行以下代码，输出结果是？（ ）\n\n```cpp\nint x = 0;\ncout << (~x);\n```\n\n- A. 0\n- B. 1\n- C. 2147483647\n- D. -1\n\n**答案：D**\n\n**解析：** 按位取反 `~0` 将每一位 0 变 1，32 位全 1 按补码解释为 -1。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 6 题（电子学会四级）位运算",
+      "correct_answer": "D",
+      "score": 2,
+      "explanation": "按位取反 `~0` 将每一位 0 变 1，32 位全 1 按补码解释为 -1。",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2147483647",
+        "D": "-1"
+      }
+    },
+    {
+      "content": "### 第 7 题（电子学会四级模拟·排序）有 1000 个整数，取值范围为 0 到 100，要将其排序，下列哪种方法通常效率最高？（ ）\n\n- A. 冒泡排序\n- B. 归并排序\n- C. 桶排序\n- D. 插入排序\n\n**答案：C**\n\n**解析：** 数据取值范围很小时，桶排序（计数思想）只需遍历计数再输出，时间复杂度约 O(n+k)，远快于 O(n log n) 或 O(n²) 算法。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 7 题（电子学会四级）排序",
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": "数据取值范围很小时，桶排序（计数思想）只需遍历计数再输出，时间复杂度约 O(n+k)，远快于 O(n log n) 或 O(n²) 算法。",
+      "options": {
+        "A": "冒泡排序",
+        "B": "归并排序",
+        "C": "桶排序",
+        "D": "插入排序"
+      }
+    },
+    {
+      "content": "### 第 8 题（电子学会四级模拟·排序）对 n 个元素的数组进行冒泡排序，最多需要进行多少趟？（ ）\n\n- A. n-1\n- B. n\n- C. 2\n- D. n+1\n\n**答案：A**\n\n**解析：** 每趟至少让一个元素到位，n 个元素只需 n-1 趟即可保证全部有序。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 8 题（电子学会四级）排序",
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": "每趟至少让一个元素到位，n 个元素只需 n-1 趟即可保证全部有序。",
+      "options": {
+        "A": "n-1",
+        "B": "n",
+        "C": "2",
+        "D": "n+1"
+      }
+    },
+    {
+      "content": "### 第 9 题（电子学会四级模拟·高精度）高精度算法比较两个大整数 a 和 b 的大小时，首先应比较？（ ）\n\n- A. 各位数字之和\n- B. 位数\n- C. 最高位数字\n- D. 个位数字\n\n**答案：B**\n\n**解析：** 位数不同的两数，位数多者一定更大；位数相同时才逐位比较。故先比较位数。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 9 题（电子学会四级）高精度",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "位数不同的两数，位数多者一定更大；位数相同时才逐位比较。故先比较位数。",
+      "options": {
+        "A": "各位数字之和",
+        "B": "位数",
+        "C": "最高位数字",
+        "D": "个位数字"
+      }
+    },
+    {
+      "content": "### 第 10 题（电子学会四级模拟·高精度）十进制高精度减法中，若当前位不够减需向高位借 1，则借来的 1 相当于本位的多少？（ ）\n\n- A. 9\n- B. 1\n- C. 10\n- D. 0\n\n**答案：C**\n\n**解析：** 十进制中，高位 1 借到低位相当于 10，故当前位加 10 后再减。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 10 题（电子学会四级）高精度",
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": "十进制中，高位 1 借到低位相当于 10，故当前位加 10 后再减。",
+      "options": {
+        "A": "9",
+        "B": "1",
+        "C": "10",
+        "D": "0"
+      }
+    },
+    {
+      "content": "### 第 11 题（电子学会四级模拟·指针）指向不同类型变量的指针可以直接用 `==` 判断是否指向同一地址。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 不同类型指针不能直接比较，需先强制转换为相同指针类型再比较。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 11 题（电子学会四级）指针",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "不同类型指针不能直接比较，需先强制转换为相同指针类型再比较。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 12 题（电子学会四级模拟·指针）指针变量可以用 `if (p)` 判断是否为空指针（空指针为假）。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 空指针（nullptr/NULL）在布尔语境下为假，非空指针为真，故 `if (p)` 可判空。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 12 题（电子学会四级）指针",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "空指针（nullptr/NULL）在布尔语境下为假，非空指针为真，故 `if (p)` 可判空。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 13 题（电子学会四级模拟·结构体）结构体变量作函数参数时按值传递，函数内部修改成员不影响原变量。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 结构体按值传递会复制一份，函数内修改的是副本，原变量不受影响。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 13 题（电子学会四级）结构体",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "结构体按值传递会复制一份，函数内修改的是副本，原变量不受影响。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 14 题（电子学会四级模拟·类）C++ 中，`class` 定义的类默认成员为 `private`，`struct` 定义的类默认成员为 `public`。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** `class` 默认访问权限为 `private`，`struct` 默认为 `public`，这是两者的重要区别。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 14 题（电子学会四级）类",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "`class` 默认访问权限为 `private`，`struct` 默认为 `public`，这是两者的重要区别。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 15 题（电子学会四级模拟·进制转换）二进制数 `110010` 转换为十进制数是 50。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** `110010`₂ = 32 + 16 + 2 = 50。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 15 题（电子学会四级）进制转换",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "`110010`₂ = 32 + 16 + 2 = 50。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 16 题（电子学会四级模拟·位运算）`x & 0xFF` 可以提取整数 x 的高 8 位。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** `0xFF` 低 8 位全 1，`x & 0xFF` 保留的是 x 的低 8 位；提取高 8 位应写作 `(x >> 8) & 0xFF`。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 16 题（电子学会四级）位运算",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "`0xFF` 低 8 位全 1，`x & 0xFF` 保留的是 x 的低 8 位；提取高 8 位应写作 `(x >> 8) & 0xFF`。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 17 题（电子学会四级模拟·排序）桶排序是原地排序，不需要额外的桶空间。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 桶排序需要额外的桶数组（或链表）存放元素，空间复杂度非 O(1)。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 17 题（电子学会四级）排序",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "桶排序需要额外的桶数组（或链表）存放元素，空间复杂度非 O(1)。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 18 题（电子学会四级模拟·排序）选择排序每一趟都会从剩余未排序元素中选出最小值，放到已排序序列的末尾。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 选择排序每趟在未排序部分中选出最小值，与未排序部分的首元素交换，从而把它放到已排序序列的末尾。说法正确。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 18 题（电子学会四级）排序",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "选择排序每趟在未排序部分中选出最小值，与未排序部分的首元素交换，从而把它放到已排序序列的末尾。说法正确。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 19 题（电子学会四级模拟·高精度）两个长度都超过 19 位的十进制整数相加，必须使用高精度算法，否则会溢出。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** `long long` 最长约 19 位，两数都超 19 位时其和必超 `long long` 范围，需用高精度。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 19 题（电子学会四级）高精度",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "`long long` 最长约 19 位，两数都超 19 位时其和必超 `long long` 范围，需用高精度。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 20 题（电子学会四级模拟·高精度）高精度加法中，两数位数不同时，从个位对齐，位数较短者的高位按 0 处理。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 从低位逐位相加时，短数超出部分按 0 参与计算即可统一处理。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 20 题（电子学会四级）高精度",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "从低位逐位相加时，短数超出部分按 0 参与计算即可统一处理。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 1 题 判断2的幂 ★★（30 分）\n\n**【题目描述】**\n\n给定一个正整数 x，判断 x 是否可以表示为 2 的幂，即是否存在非负整数 k 使 x = 2ᵏ。要求使用位运算判断。\n\n**【输入格式】**\n\n第一行：整数 n（1 ≤ n ≤ 1000）\n第二行：n 个正整数，用空格分隔\n\n**【输出格式】**\n\nn 行，每行一个 `YES` 或 `NO`，表示对应整数是否为 2 的幂。\n\n**【样例输入 1】**\n\n```\n4\n1 2 3 16\n```\n\n**【样例输出 1】**\n\n```\nYES\nYES\nNO\nYES\n```\n\n**【样例输入 2】**\n\n```\n3\n5 8 100\n```\n\n**【样例输出 2】**\n\n```\nNO\nYES\nNO\n```\n\n**【数据范围】**\n\n1 ≤ n ≤ 1000，1 ≤ x ≤ 10⁹",
+      "question_type": "programming",
+      "pid": "cie202608L4T3",
+      "url": "https://fslong.iok.la/problem/cie202608L4T3",
+      "title": "判断2的幂",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "2 的幂的二进制表示中恰好只有一个 1。利用位运算技巧：`x & (x-1)` 会把 x 最低位的 1 变为 0，故 x 是 2 的幂当且仅当 `x > 0` 且 `(x & (x-1)) == 0`。参考程序：\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int n;\n    cin >> n;\n    while (n--) {\n        long long x;\n        cin >> x;\n        if (x > 0 && (x & (x - 1)) == 0) cout << \"YES\\n\";\n        else cout << \"NO\\n\";\n    }\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 2 题 高精度减法 ★★★（30 分）\n\n**【题目描述】**\n\n实现高精度减法：输入两个正整数 a、b（可能超过 64 位），输出 a - b 的结果。若 a < b，输出负数（即结果为负）。\n\n**【输入格式】**\n\n第一行：正整数 a（字符串形式，不含前导0）\n第二行：正整数 b（字符串形式，不含前导0）\n\n**【输出格式】**\n\n一个整数，表示 a - b 的结果。若为负数，前加负号 `-`。\n\n**【样例输入 1】**\n\n```\n1000\n1\n```\n\n**【样例输出 1】**\n\n```\n999\n```\n\n**【样例输入 2】**\n\n```\n1\n1000\n```\n\n**【样例输出 2】**\n\n```\n-999\n```\n\n**【样例输入 3】**\n\n```\n999999999999999999999999999999\n1\n```\n\n**【样例输出 3】**\n\n```\n999999999999999999999999999998\n```\n\n**【数据范围】**\n\na、b 长度 ≤ 500",
+      "question_type": "programming",
+      "pid": "cie202608L4T4",
+      "url": "https://fslong.iok.la/problem/cie202608L4T4",
+      "title": "高精度减法",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "先比较 a、b 大小：位数多者大，位数相同逐位比较。若 a ≥ b 直接算 a-b，否则输出负号并算 b-a。减法从低位对齐，当前位不够减则向高位借 1（加 10），最后去掉前导零。参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\n// a >= b 返回 true（a、b 均无前导0）\nbool cmp(string a, string b) {\n    if (a.size() != b.size()) return a.size() > b.size();\n    return a >= b;\n}\n\n// 计算 a - b，要求 a >= b\nstring sub(string a, string b) {\n    string res = \"\";\n    int i = a.size() - 1, j = b.size() - 1;\n    int borrow = 0;\n    while (i >= 0) {\n        int da = a[i] - '0' - borrow;\n        int db = (j >= 0) ? b[j] - '0' : 0;\n        if (da < db) {\n            da += 10;\n            borrow = 1;\n        } else {\n            borrow = 0;\n        }\n        res += (da - db) + '0';\n        i--;\n        j--;\n    }\n    reverse(res.begin(), res.end());\n    int k = 0;\n    while (k < res.size() - 1 && res[k] == '0') k++;\n    return res.substr(k);\n}\n\nint main() {\n    string a, b;\n    cin >> a >> b;\n    if (cmp(a, b)) {\n        cout << sub(a, b) << endl;\n    } else {\n        cout << \"-\" << sub(b, a) << endl;\n    }\n    return 0;\n}\n```"
+    }
+  ]
+}

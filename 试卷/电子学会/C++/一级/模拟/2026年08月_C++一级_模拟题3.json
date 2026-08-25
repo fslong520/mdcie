@@ -1,0 +1,300 @@
+{
+ "title": "2026年08月C++一级模拟题3",
+ "description": "2026年08月模拟题3（单选10×4分 + 判断10×2分 = 60分 + 编程2×20分 = 40分，总分100分）——电子学会一级考点；编程：三角木架（分支/逻辑与）、跳绳记录（循环求最大）",
+ "time_limit": 120,
+ "pass_score": 60,
+ "questions": [
+  {
+   "content": "### 第 1 题（数据类型）存储小数（如 3.14）时，应该使用哪种数据类型？（ ）\n\n- A. int\n- B. double\n- C. char\n- D. bool",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 1 题",
+   "correct_answer": "B",
+   "score": 4,
+   "explanation": "double 是双精度浮点类型，可以存储小数。int 只能存整数，char 存字符，bool 存真假。",
+   "options": {
+    "A": "int",
+    "B": "double",
+    "C": "char",
+    "D": "bool"
+   }
+  },
+  {
+   "content": "### 第 2 题（bool类型）执行以下代码，输出的结果是？（ ）\n\n```cpp\nbool b = true;\ncout << b;\n```\n\n- A. 1\n- B. true\n- C. 0\n- D. 报错",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 2 题",
+   "correct_answer": "A",
+   "score": 4,
+   "explanation": "bool 类型输出时，真（true）显示为 1，假（false）显示为 0。",
+   "options": {
+    "A": "1",
+    "B": "true",
+    "C": "0",
+    "D": "报错"
+   }
+  },
+  {
+   "content": "### 第 3 题（逻辑非等价）条件 `!(x < 10)` 与以下哪个条件等价？（ ）\n\n- A. `x < 10`\n- B. `x > 10`\n- C. `x >= 10`\n- D. `x <= 10`",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 3 题",
+   "correct_answer": "C",
+   "score": 4,
+   "explanation": "! 取反：x 不小于 10，即 x 大于或等于 10，所以等价于 x >= 10。",
+   "options": {
+    "A": "x < 10",
+    "B": "x > 10",
+    "C": "x >= 10",
+    "D": "x <= 10"
+   }
+  },
+  {
+   "content": "### 第 4 题（自增表达式）执行以下代码，输出的结果是？（ ）\n\n```cpp\nint x = 5;\ncout << x++;\n```\n\n- A. 6\n- B. 4\n- C. 5\n- D. 报错",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 4 题",
+   "correct_answer": "C",
+   "score": 4,
+   "explanation": "x++ 是后置自增：先使用 x 的当前值 5 输出，再让 x 变成 6。所以输出 5。",
+   "options": {
+    "A": "6",
+    "B": "4",
+    "C": "5",
+    "D": "报错"
+   }
+  },
+  {
+   "content": "### 第 5 题（换行输出）执行以下代码，输出结果是？（ ）\n\n```cpp\ncout << 1 << endl << 2;\n```\n\n- A. 1 2（同一行，中间空格）\n- B. 报错\n- C. 12（同一行）\n- D. 1 和 2 分两行输出",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 5 题",
+   "correct_answer": "D",
+   "score": 4,
+   "explanation": "endl 输出换行。先输出 1 并换行，再输出 2，所以 1 和 2 各占一行。",
+   "options": {
+    "A": "1 2（同一行，中间空格）",
+    "B": "报错",
+    "C": "12（同一行）",
+    "D": "1 和 2 分两行输出"
+   }
+  },
+  {
+   "content": "### 第 6 题（数学函数）以下C++代码执行后，输出的结果是？（ ）\n\n```cpp\ncout << min(5, 9);\n```\n\n- A. 5\n- B. 9\n- C. 14\n- D. 45",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 6 题",
+   "correct_answer": "A",
+   "score": 4,
+   "explanation": "min(a, b) 返回两个数中较小的一个，min(5, 9) 返回 5。",
+   "options": {
+    "A": "5",
+    "B": "9",
+    "C": "14",
+    "D": "45"
+   }
+  },
+  {
+   "content": "### 第 7 题（多分支判断）小红考了 85 分，成绩规则：90 分及以上\"优秀\"，80~89 分\"良好\"，60~79 分\"及格\"，60 分以下\"不及格\"。执行以下代码，输出结果是？（ ）\n\n```cpp\nint score = 85;\nif (score >= 90)\n    cout << \"优秀\";\nelse if (score >= 80)\n    cout << \"良好\";\nelse if (score >= 60)\n    cout << \"及格\";\nelse\n    cout << \"不及格\";\n```\n\n- A. 优秀\n- B. 良好\n- C. 及格\n- D. 不及格",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 7 题",
+   "correct_answer": "B",
+   "score": 4,
+   "explanation": "85 分不满足 >=90，但满足 >=80，所以进入第二个分支，输出\"良好\"。",
+   "options": {
+    "A": "优秀",
+    "B": "良好",
+    "C": "及格",
+    "D": "不及格"
+   }
+  },
+  {
+   "content": "### 第 8 题（break语句）在循环中执行 `break;` 语句，会？（ ）\n\n- A. 跳过本次循环剩余部分，进入下一次循环\n- B. 循环次数减一\n- C. 停止程序\n- D. 立即结束整个循环",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 8 题",
+   "correct_answer": "D",
+   "score": 4,
+   "explanation": "break 的作用是立即跳出（结束）当前整个循环，继续执行循环后面的代码。",
+   "options": {
+    "A": "跳过本次循环剩余部分，进入下一次循环",
+    "B": "循环次数减一",
+    "C": "停止程序",
+    "D": "立即结束整个循环"
+   }
+  },
+  {
+   "content": "### 第 9 题（continue语句）在循环中执行 `continue;` 语句，会？（ ）\n\n- A. 立即结束整个循环\n- B. 跳过本次循环剩余部分，进入下一次循环\n- C. 停止程序\n- D. 报错",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 9 题",
+   "correct_answer": "B",
+   "score": 4,
+   "explanation": "continue 跳过本次循环中 continue 后面的语句，直接进入下一次循环。与 break（结束整个循环）不同。",
+   "options": {
+    "A": "立即结束整个循环",
+    "B": "跳过本次循环剩余部分，进入下一次循环",
+    "C": "停止程序",
+    "D": "报错"
+   }
+  },
+  {
+   "content": "### 第 10 题（循环计算输出）执行以下代码，输出的结果是？（ ）\n\n```cpp\nfor (int i = 1; i <= 3; i++)\n    cout << i * i << \" \";\n```\n\n- A. 1 2 3\n- B. 1 8 27\n- C. 1 4 9\n- D. 2 4 6",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 10 题",
+   "correct_answer": "C",
+   "score": 4,
+   "explanation": "i 取 1、2、3，输出 i×i：1×1=1，2×2=4，3×3=9。",
+   "options": {
+    "A": "1 2 3",
+    "B": "1 8 27",
+    "C": "1 4 9",
+    "D": "2 4 6"
+   }
+  },
+  {
+   "content": "### 第 11 题 在C++中，变量名中不能包含空格，如 `my score` 不是合法变量名。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 11 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "变量名只能由字母、数字、下划线组成，且不能以数字开头，不能包含空格。",
+   "options": {}
+  },
+  {
+   "content": "### 第 12 题 C++中，`7.0 / 2` 的计算结果是 3。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 12 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "7.0 是浮点数，浮点数参与除法，结果是浮点数 3.5，不是 3。",
+   "options": {}
+  },
+  {
+   "content": "### 第 13 题 执行 `int x = 5; x++;` 后，x 的值是 6。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 13 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "x++ 让 x 自增 1，5 变成 6。",
+   "options": {}
+  },
+  {
+   "content": "### 第 14 题 `cout << 5 + 3;` 输出的是 53。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 14 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "5 + 3 先计算，结果是 8，输出 8，不是把 5 和 3 拼在一起。",
+   "options": {}
+  },
+  {
+   "content": "### 第 15 题 执行 `int a = 3.9;` 后，a 的值是 4。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 15 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "把小数 3.9 赋给 int 变量时，会自动丢弃小数部分，a 的值是 3，不是 4。",
+   "options": {}
+  },
+  {
+   "content": "### 第 16 题 `if-else` 语句属于选择（分支）结构。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 16 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "if-else 根据条件选择执行不同的分支，属于选择结构。",
+   "options": {}
+  },
+  {
+   "content": "### 第 17 题 逻辑或运算符 `||` 需要两个条件都为真，结果才为真。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 17 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "|| 只要有一个条件为真，结果就为真（一真即真）。两个都为真才为真的是逻辑与 &&。",
+   "options": {}
+  },
+  {
+   "content": "### 第 18 题 while 循环先判断条件再执行循环体，do-while 循环先执行循环体再判断条件。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 18 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "while 先判断后执行，条件不成立则一次都不执行；do-while 先执行一次再判断，所以至少执行一次。",
+   "options": {}
+  },
+  {
+   "content": "### 第 19 题 `double` 类型的变量可以存储整数，如 `double d = 5;` 是合法的。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 19 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "double 能存小数也能存整数，5 存入 double 变量后表示为 5.0。",
+   "options": {}
+  },
+  {
+   "content": "### 第 20 题 在C++中，每条语句以分号（`;`）结尾。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 20 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "C++ 语句以分号结束，如 int a = 5;、cout << a;。",
+   "options": {}
+  },
+  {
+   "content": "### 第 21 题 三角木架（20 分）\n\n**题目描述**\n\n张叔叔是木匠，他想用三根木条做一个三角形展示架。做之前要判断：这三根木条的长度能不能组成一个三角形。\n\n规则：任意两根木条的长度之和大于第三根木条，才能组成三角形。\n\n请你写程序：输入三根木条的长度，判断能否组成三角形，能则输出 YES，不能则输出 NO。\n\n**输入格式**\n\n一行，三个整数 a、b、c，分别表示三根木条的长度（1 ≤ a、b、c ≤ 10000）。\n\n**输出格式**\n\n一行，若能组成三角形输出 YES，否则输出 NO。\n\n**样例输入 1**\n\n```\n3 4 5\n```\n\n**样例输出 1**\n\n```\nYES\n```\n\n**样例输入 2**\n\n```\n1 2 3\n```\n\n**样例输出 2**\n\n```\nNO\n```\n\n**样例输入 3**\n\n```\n5 5 9\n```\n\n**样例输出 3**\n\n```\nYES\n```\n\n**样例说明**\n\n样例 2：1+2=3，不大于 3，不能组成三角形。样例 3：5+5=10>9，能组成三角形。\n\n**数据范围**\n\n1 ≤ a、b、c ≤ 10000。\n\n---",
+   "question_type": "programming",
+   "pid": "cie202608L1T5",
+   "url": "https://fslong.iok.la/problem/cie202608L1T5",
+   "title": "第 21 题 三角木架",
+   "correct_answer": "见解析",
+   "score": 20,
+   "explanation": "任意两边之和大于第三边：a+b>c && a+c>b && b+c>a，三个条件都成立输出 YES。分支+逻辑与。",
+   "options": {}
+  },
+  {
+   "content": "### 第 22 题 跳绳记录（20 分）\n\n**题目描述**\n\n刘伯伯坚持晨练跳绳，他把 n 天里每天跳绳的个数都记在本子上。他想知道这些天里，最多的一天跳了多少个。\n\n请你写程序：输入 n 和 n 天的跳绳个数，输出其中的最大值。\n\n**输入格式**\n\n第一行，一个整数 n（1 ≤ n ≤ 1000）。\n\n第二行，n 个整数，表示每天跳绳的个数（1 ≤ 个数 ≤ 10000），用空格分隔。\n\n**输出格式**\n\n一行，一个整数，表示 n 天中跳绳个数的最大值。\n\n**样例输入 1**\n\n```\n5\n100 200 150 300 250\n```\n\n**样例输出 1**\n\n```\n300\n```\n\n**样例输入 2**\n\n```\n3\n50 50 50\n```\n\n**样例输出 2**\n\n```\n50\n```\n\n**样例说明**\n\n样例 1：5 个数中最大的是 300。样例 2：三天都是 50，最大值是 50。\n\n**数据范围**\n\n1 ≤ n ≤ 1000，1 ≤ 个数 ≤ 10000。\n\n---",
+   "question_type": "programming",
+   "pid": "cie202608L1T6",
+   "url": "https://fslong.iok.la/problem/cie202608L1T6",
+   "title": "第 22 题 跳绳记录",
+   "correct_answer": "见解析",
+   "score": 20,
+   "explanation": "循环读入每个数，与当前最大值比较，大的更新 maxn，输出最大值。循环+比较。",
+   "options": {}
+  }
+ ]
+}

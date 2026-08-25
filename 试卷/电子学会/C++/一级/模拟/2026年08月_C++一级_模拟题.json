@@ -1,0 +1,300 @@
+{
+ "title": "2026年08月C++一级模拟题",
+ "description": "2026年08月模拟题（单选10×4分 + 判断10×2分 = 60分 + 编程2×20分 = 40分，总分100分）——电子学会一级考点；编程：哪箱最重（分支）、幸运兑换（循环）",
+ "time_limit": 120,
+ "pass_score": 60,
+ "questions": [
+  {
+   "content": "### 第 1 题（开发环境）小明想编写C++程序，以下哪个软件可以用来编写和运行C++程序？（ ）\n\n- A. 画图软件\n- B. 微信\n- C. Dev-C++\n- D. 记事本",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 1 题",
+   "correct_answer": "C",
+   "score": 4,
+   "explanation": "Dev-C++ 是C++的集成开发环境，可以编写、编译和运行C++程序。",
+   "options": {
+    "A": "画图软件",
+    "B": "微信",
+    "C": "Dev-C++",
+    "D": "记事本"
+   }
+  },
+  {
+   "content": "### 第 2 题（源文件后缀）一个C++源程序文件保存时，应该使用以下哪个后缀名？（ ）\n\n- A. .txt\n- B. .cpp\n- C. .doc\n- D. .exe",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 2 题",
+   "correct_answer": "B",
+   "score": 4,
+   "explanation": "C++源文件使用 .cpp 作为后缀名。.exe 是编译后生成的可执行文件。",
+   "options": {
+    "A": ".txt",
+    "B": ".cpp",
+    "C": ".doc",
+    "D": ".exe"
+   }
+  },
+  {
+   "content": "### 第 3 题（变量命名）以下C++变量名中，哪个是合法的？（ ）\n\n- A. `2name`\n- B. `my-score`\n- C. `int`\n- D. `_apple`",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 3 题",
+   "correct_answer": "D",
+   "score": 4,
+   "explanation": "变量名可以由下划线开头。A以数字开头，B含减号，C是关键字，均不合法。",
+   "options": {
+    "A": "2name",
+    "B": "my-score",
+    "C": "int",
+    "D": "_apple"
+   }
+  },
+  {
+   "content": "### 第 4 题（运算符优先级）C++表达式 `6 + 4 / 2` 的计算结果是？（ ）\n\n- A. 8\n- B. 5\n- C. 10\n- D. 2",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 4 题",
+   "correct_answer": "A",
+   "score": 4,
+   "explanation": "先算除法 4/2=2，再算加法 6+2=8。",
+   "options": {
+    "A": "8",
+    "B": "5",
+    "C": "10",
+    "D": "2"
+   }
+  },
+  {
+   "content": "### 第 5 题（输入输出）执行以下C++代码，输入 10 并回车，输出结果是？（ ）\n\n```cpp\nint a;\ncin >> a;\ncout << a + 5;\n```\n\n- A. 10\n- B. 15\n- C. 5\n- D. 10+5",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 5 题",
+   "correct_answer": "B",
+   "score": 4,
+   "explanation": "输入10，a=10，a+5=15。",
+   "options": {
+    "A": "10",
+    "B": "15",
+    "C": "5",
+    "D": "10+5"
+   }
+  },
+  {
+   "content": "### 第 6 题（数学函数）以下哪个C++函数可以用于计算一个数的平方根？（ ）\n\n- A. `abs()`\n- B. `pow()`\n- C. `sqrt()`\n- D. `max()`",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 6 题",
+   "correct_answer": "C",
+   "score": 4,
+   "explanation": "sqrt() 用于计算平方根。abs() 计算绝对值，pow() 计算幂。",
+   "options": {
+    "A": "abs()",
+    "B": "pow()",
+    "C": "sqrt()",
+    "D": "max()"
+   }
+  },
+  {
+   "content": "### 第 7 题（变量运算）以下C++代码执行后，变量 b 的值是？（ ）\n\n```cpp\nint a = 8, b;\nb = a / 2;\n```\n\n- A. 4\n- B. 4.0\n- C. 8\n- D. 2",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 7 题",
+   "correct_answer": "A",
+   "score": 4,
+   "explanation": "a=8，8/2=4（整数除法），b=4。",
+   "options": {
+    "A": "4",
+    "B": "4.0",
+    "C": "8",
+    "D": "2"
+   }
+  },
+  {
+   "content": "### 第 8 题（逻辑或）执行以下C++代码，输出结果是？（ ）\n\n```cpp\nint x = 3, y = 8;\nif (x > 5 || y > 5)\n    cout << \"Yes\";\nelse\n    cout << \"No\";\n```\n\n- A. No\n- B. 1\n- C. 0\n- D. Yes",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 8 题",
+   "correct_answer": "D",
+   "score": 4,
+   "explanation": "x>5为假，y>5为真，假||真=真，输出Yes。",
+   "options": {
+    "A": "No",
+    "B": "1",
+    "C": "0",
+    "D": "Yes"
+   }
+  },
+  {
+   "content": "### 第 9 题（for循环次数）执行以下C++代码，循环体一共执行多少次？（ ）\n\n```cpp\nfor (int i = 0; i < 6; i += 2)\n    cout << i;\n```\n\n- A. 2\n- B. 3\n- C. 6\n- D. 无限次",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 9 题",
+   "correct_answer": "B",
+   "score": 4,
+   "explanation": "i取值：0、2、4，共3次。下次i=6不满足i<6。",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "6",
+    "D": "无限次"
+   }
+  },
+  {
+   "content": "### 第 10 题（while循环）执行以下C++代码，输出的结果是？（ ）\n\n```cpp\nint n = 1;\nwhile (n < 10)\n    n *= 2;\ncout << n;\n```\n\n- A. 16\n- B. 8\n- C. 10\n- D. 4",
+   "question_type": "single",
+   "pid": "",
+   "url": "",
+   "title": "第 10 题",
+   "correct_answer": "A",
+   "score": 4,
+   "explanation": "n依次为1→2→4→8→16，当n=16时n<10不成立，退出，输出16。",
+   "options": {
+    "A": "16",
+    "B": "8",
+    "C": "10",
+    "D": "4"
+   }
+  },
+  {
+   "content": "### 第 11 题 C++程序从 main() 函数开始执行。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 11 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "main() 是程序入口，程序从这里开始执行。",
+   "options": {}
+  },
+  {
+   "content": "### 第 12 题 C++中，变量可以先使用，后定义。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 12 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "变量必须先定义才能使用。",
+   "options": {}
+  },
+  {
+   "content": "### 第 13 题 C++中，`8 % 3` 的计算结果是 2。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 13 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "8÷3=2余2，%是求余运算符。",
+   "options": {}
+  },
+  {
+   "content": "### 第 14 题 `cout` 是C++中用于输入的标准流对象。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 14 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "cout 用于输出，cin 用于输入。",
+   "options": {}
+  },
+  {
+   "content": "### 第 15 题 C++中，关系运算符 `>=` 表示大于或等于。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 15 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": ">= 当左侧大于或等于右侧时，结果为真。",
+   "options": {}
+  },
+  {
+   "content": "### 第 16 题 `pow(2, 3)` 的计算结果是 8。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 16 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "pow(2,3) 计算 2 的 3 次方，即 2×2×2=8。",
+   "options": {}
+  },
+  {
+   "content": "### 第 17 题 C++中，`&&` 逻辑与运算符，只要有一个操作数为真，结果就为真。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 17 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "&& 是逻辑与，必须两个操作数都为真，结果才为真。",
+   "options": {}
+  },
+  {
+   "content": "### 第 18 题 在Dev-C++中，代码编译报错时，依然可以运行程序。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 18 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "编译报错时无法生成可执行文件，不能运行。",
+   "options": {}
+  },
+  {
+   "content": "### 第 19 题 do-while 循环的循环体至少会执行一次。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 19 题",
+   "correct_answer": "T",
+   "score": 2,
+   "explanation": "do-while 先执行循环体，再判断条件，至少执行一次。",
+   "options": {}
+  },
+  {
+   "content": "### 第 20 题 C++中，整数变量可以存储小数，不会丢失精度。（ ）",
+   "question_type": "judge",
+   "pid": "",
+   "url": "",
+   "title": "第 20 题",
+   "correct_answer": "F",
+   "score": 2,
+   "explanation": "整数变量只能存储整数，存储小数会丢失小数部分。",
+   "options": {}
+  },
+  {
+   "content": "### 第 21 题 哪箱最重（20 分）\n\n**题目描述**\n\n王叔叔的便利店新进了三箱饮料，分别是果汁、牛奶和汽水。他想知道这三箱里哪一箱最重，好把最重的摆在货架底层。\n\n请你写程序：输入三箱饮料的重量，输出最重的那一箱的重量。\n\n**输入格式**\n\n一行，三个整数 a、b、c，分别表示三箱饮料的重量（单位：千克）。\n\n**输出格式**\n\n一行，一个整数，表示三箱中最大的重量。\n\n**样例输入 1**\n\n```\n3 9 5\n```\n\n**样例输出 1**\n\n```\n9\n```\n\n**样例输入 2**\n\n```\n7 7 2\n```\n\n**样例输出 2**\n\n```\n7\n```\n\n**样例说明**\n\n样例 2：牛奶和汽水都是 7 千克，果汁 2 千克，最重的是 7 千克。\n\n**数据范围**\n\n1 ≤ a、b、c ≤ 10000。\n\n---",
+   "question_type": "programming",
+   "pid": "cie202608L1T1",
+   "url": "https://fslong.iok.la/problem/cie202608L1T1",
+   "title": "第 21 题 哪箱最重",
+   "correct_answer": "见解析",
+   "score": 20,
+   "explanation": "三数取最大：先令 max=a，再依次与 b、c 比较，大的更新到 max。分支结构。",
+   "options": {}
+  },
+  {
+   "content": "### 第 22 题 幸运兑换（20 分）\n\n**题目描述**\n\n美食街新开的甜品店搞活动：每张购物小票上有一个编号，编号能被 3 整除的小票可以到柜台免费兑换一杯柠檬水。\n\n冯阿姨帮邻居们收了一叠小票，想数一数有几张能兑换柠檬水。\n\n请你写程序：输入 n 张小票的编号，输出其中能兑换的张小票数（能被 3 整除的个数）。\n\n**输入格式**\n\n第一行，一个整数 n（1 ≤ n ≤ 1000）。\n\n第二行，n 个整数，表示每张小票的编号（绝对值不超过 10000）。\n\n**输出格式**\n\n一行，一个整数，表示能被 3 整除的小票数。\n\n**样例输入 1**\n\n```\n5\n3 6 7 9 10\n```\n\n**样例输出 1**\n\n```\n3\n```\n\n**样例输入 2**\n\n```\n4\n1 2 4 5\n```\n\n**样例输出 2**\n\n```\n0\n```\n\n**样例说明**\n\n样例 1：编号 3、6、9 能被 3 整除，共 3 张。样例 2：4 张都不能被 3 整除，共 0 张。\n\n**数据范围**\n\n1 ≤ n ≤ 1000，整数绝对值 ≤ 10000。\n\n---",
+   "question_type": "programming",
+   "pid": "cie202608L1T2",
+   "url": "https://fslong.iok.la/problem/cie202608L1T2",
+   "title": "第 22 题 幸运兑换",
+   "correct_answer": "见解析",
+   "score": 20,
+   "explanation": "循环读入每个编号，用 x % 3 == 0 判断能否被 3 整除，计数累加。循环结构。",
+   "options": {}
+  }
+ ]
+}

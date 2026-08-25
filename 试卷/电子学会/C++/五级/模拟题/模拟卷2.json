@@ -1,0 +1,330 @@
+{
+  "title": "2026 年 8 月 电子学会 C/C++ 五级 模拟卷2",
+  "description": "2026年8月 电子学会青少年软件编程等级考试 C/C++ 五级 模拟卷2（单选10 + 判断10 + 编程2）",
+  "time_limit": 120,
+  "pass_score": 100,
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会五级模拟·快速幂）快速幂的递归实现中，当指数 `b==0` 时函数应返回？（ ）\n\n- A. 0\n- B. 1\n- C. a\n- D. 报错\n\n**答案：B**\n\n**解析：** `a^0 = 1`，任何数的 0 次方均为 1，这是快速幂递归的终止条件。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 1 题（电子学会五级）快速幂",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "`a^0 = 1`，任何数的 0 次方均为 1，这是快速幂递归的终止条件。",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "a",
+        "D": "报错"
+      }
+    },
+    {
+      "content": "### 第 2 题（电子学会五级模拟·递推）已知递推公式 `f(1)=2`，`f(n)=f(n-1)+n²`，则 `f(3)` 的值是？（ ）\n\n- A. 13\n- B. 11\n- C. 17\n- D. 15\n\n**答案：D**\n\n**解析：** `f(2)=2+2²=6`，`f(3)=6+3²=15`。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 2 题（电子学会五级）递推",
+      "correct_answer": "D",
+      "score": 2,
+      "explanation": "`f(2)=2+2²=6`，`f(3)=6+3²=15`。",
+      "options": {
+        "A": "13",
+        "B": "11",
+        "C": "17",
+        "D": "15"
+      }
+    },
+    {
+      "content": "### 第 3 题（电子学会五级模拟·贪心）硬币面额为 1、5、10，用贪心策略（优先选大面额）找 17 元，共需多少枚硬币？（ ）\n\n- A. 3\n- B. 5\n- C. 4\n- D. 2\n\n**答案：C**\n\n**解析：** 17 = 10 + 5 + 1 + 1，贪心依次取 10、5、1、1 共 4 枚。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 3 题（电子学会五级）贪心",
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": "17 = 10 + 5 + 1 + 1，贪心依次取 10、5、1、1 共 4 枚。",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "4",
+        "D": "2"
+      }
+    },
+    {
+      "content": "### 第 4 题（电子学会五级模拟·前缀和）二维前缀和数组 `pre` 中，`pre[i][j]` 表示子矩阵 `(1,1)` 到 `(i,j)` 的和。则子矩阵 `(x1,y1)` 到 `(x2,y2)` 的和可以表示为？（ ）\n\n- A. `pre[x2][y2] - pre[x1-1][y2] - pre[x2][y1-1] + pre[x1-1][y1-1]`\n- B. `pre[x2][y2] - pre[x1][y1]`\n- C. `pre[x2][y2] - pre[x1-1][y2] - pre[x2][y1-1]`\n- D. `pre[x2][y2] + pre[x1-1][y1-1]`\n\n**答案：A**\n\n**解析：** 用容斥原理：大矩形减掉左侧与上侧两个多余矩形，再加回被重复减去的左上角 `(1,1)` 到 `(x1-1,y1-1)` 部分。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 4 题（电子学会五级）前缀和",
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": "用容斥原理：大矩形减掉左侧与上侧两个多余矩形，再加回被重复减去的左上角 `(1,1)` 到 `(x1-1,y1-1)` 部分。",
+      "options": {
+        "A": "`pre[x2][y2] - pre[x1-1][y2] - pre[x2][y1-1] + pre[x1-1][y1-1]`",
+        "B": "`pre[x2][y2] - pre[x1][y1]`",
+        "C": "`pre[x2][y2] - pre[x1-1][y2] - pre[x2][y1-1]`",
+        "D": "`pre[x2][y2] + pre[x1-1][y1-1]`"
+      }
+    },
+    {
+      "content": "### 第 5 题（电子学会五级模拟·差分）对一个全 0 数组执行差分操作 `d[3]+=2`、`d[8]-=2`（`d[i]=a[i]-a[i-1]`），随后对 d 求前缀和得到原数组 a，则 `a[4]` 到 `a[7]` 的值分别是？（ ）\n\n- A. 全部为 2\n- B. 全部为 0\n- C. 仅 `a[4]=2`，其余为 0\n- D. 无法确定\n\n**答案：A**\n\n**解析：** `a[i] = d[1]+…+d[i]`。从 `i=3` 起 2 生效，直到 `i=8` 被抵消，故 `a[4]`、`a[5]`、`a[6]`、`a[7]` 全为 2。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 5 题（电子学会五级）差分",
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": "`a[i] = d[1]+…+d[i]`。从 `i=3` 起 2 生效，直到 `i=8` 被抵消，故 `a[4]`、`a[5]`、`a[6]`、`a[7]` 全为 2。",
+      "options": {
+        "A": "全部为 2",
+        "B": "全部为 0",
+        "C": "仅 `a[4]=2`，其余为 0",
+        "D": "无法确定"
+      }
+    },
+    {
+      "content": "### 第 6 题（电子学会五级模拟·二分）在升序数组 `{1, 3, 5, 5, 7}` 中，用二分查找\"第一个大于等于 5 的元素\"的下标（从 0 开始）是？（ ）\n\n- A. 3\n- B. 4\n- C. 2\n- D. 5\n\n**答案：C**\n\n**解析：** 数组中第一个 ≥5 的元素是下标 2 处的 5；此类\"第一个满足条件位置\"问题常用二分变体求解。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 6 题（电子学会五级）二分",
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": "数组中第一个 ≥5 的元素是下标 2 处的 5；此类\"第一个满足条件位置\"问题常用二分变体求解。",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "2",
+        "D": "5"
+      }
+    },
+    {
+      "content": "### 第 7 题（电子学会五级模拟·双指针）用双指针在升序数组 `{2, 4, 6, 8, 10}` 中找两数之和为 14，初始左指针指 2、右指针指 10，第一次比较 `2+10=12 < 14`，下一步应？（ ）\n\n- A. 左指针右移一位\n- B. 右指针左移一位\n- C. 两个指针同时移动\n- D. 直接返回\"不存在\"\n\n**答案：A**\n\n**解析：** 和偏小说明需要更大的数，应将左指针右移尝试更大的左值；和偏大才右移右指针。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 7 题（电子学会五级）双指针",
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": "和偏小说明需要更大的数，应将左指针右移尝试更大的左值；和偏大才右移右指针。",
+      "options": {
+        "A": "左指针右移一位",
+        "B": "右指针左移一位",
+        "C": "两个指针同时移动",
+        "D": "直接返回\"不存在\""
+      }
+    },
+    {
+      "content": "### 第 8 题（电子学会五级模拟·STL）以下关于 `deque` 容器的说法，正确的是？（ ）\n\n- A. 只能在一端进行插入和删除\n- B. 支持在两端快速插入和删除\n- C. 元素自动有序\n- D. 不支持随机访问\n\n**答案：B**\n\n**解析：** `deque` 是双端队列，`push_front`/`push_back` 等两端操作均接近 O(1)，且支持下标随机访问。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 8 题（电子学会五级）STL",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "`deque` 是双端队列，`push_front`/`push_back` 等两端操作均接近 O(1)，且支持下标随机访问。",
+      "options": {
+        "A": "只能在一端进行插入和删除",
+        "B": "支持在两端快速插入和删除",
+        "C": "元素自动有序",
+        "D": "不支持随机访问"
+      }
+    },
+    {
+      "content": "### 第 9 题（电子学会五级模拟·STL）以下代码的输出是？（ ）\n\n```cpp\nstring s = \"hello\";\ns += \" world\";\ncout << s.substr(6, 5);\n```\n\n- A. `hello`\n- B. ` world`\n- C. `world`\n- D. `ello`\n\n**答案：C**\n\n**解析：** `s` 拼接后为 `\"hello world\"`，下标 6 起取 5 个字符为 `\"world\"`。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 9 题（电子学会五级）STL",
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": "`s` 拼接后为 `\"hello world\"`，下标 6 起取 5 个字符为 `\"world\"`。",
+      "options": {
+        "A": "`hello`",
+        "B": "` world`",
+        "C": "`world`",
+        "D": "`ello`"
+      }
+    },
+    {
+      "content": "### 第 10 题（电子学会五级模拟·STL）关于 `vector` 的 `size()` 与 `capacity()`，下列说法正确的是？（ ）\n\n- A. `size()` 返回元素个数，`capacity()` 返回已分配的内存容量\n- B. 两者含义完全相同\n- C. `size()` 返回容量，`capacity()` 返回元素个数\n- D. `vector` 不支持动态扩容\n\n**答案：A**\n\n**解析：** `size()` 是当前元素个数，`capacity()` 是已分配空间能容纳的元素数（通常 ≥ size），vector 满时自动扩容。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 10 题（电子学会五级）STL",
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": "`size()` 是当前元素个数，`capacity()` 是已分配空间能容纳的元素数（通常 ≥ size），vector 满时自动扩容。",
+      "options": {
+        "A": "`size()` 返回元素个数，`capacity()` 返回已分配的内存容量",
+        "B": "两者含义完全相同",
+        "C": "`size()` 返回容量，`capacity()` 返回元素个数",
+        "D": "`vector` 不支持动态扩容"
+      }
+    },
+    {
+      "content": "### 第 11 题（电子学会五级模拟·快速幂）快速幂算法在每轮迭代中，都会将底数平方，同时将指数右移一位。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 标准二进制快速幂每轮：判断当前最低位是否为 1，指数右移一位，同时底数平方（`base = base × base`），故描述正确。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 11 题（电子学会五级）快速幂",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "标准二进制快速幂每轮：判断当前最低位是否为 1，指数右移一位，同时底数平方（`base = base × base`），故描述正确。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 12 题（电子学会五级模拟·递推）递推算法相比递归算法，通常能避免大量重复计算，效率更高。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 递推用循环从前往后依次计算，每项只算一次；递归可能重复求解相同子问题（如朴素递归求斐波那契）。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 12 题（电子学会五级）递推",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "递推用循环从前往后依次计算，每项只算一次；递归可能重复求解相同子问题（如朴素递归求斐波那契）。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 13 题（电子学会五级模拟·贪心）硬币面额为 1、5、10 时，用贪心策略（优先选大面额）找 12 元，共需要 4 枚硬币。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 12 = 10 + 1 + 1，共 3 枚，并非 4 枚。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 13 题（电子学会五级）贪心",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "12 = 10 + 1 + 1，共 3 枚，并非 4 枚。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 14 题（电子学会五级模拟·前缀和）构建二维前缀和数组的时间复杂度为 O(n⁴)。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 二维前缀和 `pre[i][j]` 可由相邻格递推一次遍历求出，时间复杂度为 O(n²)。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 14 题（电子学会五级）前缀和",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "二维前缀和 `pre[i][j]` 可由相邻格递推一次遍历求出，时间复杂度为 O(n²)。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 15 题（电子学会五级模拟·差分）对一个全 0 数组执行差分操作 `d[1]+=3`、`d[4]-=3`（d 为差分数组），求前缀和还原后，原数组的第 2、3 个元素均为 3。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** `d[1]=3` 使 `a[1]` 起均为 3，`d[4]-=3` 在 `a[4]` 处抵消，故 `a[2]`、`a[3]` 均为 3。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 15 题（电子学会五级）差分",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "`d[1]=3` 使 `a[1]` 起均为 3，`d[4]-=3` 在 `a[4]` 处抵消，故 `a[2]`、`a[3]` 均为 3。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 16 题（电子学会五级模拟·二分）有序数组中存在重复元素时，二分查找将无法找到任何目标元素。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 重复元素不影响二分查找的正确性，仍能通过比较找到某个目标值。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 16 题（电子学会五级）二分",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "重复元素不影响二分查找的正确性，仍能通过比较找到某个目标值。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 17 题（电子学会五级模拟·双指针）双指针滑动窗口常用于解决连续子数组、连续子串的统计与最值问题。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 滑动窗口通过移动左右指针维护一个连续区间，是求解连续子数组/子串问题的常用方法。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 17 题（电子学会五级）双指针",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "滑动窗口通过移动左右指针维护一个连续区间，是求解连续子数组/子串问题的常用方法。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 18 题（电子学会五级模拟·STL）`vector` 使用 `insert()` 在头部插入元素时，时间复杂度为 O(n)。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 头部插入需将后续所有元素后移一位，最坏为 O(n)；大量头部插入宜用 `deque`。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 18 题（电子学会五级）STL",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "头部插入需将后续所有元素后移一位，最坏为 O(n)；大量头部插入宜用 `deque`。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 19 题（电子学会五级模拟·STL）`multiset` 容器允许存放重复元素，插入后元素自动有序。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** `multiset` 与 `set` 同基于红黑树，区别在于允许重复键，插入后仍自动有序。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 19 题（电子学会五级）STL",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "`multiset` 与 `set` 同基于红黑树，区别在于允许重复键，插入后仍自动有序。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 20 题（电子学会五级模拟·STL）`string` 的 `find()` 方法在找不到子串时，返回值为 `string::npos`。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** `npos` 是 `string` 中定义的最大 size_t 值，表示\"未找到\"，通常用 `if (s.find(t) != string::npos)` 判断。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 20 题（电子学会五级）STL",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "`npos` 是 `string` 中定义的最大 size_t 值，表示\"未找到\"，通常用 `if (s.find(t) != string::npos)` 判断。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 1 题 木材切割 ★★★（30 分）\n\n**【题目描述】**\n\n有 n 段木材，第 i 段长度为 aᵢ。现在要把这些木材锯成 k 段长度相等的小木段（每段长度 x），第 i 段木材可以锯出 ⌊aᵢ / x⌋ 段。长度不足 x 的余料舍弃。\n\n求能锯出的等长小木段的最大长度 x。\n\n**【输入格式】**\n\n第一行，两个整数 n、k。\n第二行，n 个整数，表示 a₁, a₂, …, aₙ。\n\n**【输出格式】**\n\n输出一个整数，表示最大可能的等长小木段长度 x。\n\n**【样例输入 1】**\n\n```\n3 7\n10 15 8\n```\n\n**【样例输出 1】**\n\n```\n4\n```\n\n**【样例输入 2】**\n\n```\n1 3\n10\n```\n\n**【样例输出 2】**\n\n```\n3\n```\n\n**【数据范围】**\n\n1 ≤ n ≤ 10⁵，1 ≤ k ≤ 10⁹，1 ≤ aᵢ ≤ 10⁹，所有输入均为整数。",
+      "question_type": "programming",
+      "pid": "cie202608L5T3",
+      "url": "https://fslong.iok.la/problem/cie202608L5T3",
+      "title": "木材切割",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "二分答案 x（等长小木段长度）：x 越大能锯出的总段数越少，满足单调性。check(x) 统计 Σ⌊aᵢ/x⌋ 是否 ≥ k。若全部锯成 1 段仍不足 k 段，则 ans 为 0。时间复杂度 O(n log max(a))。参考程序：\n\n```cpp\n#include <iostream>\n#include <algorithm>\nusing namespace std;\n\ntypedef long long ll;\nll a[100005];\nint n; ll k;\n\nbool check(ll x) {\n    ll cnt = 0;\n    for (int i = 0; i < n; i++) {\n        cnt += a[i] / x;\n        if (cnt >= k) return true;\n    }\n    return false;\n}\n\nint main() {\n    ios::sync_with_stdio(false); cin.tie(0);\n    cin >> n >> k;\n    ll mx = 0;\n    for (int i = 0; i < n; i++) { cin >> a[i]; mx = max(mx, a[i]); }\n    ll lo = 1, hi = mx, ans = 0;\n    while (lo <= hi) {\n        ll mid = (lo + hi) / 2;\n        if (check(mid)) { ans = mid; lo = mid + 1; }\n        else hi = mid - 1;\n    }\n    cout << ans << \"\\n\";\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 2 题 区间合并 ★★（30 分）\n\n**【题目描述】**\n\n给定 n 个闭区间 `[lᵢ, rᵢ]`。若两个区间有交集或端点相邻（如 `[1,4]` 与 `[4,5]`），则可合并为一个区间。请把所有能合并的区间合并后，输出合并后区间的个数。\n\n**【输入格式】**\n\n第一行，一个整数 n。\n接下来 n 行，每行两个整数 lᵢ、rᵢ，表示一个区间。\n\n**【输出格式】**\n\n输出一个整数，表示合并后区间的个数。\n\n**【样例输入 1】**\n\n```\n4\n1 3\n2 6\n8 10\n15 18\n```\n\n**【样例输出 1】**\n\n```\n3\n```\n\n**【样例输入 2】**\n\n```\n3\n1 4\n4 5\n6 7\n```\n\n**【样例输出 2】**\n\n```\n2\n```\n\n**【数据范围】**\n\n1 ≤ n ≤ 10⁵，1 ≤ lᵢ ≤ rᵢ ≤ 10⁹，所有输入均为整数。",
+      "question_type": "programming",
+      "pid": "cie202608L5T4",
+      "url": "https://fslong.iok.la/problem/cie202608L5T4",
+      "title": "区间合并",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "将区间按左端点 l 升序排序，维护当前合并区间 [L, R]：下一区间 l ≤ R 则并入（R 取 max），否则开新区间并计数。排序 O(n log n)，遍历 O(n)。参考程序：\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\ntypedef long long ll;\n\nint main() {\n    ios::sync_with_stdio(false); cin.tie(0);\n    int n; cin >> n;\n    vector<pair<ll, ll>> seg(n);\n    for (int i = 0; i < n; i++) cin >> seg[i].first >> seg[i].second;\n    sort(seg.begin(), seg.end());\n    int ans = 1;\n    ll L = seg[0].first, R = seg[0].second;\n    for (int i = 1; i < n; i++) {\n        if (seg[i].first <= R) R = max(R, seg[i].second);\n        else { ans++; L = seg[i].first; R = seg[i].second; }\n    }\n    cout << ans << \"\\n\";\n    return 0;\n}\n```"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "title": "【电子学会】 C++等级考试3级 2026年06月 真题",
+  "description": "2026年06月真题 电子学会青少年软件编程等级考试 C/C++ 三级 真题（单选10×2分 + 判断10×2分 = 客观40分；编程2×30分 = 60分）",
+  "time_limit": 40,
+  "pass_score": 100,
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会三级·函数声明）\n以下关于C++函数声明的说法，正确的是？（ ）\n\n- A. 函数声明必须写在函数调用之后\n- B. 函数声明可以只写函数名和返回值类型，不写参数列表\n- C. 函数声明的作用是告诉编译器函数的名称、返回值类型和参数信息\n- D. 函数声明和函数定义作用完全相同\n\n**答案：C**\n\n**解析：** 函数声明作用是告诉编译器函数名、返回值、参数列表，声明必须放在调用前，A错误；\n缺少参数列表的声明，编译器不能识别函数信息，B错误；\n定义才是函数具体实现，二者作用不同，D错误。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 1 题（电子学会三级）函数声明",
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": "函数声明作用是告诉编译器函数名、返回值、参数列表，声明必须放在调用前，A错误；\n缺少参数列表的声明，编译器不能识别函数信息，B错误；\n定义才是函数具体实现，二者作用不同，D错误。",
+      "options": {
+        "A": "函数声明必须写在函数调用之后",
+        "B": "函数声明可以只写函数名和返回值类型，不写参数列表",
+        "C": "函数声明的作用是告诉编译器函数的名称、返回值类型和参数信息",
+        "D": "函数声明和函数定义作用完全相同"
+      }
+    },
+    {
+      "content": "### 第 2 题（电子学会三级·函数调用）\n函数定义为 double calc(double a, double b)，以下调用方式正确的是？（ ）\n\n- A. calc(5);\n- B. calc(3.14, 2.5);\n- C. calc(\"3\", \"5\");\n- D. double calc(2, 3);\n\n**答案：B**\n\n**解析：** 该函数需要两个double类型实参；\nA仅传入一个参数，参数数量不匹配；\nC传入字符串，类型不匹配；\nD调用前不能加返回值类型。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 2 题（电子学会三级）函数调用",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "该函数需要两个double类型实参；\nA仅传入一个参数，参数数量不匹配；\nC传入字符串，类型不匹配；\nD调用前不能加返回值类型。",
+      "options": {
+        "A": "calc(5);",
+        "B": "calc(3.14, 2.5);",
+        "C": "calc(\"3\", \"5\");",
+        "D": "double calc(2, 3);"
+      }
+    },
+    {
+      "content": "### 第 3 题（电子学会三级·参数传递）\n以下函数参数传递方式中，函数内对形参的修改会影响实参的是？（ ）\n\n- A. 值传递\n- B. 引用传递\n- C. 常量传递\n- D. 数值传递\n\n**答案：B**\n\n**解析：** 值传递会复制变量副本，修改形参不影响外部实参；\n引用传递直接绑定原变量内存地址，修改形参会同步改变实参。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 3 题（电子学会三级）参数传递",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "值传递会复制变量副本，修改形参不影响外部实参；\n引用传递直接绑定原变量内存地址，修改形参会同步改变实参。",
+      "options": {
+        "A": "值传递",
+        "B": "引用传递",
+        "C": "常量传递",
+        "D": "数值传递"
+      }
+    },
+    {
+      "content": "### 第 4 题（电子学会三级·引用传递）\n执行以下代码，输出结果是？（ ）\n\n\n\n```cpp\n\n#include <iostream>\n\nusing namespace std;\n\nvoid change(int &x) {\n\n    x = x * 2;\n\n}\n\nint main() {\n\n    int a = 8;\n\n    change(a);\n\n    cout << a;\n\n    return 0;\n\n}\n\n```\n\n- A. 4\n- B. 8\n- C. 16\n- D. 0\n\n**答案：C**\n\n**解析：** 函数参数为 int& 引用传递，函数内修改x会影响实参a，x=8*2=16，原变量a的值也变为16。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 4 题（电子学会三级）引用传递",
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": "函数参数为 int& 引用传递，函数内修改x会影响实参a，x=8*2=16，原变量a的值也变为16。",
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "16",
+        "D": "0"
+      }
+    },
+    {
+      "content": "### 第 5 题（电子学会三级·递归累加）\n以下递归函数用于计算 1~n 的累加和，横线处应填入的代码是？（ ）\n\n\n\n```cpp\n\nint sum(int n) {\n\n    if(n == 1)\n\n        return 1;\n\n    _____________\n\n}\n\n```\n\n- A. return sum(n-1);\n- B. return n + sum(n-1);\n- C. return n * sum(n-1);\n- D. return sum(n) + n;\n\n**答案：B**\n\n**解析：** 递归思路：当前数字 n 加上 1~n-1 的累加和，递归为：n + sum(n - 1)。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 5 题（电子学会三级）递归累加",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "递归思路：当前数字 n 加上 1~n-1 的累加和，递归为：n + sum(n - 1)。",
+      "options": {
+        "A": "return sum(n-1);",
+        "B": "return n + sum(n-1);",
+        "C": "return n * sum(n-1);",
+        "D": "return sum(n) + n;"
+      }
+    },
+    {
+      "content": "### 第 6 题（电子学会三级·字符串拼接strcat）\n以下哪个函数可以将两个 C 风格字符串拼接在一起？（ ）\n\n- A. strcat()\n- B. strcpy()\n- C. strlen()\n- D. strcmp()\n\n**答案：A**\n\n**解析：** strcat用于拼接两个字符数组字符串；\nstrcpy为字符串拷贝；strlen计算字符串长度；strcmp用于比较两个字符串大小。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 6 题（电子学会三级）字符串拼接strcat",
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": "strcat用于拼接两个字符数组字符串；\nstrcpy为字符串拷贝；strlen计算字符串长度；strcmp用于比较两个字符串大小。",
+      "options": {
+        "A": "strcat()",
+        "B": "strcpy()",
+        "C": "strlen()",
+        "D": "strcmp()"
+      }
+    },
+    {
+      "content": "### 第 7 题（电子学会三级·字符串比较strcmp）\n执行 strcmp(\"test\", \"test\")，返回值是？（ ）\n\n- A. 大于0\n- B. 等于0\n- C. 小于0\n- D. 不确定\n\n**答案：B**\n\n**解析：** strcmp 逐字符对比字符串，两个字符串完全一致时返回 0；\n第一个字符串更大返回正数，更小则返回负数。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 7 题（电子学会三级）字符串比较strcmp",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "strcmp 逐字符对比字符串，两个字符串完全一致时返回 0；\n第一个字符串更大返回正数，更小则返回负数。",
+      "options": {
+        "A": "大于0",
+        "B": "等于0",
+        "C": "小于0",
+        "D": "不确定"
+      }
+    },
+    {
+      "content": "### 第 8 题（电子学会三级·枚举法）\n要找出 1000 以内所有的素数，最适合使用的算法思想是？（ ）\n\n- A. 递归法\n- B. 枚举法\n- C. 分治法\n- D. 二分法\n\n**答案：B**\n\n**解析：** 枚举法遍历 2~1000 所有数字，逐个判断是否为素数。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 8 题（电子学会三级）枚举法",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "枚举法遍历 2~1000 所有数字，逐个判断是否为素数。",
+      "options": {
+        "A": "递归法",
+        "B": "枚举法",
+        "C": "分治法",
+        "D": "二分法"
+      }
+    },
+    {
+      "content": "### 第 9 题（电子学会三级·素数统计）\n运行程序，输出结果为？（ ）\n\n\n\n```cpp\n\n#include <iostream>\n\nusing namespace std;\n\nint main() {\n\n    int cnt = 0;\n\n    for(int n = 2; n<=100; n++) {\n\n        bool isPrime = true;\n\n        for(int i = 2; i*i<=n; i++) {\n\n            if(n % i == 0) {\n\n                isPrime = false;\n\n                break;\n\n            }\n\n        }\n\n        if(isPrime) cnt++;\n\n    }\n\n    cout<<cnt;\n\n    return 0;\n\n}\n\n```\n\n- A. 23\n- B. 25\n- C. 27\n- D. 29\n\n**答案：B**\n\n**解析：** 代码遍历 2 到 100，判断每个数字是否为素数并计数，100 以内一共有 25 个素数。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 9 题（电子学会三级）素数统计",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "代码遍历 2 到 100，判断每个数字是否为素数并计数，100 以内一共有 25 个素数。",
+      "options": {
+        "A": "23",
+        "B": "25",
+        "C": "27",
+        "D": "29"
+      }
+    },
+    {
+      "content": "### 第 10 题（电子学会三级·逻辑与运算）\n以下代码用于统计 1~200 中，能同时被 3 和 5 整除的数的个数，横线处应填入的代码是？（ ）\n\n\n\n```cpp\n\n#include <bits/stdc++.h>\n\nusing namespace std;\n\nint main() {\n\n    int cnt = 0;\n\n    for(int i=1; i<=200; i++) {\n\n        if( _____________ )\n\n            cnt++;\n\n    }\n\n    cout << cnt;\n\n    return 0;\n\n}\n\n```\n\n- A. i % 3 == 0 || i % 5 == 0\n- B. i % 3 == 0 && i % 5 == 0\n- C. i / 3 == 0 && i / 5 == 0\n- D. i % 15 != 0\n\n**答案：B**\n\n**解析：** 同时被3、5整除需要两个取模条件同时成立，使用逻辑与&&，即：i % 3 == 0 && i % 5 == 0。",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 10 题（电子学会三级）逻辑与运算",
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": "同时被3、5整除需要两个取模条件同时成立，使用逻辑与&&，即：i % 3 == 0 && i % 5 == 0。",
+      "options": {
+        "A": "i % 3 == 0 || i % 5 == 0",
+        "B": "i % 3 == 0 && i % 5 == 0",
+        "C": "i / 3 == 0 && i / 5 == 0",
+        "D": "i % 15 != 0"
+      }
+    },
+    {
+      "content": "### 第 11 题（电子学会三级·return语句）\n函数的返回值类型为 void 时，函数内可以使用 return; 语句提前结束函数。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 函数为 void 类型，允许单独书写 return;，作用是函数直接返回。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 11 题（电子学会三级）return语句",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "函数为 void 类型，允许单独书写 return;，作用是函数直接返回。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 12 题（电子学会三级·函数重载）\nC++中，两个同名函数只要返回值类型不同，就可以构成函数重载。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 函数重载仅依靠参数列表区分（参数个数、类型、顺序），仅返回值不同无法区分重载，编译器会报错。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 12 题（电子学会三级）函数重载",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "函数重载仅依靠参数列表区分（参数个数、类型、顺序），仅返回值不同无法区分重载，编译器会报错。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 13 题（电子学会三级·值传递）\n值传递方式下，函数会为形参创建新的内存空间，实参和形参互不影响。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 值传递的形参会复制实参的副本，原始实参变量不受任何影响。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 13 题（电子学会三级）值传递",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "值传递的形参会复制实参的副本，原始实参变量不受任何影响。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 14 题（电子学会三级·递归终止条件）\n递归函数可以没有终止条件，编译器会自动处理。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：F**\n\n**解析：** 递归必须设置终止条件，若无终止条件会无限递归调用，造成栈溢出程序崩溃，编译器不会自动处理。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 14 题（电子学会三级）递归终止条件",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "递归必须设置终止条件，若无终止条件会无限递归调用，造成栈溢出程序崩溃，编译器不会自动处理。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 15 题（电子学会三级·递归与非递归）\n有些算法既有递归实现也有非递归实现。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 例如阶乘、斐波那契数列等，既可以使用递归写法，也可以使用递推等实现。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 15 题（电子学会三级）递归与非递归",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "例如阶乘、斐波那契数列等，既可以使用递归写法，也可以使用递推等实现。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 16 题（电子学会三级·strlen长度）\nstrlen() 函数功能是计算字符串长度。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** strlen 是C风格计算字符串长度的函数。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 16 题（电子学会三级）strlen长度",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "strlen 是C风格计算字符串长度的函数。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 17 题（电子学会三级·string拼接）\nC++ 的 string 类可以直接用 + 运算符拼接。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** string重载了加号运算符，支持两个string对象直接相加拼接字符串。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 17 题（电子学会三级）string拼接",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "string重载了加号运算符，支持两个string对象直接相加拼接字符串。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 18 题（电子学会三级·枚举法思想）\n枚举法的核心是不遗漏地遍历所有可能的情况。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 枚举法通过循环遍历问题全部候选值，逐一验证条件，保证不会漏掉符合要求的解。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 18 题（电子学会三级）枚举法思想",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "枚举法通过循环遍历问题全部候选值，逐一验证条件，保证不会漏掉符合要求的解。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 19 题（电子学会三级·枚举效率）\n枚举要注意程序的运行效率，否则很容易在规定的时间内得不到希望的结论。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 当数据规模较大时，循环次数过多会超时，需要优化程序或使用其它算法。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 19 题（电子学会三级）枚举效率",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "当数据规模较大时，循环次数过多会超时，需要优化程序或使用其它算法。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 20 题（电子学会三级·模拟法）\n当问题与游戏规则、物理过程等实际场景有关时，可以考虑使用模拟法解决问题。（ ）\n\n- T. 正确\n- F. 错误\n\n**答案：T**\n\n**解析：** 正确，模拟法按照给定规则一步步复现过程。",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 20 题（电子学会三级）模拟法",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "正确，模拟法按照给定规则一步步复现过程。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 21 题 画作（30 分）\n\n**【题目描述】**\n\n墙上，挂着一幅由 n×n 个彩色方格组成的画作。画作的内容可以用一个 n×n 的字符矩阵来表示。\n现在想要将这幅画顺时针旋转 90 度后重新悬挂，请你帮他计算出旋转后的画作是什么样的。\n\n**【输入格式】**\n\n第一行，一个整数表示n。\n接下来 n 行，每行 n 个字符。\n\n**【输出格式】**\n\n输出 n 行，每行 n 个字符，表示顺时针旋转 90 度后的矩阵。\n\n**【样例输入 1】**\n\n```\n4\nooxx\nxoox\nxxxx\nxxxx\n```\n\n**【样例输出 1】**\n\n```\nxxxo\nxxoo\nxxox\nxxxx\n```\n\n**【样例输入 2】**\n\n```\n2\n12\n34\n```\n\n**【样例输出 2】**\n\n```\n31\n42\n```\n\n**【数据范围】**\n\n1 ≤ n ≤ 1000。",
+      "question_type": "programming",
+      "pid": "CIE202606L3A",
+      "url": "https://fslong.iok.la/problem/CIE202606L3A",
+      "title": "画作",
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "参考代码见解析：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nstring a[1000], b[1000];\nint main() {\n    int n;\n    cin >> n;\n    for(int i=0; i<n; i++) {\n        cin >> a[i];\n        b[i] = a[i];  //保存旋转后的矩阵\n    }\n    //顺时针旋转 90°：a[i][j]=>b[j][n-1-i]\n    for(int i=0; i<n; i++) {\n        for(int j=0; j<n; j++) {\n            b[j][n-1-i] = a[i][j];\n        }\n    }\n    for(int i=0; i<n; i++) {\n        cout << b[i] << endl;\n    }\n    return 0;\n}\n```",
+      "options": {}
+    },
+    {
+      "content": "### 第 22 题 花坛（30 分）\n\n**【题目描述】**\n\n花坛里有 n 朵花，每朵花的编号为 1, 2, …, n。初始时，所有花的高度都是 0。\n现在给定一个数列 h = {h1, h2, …, hn}，你可以重复进行如下的浇水操作，每次操作：任选一段连续区间 [l, r]，区间内每朵花高度加 1。可以无限重复该操作，使得第 k 朵花的最终高度恰好为 hk（1≤k≤n）。\n求完成目标需要的最小操作浇水次数。\n\n**【输入格式】**\n\n第一行一个整数，表示花的数量 n；\n第二行 n 个整数，依次表示每朵花需要达到的目标高度 h1, h2, …, hn。\n\n**【输出格式】**\n\n输出一个整数，表示达成目标所需的最少浇水操作次数。\n\n**【样例输入 1】**\n\n```\n5\n3 1 2 3 1\n```\n\n**【样例输出 1】**\n\n```\n5\n```\n\n**【样例输入 2】**\n\n```\n8\n4 23 75 0 23 96 50 100\n```\n\n**【样例输出 2】**\n\n```\n221\n```\n\n**【数据范围】**\n\n1 ≤ n ≤ 100，0 ≤ hi ≤ 100，所有输入均为整数。",
+      "question_type": "programming",
+      "pid": "CIE202606L3B",
+      "url": "https://fslong.iok.la/problem/CIE202606L3B",
+      "title": "花坛",
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "参考代码见解析：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint h[100];\nint main() {\n    int n;\n    cin >> n;\n    for (int i = 0; i < n; i++) {\n        cin >> h[i];\n    }\n    //若后面高于前面的， 需要增加高度差的次数\n    //若后面低于前面， 不需要增加次数\n    int ans = h[0];\n    for (int i = 1; i < n; i++) {\n        int d = h[i] - h[i - 1];\n        if(d > 0)\n            ans += d;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```",
+      "options": {}
+    }
+  ]
+}
