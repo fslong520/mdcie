@@ -27,7 +27,7 @@ const int SUBTASK_COUNT = sizeof(SUBTASKS) / sizeof(SUBTASKS[0]);
  * 四方定理 - 测试数据生成
  * 输入：一个自然数 n
  * 输出：n 的所有四平方拆分方案（字典序）
- * 范围：0 ≤ n ≤ 50000
+ * 范围：0 ≤ n ≤ 5000
  */
 
 long long rnd_ll(long long lo, long long hi) {
@@ -46,13 +46,13 @@ void test(int case_num, ofstream& fout)
     else if (case_num == 6) fout << "5" << endl;
     else if (case_num == 7) fout << rnd_ll(1, 100) << endl;
     else if (case_num == 8) fout << "144" << endl;    // 12^2
-    else if (case_num == 9) fout << "50000" << endl;  // 极限
-    else if (case_num == 10) fout << "49999" << endl;
-    else if (case_num == 11) fout << "2500" << endl;  // 50^2
+    else if (case_num == 9) fout << "5000" << endl;   // 上限
+    else if (case_num == 10) fout << "4999" << endl;
+    else if (case_num == 11) fout << "2500" << endl;
     else if (case_num >= 12 && case_num <= 20) {
-        fout << rnd_ll(1, 20000) << endl;
+        fout << rnd_ll(1, 5000) << endl;
     }
-    else fout << rnd_ll(20000, 50000) << endl;
+    else fout << rnd_ll(500, 5000) << endl;
 }
 
 #endif
