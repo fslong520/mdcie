@@ -327,7 +327,7 @@
       "options": {}
     },
     {
-      "content": "### 第 23 题 行李箱密码 ★★（30 分）\n\n**【题目描述】**\n\n行李箱密码锁是一个环形数字转盘（0-9 循环）。给定当前密码和目标密码（均为 4 位数字，每位 0-9），每次可以顺时针或逆时针转动一格，求最少转动格数。\n【输入格式】两行，每行一个 4 位数字串，分别表示当前密码和目标密码。\n【输出格式】一个整数，表示最少转动格数。\n【样例输入 1】\n```\n0000\n9999\n```\n【样例输出 1】\n```\n4\n```\n【样例输入 2】\n```\n1234\n1244\n```\n【样例输出 2】\n```\n1\n```\n【数据范围】密码始终为 4 位数字。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    string a, b;\n    cin >> a >> b;\n    int ans = 0;\n    for (int i = 0; i < 4; i++)\n    {\n        int d = a[i] - b[i];\n        if (d < 0) d = -d;\n        ans += d < 10 - d ? d : 10 - d;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 对每位数字，顺时针和逆时针距离取较小值（min(|a-b|, 10-|a-b|)），累加每位结果。",
+      "content": "### 第 23 题 行李箱密码 ★★（30 分）\n\n**【题目描述】**\n\n行李箱密码锁是一个环形数字转盘（0-9 循环）。给定当前密码和目标密码（均为 4 位数字，每位 0-9），每次可以顺时针或逆时针转动一格，求最少转动格数。\n【输入格式】两行，每行一个 4 位数字串，分别表示当前密码和目标密码。\n【输出格式】一个整数，表示最少转动格数。\n【样例输入 1】\n```\n0000\n9999\n```\n【样例输出 1】\n```\n4\n```\n【样例输入 2】\n```\n1234\n1244\n```\n【样例输出 2】\n```\n1\n```\n【数据范围】密码始终为 4 位数字。",
       "question_type": "programming",
       "pid": "cie202608L3T7",
       "url": "https://fslong.iok.la/problem/cie202608L3T7",
@@ -338,7 +338,7 @@
       "explanation": "对每位数字，顺时针和逆时针距离取较小值（min(|a-b|, 10-|a-b|)），累加每位结果。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    string a, b;\n    cin >> a >> b;\n    int ans = 0;\n    for (int i = 0; i < 4; i++)\n    {\n        int d = a[i] - b[i];\n        if (d < 0) d = -d;\n        ans += d < 10 - d ? d : 10 - d;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```"
     },
     {
-      "content": "### 第 24 题 矩阵翻转 ★★★（30 分）\n\n**【题目描述】**\n\n给定一个 n×n 的字符矩阵，请将其左右翻转后输出。\n【输入格式】第一行一个整数 n；接下来 n 行每行 n 个字符。\n【输出格式】n 行，每行翻转后的字符串。\n【样例输入 1】\n```\n3\nabc\ndef\nghi\n```\n【样例输出 1】\n```\ncba\nfed\nihg\n```\n【数据范围】1 ≤ n ≤ 1000。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nint main()\n{\n    int n;\n    string s;\n    cin >> n;\n    for (int i = 0; i < n; i++)\n    {\n        cin >> s;\n        reverse(s.begin(), s.end());\n        cout << s << endl;\n    }\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 逐行读取，每行反转后输出。",
+      "content": "### 第 24 题 矩阵翻转 ★★★（30 分）\n\n**【题目描述】**\n\n给定一个 n×n 的字符矩阵，请将其左右翻转后输出。\n【输入格式】第一行一个整数 n；接下来 n 行每行 n 个字符。\n【输出格式】n 行，每行翻转后的字符串。\n【样例输入 1】\n```\n3\nabc\ndef\nghi\n```\n【样例输出 1】\n```\ncba\nfed\nihg\n```\n【数据范围】1 ≤ n ≤ 1000。",
       "question_type": "programming",
       "pid": "cie202608L3T8",
       "url": "https://fslong.iok.la/problem/cie202608L3T8",
