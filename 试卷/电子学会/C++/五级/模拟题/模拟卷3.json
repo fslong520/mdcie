@@ -325,6 +325,28 @@
       "correct_answer": "参考代码见解析",
       "score": 30,
       "explanation": "用结构体存学号与三科成绩，计算总分。按\"总分降序、语文降序、学号升序\"自定义比较函数传给 sort。时间复杂度 O(n log n)。参考程序：\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nstruct Stu {\n    int id, a, b, c, sum;\n};\n\nint main() {\n    ios::sync_with_stdio(false); cin.tie(0);\n    int n; cin >> n;\n    vector<Stu> v(n);\n    for (int i = 0; i < n; i++) {\n        cin >> v[i].id >> v[i].a >> v[i].b >> v[i].c;\n        v[i].sum = v[i].a + v[i].b + v[i].c;\n    }\n    sort(v.begin(), v.end(), [](const Stu& x, const Stu& y) {\n        if (x.sum != y.sum) return x.sum > y.sum;\n        if (x.a != y.a) return x.a > y.a;\n        return x.id < y.id;\n    });\n    for (auto& s : v) cout << s.id << \" \" << s.sum << \"\\n\";\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 23 题 正方形边长 ★★★（30 分）\n\n**【题目描述】**\n\n给定一个面积为 n 的正方形，求其边长的整数部分（即 ⌊√n⌋）。请用二分法实现。\n【输入格式】一个整数 n。\n【输出格式】一个整数，表示边长的整数部分。\n【样例输入 1】\n```\n8\n```\n【样例输出 1】\n```\n2\n```\n【样例输入 2】\n```\n16\n```\n【样例输出 2】\n```\n4\n```\n【数据范围】0 ≤ n ≤ 10¹⁸。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\nusing namespace std;\n\ntypedef long long ll;\n\nint main()\n{\n    ll n;\n    cin >> n;\n    ll l = 0, r = n, ans = 0;\n    while (l <= r)\n    {\n        ll mid = l + (r - l) / 2;\n        if (mid <= n / mid) { ans = mid; l = mid + 1; }\n        else r = mid - 1;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 二分查找 0~n 中最大的 mid 使得 mid²≤n。注意用 long long 防溢出。",
+      "question_type": "programming",
+      "pid": "cie202608L5T11",
+      "url": "https://fslong.iok.la/problem/cie202608L5T11",
+      "title": "正方形边长",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "二分查找 0~n 中最大的 mid 使得 mid²≤n。注意用 long long 防溢出。\n\n参考程序：\n\n```cpp\n#include <iostream>\nusing namespace std;\n\ntypedef long long ll;\n\nint main()\n{\n    ll n;\n    cin >> n;\n    ll l = 0, r = n, ans = 0;\n    while (l <= r)\n    {\n        ll mid = l + (r - l) / 2;\n        if (mid <= n / mid) { ans = mid; l = mid + 1; }\n        else r = mid - 1;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 24 题 投票统计 ★★★（30 分）\n\n**【题目描述】**\n\n班级选举投票，有 n 张选票，每张选票上写着一个候选人的名字。请统计每位候选人的得票数，按得票数从高到低输出，得票相同时按名字字典序升序输出。\n【输入格式】第一行一个整数 n；接下来 n 行，每行一个字符串表示候选人名字。\n【输出格式】每行\"名字 票数\"，按规则排序。\n【样例输入 1】\n```\n5\nAlice\nBob\nAlice\nCharlie\nBob\n```\n【样例输出 1】\n```\nAlice 2\nBob 2\nCharlie 1\n```\n【数据范围】1 ≤ n ≤ 100000，名字长度 ≤ 20。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <map>\n#include <vector>\n#include <algorithm>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    int n;\n    string s;\n    map<string,int> mp;\n    cin >> n;\n    for (int i = 0; i < n; i++) { cin >> s; mp[s]++; }\n    vector<pair<int,string>> v;\n    for (auto &p : mp) v.push_back({-p.second, p.first});\n    sort(v.begin(), v.end());\n    for (auto &p : v) cout << p.second << \" \" << -p.first << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** map 统计票数，将 map 中的 pair 转入 vector，按票数降序、名字字典序升序排序后输出。",
+      "question_type": "programming",
+      "pid": "cie202608L5T12",
+      "url": "https://fslong.iok.la/problem/cie202608L5T12",
+      "title": "投票统计",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "map 统计票数，将 map 中的 pair 转入 vector，按票数降序、名字字典序升序排序后输出。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <map>\n#include <vector>\n#include <algorithm>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    int n;\n    string s;\n    map<string,int> mp;\n    cin >> n;\n    for (int i = 0; i < n; i++) { cin >> s; mp[s]++; }\n    vector<pair<int,string>> v;\n    for (auto &p : mp) v.push_back({-p.second, p.first});\n    sort(v.begin(), v.end());\n    for (auto &p : v) cout << p.second << \" \" << -p.first << endl;\n    return 0;\n}\n```"
     }
   ]
 }

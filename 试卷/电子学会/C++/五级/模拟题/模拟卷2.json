@@ -325,6 +325,28 @@
       "correct_answer": "参考代码见解析",
       "score": 30,
       "explanation": "将区间按左端点 l 升序排序，维护当前合并区间 [L, R]：下一区间 l ≤ R 则并入（R 取 max），否则开新区间并计数。排序 O(n log n)，遍历 O(n)。参考程序：\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\ntypedef long long ll;\n\nint main() {\n    ios::sync_with_stdio(false); cin.tie(0);\n    int n; cin >> n;\n    vector<pair<ll, ll>> seg(n);\n    for (int i = 0; i < n; i++) cin >> seg[i].first >> seg[i].second;\n    sort(seg.begin(), seg.end());\n    int ans = 1;\n    ll L = seg[0].first, R = seg[0].second;\n    for (int i = 1; i < n; i++) {\n        if (seg[i].first <= R) R = max(R, seg[i].second);\n        else { ans++; L = seg[i].first; R = seg[i].second; }\n    }\n    cout << ans << \"\\n\";\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 23 题 共同好友 ★★（30 分）\n\n**【题目描述】**\n\n小明和小红的好友列表（可能包含重复）分别给出，请统计两人共同的好友（去重后）有多少个。\n【输入格式】第一行两个整数 n、m，表示小明和小红的好友数；第二行 n 个字符串（小明的好友）；第三行 m 个字符串（小红的好友）。\n【输出格式】一个整数，表示共同好友个数。\n【样例输入 1】\n```\n4 3\nAlice Bob Cindy David\nBob Alice Eve\n```\n【样例输出 1】\n```\n2\n```\n【样例输入 2】\n```\n3 3\nTom Jerry Spike\nAmy Ben Cathy\n```\n【样例输出 2】\n```\n0\n```\n【数据范围】1 ≤ n,m ≤ 100000，姓名长度 ≤ 20。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <set>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    int n, m, ans = 0;\n    string s;\n    set<string> st;\n    cin >> n >> m;\n    for (int i = 0; i < n; i++) { cin >> s; st.insert(s); }\n    for (int i = 0; i < m; i++) { cin >> s; if (st.count(s)) ans++; }\n    cout << ans << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 用 set 存小明的好友（去重），遍历小红的好友，若在 set 中出现则计数。",
+      "question_type": "programming",
+      "pid": "cie202608L5T9",
+      "url": "https://fslong.iok.la/problem/cie202608L5T9",
+      "title": "共同好友",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "用 set 存小明的好友（去重），遍历小红的好友，若在 set 中出现则计数。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <set>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    int n, m, ans = 0;\n    string s;\n    set<string> st;\n    cin >> n >> m;\n    for (int i = 0; i < n; i++) { cin >> s; st.insert(s); }\n    for (int i = 0; i < m; i++) { cin >> s; if (st.count(s)) ans++; }\n    cout << ans << endl;\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 24 题 糖果装盒 ★★★（30 分）\n\n**【题目描述】**\n\n有一些糖果，每颗糖果的重量不同。现在要用盒子装糖果，每盒最多装 2 颗，且总重量不能超过盒子限重 W。每次将最轻的糖果和最重的糖果配对，若重量和 ≤ W 则装一盒，否则最重的单独装一盒。求最少需要多少盒子。\n【输入格式】第一行两个整数 n、W；第二行 n 个整数表示糖果重量。\n【输出格式】一个整数，表示最少盒数。\n【样例输入 1】\n```\n5 6\n1 2 3 4 5\n```\n【样例输出 1】\n```\n3\n```\n【样例输入 2】\n```\n4 10\n10 10 10 10\n```\n【样例输出 2】\n```\n4\n```\n【数据范围】1 ≤ n ≤ 100000，1 ≤ wᵢ ≤ W ≤ 10⁹。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <algorithm>\nusing namespace std;\n\ntypedef long long ll;\nll a[100005];\n\nint main()\n{\n    int n, ans = 0;\n    ll W;\n    cin >> n >> W;\n    for (int i = 0; i < n; i++) cin >> a[i];\n    sort(a, a + n);\n    int l = 0, r = n - 1;\n    while (l <= r)\n    {\n        if (l == r) { ans++; break; }\n        if (a[l] + a[r] <= W) { ans++; l++; r--; }\n        else { ans++; r--; }\n    }\n    cout << ans << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 排序后双指针贪心：l=0, r=n-1，若 a[l]+a[r]≤W 则配对（l++ r--），否则重单独装（r--），每步盒数+1。",
+      "question_type": "programming",
+      "pid": "cie202608L5T10",
+      "url": "https://fslong.iok.la/problem/cie202608L5T10",
+      "title": "糖果装盒",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "排序后双指针贪心：l=0, r=n-1，若 a[l]+a[r]≤W 则配对（l++ r--），否则重单独装（r--），每步盒数+1。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <algorithm>\nusing namespace std;\n\ntypedef long long ll;\nll a[100005];\n\nint main()\n{\n    int n, ans = 0;\n    ll W;\n    cin >> n >> W;\n    for (int i = 0; i < n; i++) cin >> a[i];\n    sort(a, a + n);\n    int l = 0, r = n - 1;\n    while (l <= r)\n    {\n        if (l == r) { ans++; break; }\n        if (a[l] + a[r] <= W) { ans++; l++; r--; }\n        else { ans++; r--; }\n    }\n    cout << ans << endl;\n    return 0;\n}\n```"
     }
   ]
 }

@@ -325,6 +325,28 @@
       "correct_answer": "参考代码见解析",
       "score": 30,
       "explanation": "从最高位开始逐位做除法：维护当前余数 r，每读入一位数字后 r = r × 10 + 该位，商的当前位为 r / b，更新余数 r %= b，最后去掉商的前导零。参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a;\n    long long b;\n    cin >> a >> b;\n    string q = \"\";\n    long long r = 0;\n    for (int i = 0; i < a.size(); i++) {\n        r = r * 10 + (a[i] - '0');\n        int d = r / b;\n        if (!(q.empty() && d == 0)) q += char('0' + d);\n        r %= b;\n    }\n    if (q.empty()) q = \"0\";\n    cout << q << endl;\n    cout << r << endl;\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 23 题 单价计算 ★★（30 分）\n\n**【题目描述】**\n\n购买若干件商品，单价为 p（可能很大），数量为 k（1-9 的一位整数），请用高精度计算总价。\n【输入格式】第一行一个字符串 p（表示单价，不含前导 0）；第二行一位整数 k。\n【输出格式】一个整数，表示总价。\n【样例输入 1】\n```\n123\n4\n```\n【样例输出 1】\n```\n492\n```\n【样例输入 2】\n```\n999999999999999999999999\n9\n```\n【样例输出 2】\n```\n8999999999999999999999991\n```\n【数据范围】p 长度 ≤ 1000，1 ≤ k ≤ 9。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nstring mul(string a, int k)\n{\n    string r = \"\";\n    int carry = 0;\n    for (int i = a.size() - 1; i >= 0; i--)\n    {\n        int s = (a[i] - '0') * k + carry;\n        r += char(s % 10 + '0');\n        carry = s / 10;\n    }\n    while (carry) { r += char(carry % 10 + '0'); carry /= 10; }\n    reverse(r.begin(), r.end());\n    return r;\n}\n\nint main()\n{\n    string p;\n    int k;\n    cin >> p >> k;\n    cout << mul(p, k) << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 高精度乘法：从最低位开始逐位乘 k，当前位 = (原位×k+进位) % 10，进位 = (原位×k+进位)/10，最后处理进位。",
+      "question_type": "programming",
+      "pid": "cie202608L4T11",
+      "url": "https://fslong.iok.la/problem/cie202608L4T11",
+      "title": "单价计算",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "高精度乘法：从最低位开始逐位乘 k，当前位 = (原位×k+进位) % 10，进位 = (原位×k+进位)/10，最后处理进位。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nstring mul(string a, int k)\n{\n    string r = \"\";\n    int carry = 0;\n    for (int i = a.size() - 1; i >= 0; i--)\n    {\n        int s = (a[i] - '0') * k + carry;\n        r += char(s % 10 + '0');\n        carry = s / 10;\n    }\n    while (carry) { r += char(carry % 10 + '0'); carry /= 10; }\n    reverse(r.begin(), r.end());\n    return r;\n}\n\nint main()\n{\n    string p;\n    int k;\n    cin >> p >> k;\n    cout << mul(p, k) << endl;\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 24 题 阶乘和 ★★★（30 分）\n\n**【题目描述】**\n\n求 1! + 2! + 3! + … + n! 的值，结果可能很大，请用高精度计算。\n【输入格式】一个整数 n。\n【输出格式】一个整数，表示阶乘之和。\n【样例输入 1】\n```\n5\n```\n【样例输出 1】\n```\n153\n```\n【样例输入 2】\n```\n10\n```\n【样例输出 2】\n```\n4037913\n```\n【数据范围】1 ≤ n ≤ 200。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nvector<int> add(vector<int> a, vector<int> b)\n{\n    vector<int> r;\n    int carry = 0, i = 0;\n    while (i < a.size() || i < b.size() || carry)\n    {\n        int s = carry;\n        if (i < a.size()) s += a[i];\n        if (i < b.size()) s += b[i];\n        r.push_back(s % 10);\n        carry = s / 10;\n        i++;\n    }\n    return r;\n}\n\nvector<int> mul(vector<int> a, int k)\n{\n    vector<int> r;\n    int carry = 0;\n    for (int i = 0; i < a.size(); i++)\n    {\n        int s = a[i] * k + carry;\n        r.push_back(s % 10);\n        carry = s / 10;\n    }\n    while (carry) { r.push_back(carry % 10); carry /= 10; }\n    return r;\n}\n\nint main()\n{\n    int n;\n    cin >> n;\n    vector<int> sum(1, 0), term(1, 1);\n    for (int i = 1; i <= n; i++)\n    {\n        term = mul(term, i);\n        sum = add(sum, term);\n    }\n    for (int i = sum.size() - 1; i >= 0; i--) cout << sum[i];\n    cout << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 高精度乘加：每次计算当前阶乘 term = term × i（高精度乘一位），再累加到 sum（高精度加），循环 i=1..n。",
+      "question_type": "programming",
+      "pid": "cie202608L4T12",
+      "url": "https://fslong.iok.la/problem/cie202608L4T12",
+      "title": "阶乘和",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "高精度乘加：每次计算当前阶乘 term = term × i（高精度乘一位），再累加到 sum（高精度加），循环 i=1..n。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nvector<int> add(vector<int> a, vector<int> b)\n{\n    vector<int> r;\n    int carry = 0, i = 0;\n    while (i < a.size() || i < b.size() || carry)\n    {\n        int s = carry;\n        if (i < a.size()) s += a[i];\n        if (i < b.size()) s += b[i];\n        r.push_back(s % 10);\n        carry = s / 10;\n        i++;\n    }\n    return r;\n}\n\nvector<int> mul(vector<int> a, int k)\n{\n    vector<int> r;\n    int carry = 0;\n    for (int i = 0; i < a.size(); i++)\n    {\n        int s = a[i] * k + carry;\n        r.push_back(s % 10);\n        carry = s / 10;\n    }\n    while (carry) { r.push_back(carry % 10); carry /= 10; }\n    return r;\n}\n\nint main()\n{\n    int n;\n    cin >> n;\n    vector<int> sum(1, 0), term(1, 1);\n    for (int i = 1; i <= n; i++)\n    {\n        term = mul(term, i);\n        sum = add(sum, term);\n    }\n    for (int i = sum.size() - 1; i >= 0; i--) cout << sum[i];\n    cout << endl;\n    return 0;\n}\n```"
     }
   ]
 }

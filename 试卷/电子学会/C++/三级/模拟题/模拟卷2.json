@@ -325,6 +325,28 @@
       "score": 30,
       "explanation": "用变量 cur 记录当前楼层，依次读取每个目标楼层 x，累加 |x - cur| 并更新 cur = x。从 1 楼出发。参考程序：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    cin >> n;\n    int cur = 1, ans = 0;\n    for (int i = 0; i < n; i++) {\n        int x;\n        cin >> x;\n        ans += abs(x - cur);\n        cur = x;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```",
       "options": {}
+    },
+    {
+      "content": "### 第 23 题 快递分装 ★★（30 分）\n\n**【题目描述】**\n\n快递站有 n 个包裹依次排列，重量分别为 w₁, w₂, …, wₙ。有一辆货车，每次最多装重量 W。按顺序装车，若当前包裹放进去后总重超过 W，则换下一辆新车，当前包裹仍装在新车上。问最少需要多少辆车。\n【输入格式】第一行两个整数 n、W；第二行 n 个整数 wᵢ。\n【输出格式】一个整数，表示最少车数。\n【样例输入 1】\n```\n5 5\n2 3 1 4 2\n```\n【样例输出 1】\n```\n3\n```\n【样例输入 2】\n```\n3 10\n3 4 5\n```\n【样例输出 2】\n```\n1\n```\n【数据范围】1 ≤ n ≤ 100000，1 ≤ wᵢ ≤ W ≤ 10⁹。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\nusing namespace std;\n\ntypedef long long ll;\n\nint main()\n{\n    int n, ans = 1;\n    ll W, cur = 0, w;\n    cin >> n >> W;\n    for (int i = 0; i < n; i++)\n    {\n        cin >> w;\n        if (cur + w <= W) cur += w;\n        else { ans++; cur = w; }\n    }\n    cout << ans << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 模拟顺序装车：当前车已经装总重 cur，若 cur+wᵢ ≤ W 则装（cur+=wᵢ），否则新车计数+1 且 cur=wᵢ。初始车数=1。",
+      "question_type": "programming",
+      "pid": "cie202608L3T9",
+      "url": "https://fslong.iok.la/problem/cie202608L3T9",
+      "title": "快递分装",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "模拟顺序装车：当前车已经装总重 cur，若 cur+wᵢ ≤ W 则装（cur+=wᵢ），否则新车计数+1 且 cur=wᵢ。初始车数=1。\n\n参考程序：\n\n```cpp\n#include <iostream>\nusing namespace std;\n\ntypedef long long ll;\n\nint main()\n{\n    int n, ans = 1;\n    ll W, cur = 0, w;\n    cin >> n >> W;\n    for (int i = 0; i < n; i++)\n    {\n        cin >> w;\n        if (cur + w <= W) cur += w;\n        else { ans++; cur = w; }\n    }\n    cout << ans << endl;\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 24 题 密文传送 ★★（30 分）\n\n**【题目描述】**\n\n小明收到一条密文（仅包含英文字母），已知加密规则：每个字母向后移动 k 位（循环，z 后回到 a，Z 后回到 A），非字母字符不变。请编写程序解密。\n【输入格式】第一行一个字符串 s；第二行一个整数 k。\n【输出格式】解密后的字符串。\n【样例输入 1】\n```\nxyz\n3\n```\n【样例输出 1】\n```\nabc\n```\n【样例输入 2】\n```\nHello, World!\n5\n```\n【样例输出 2】\n```\nMjqqt, Btwqi!\n```\n【数据范围】字符串长度 ≤ 1000，1 ≤ k ≤ 1000。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    string s;\n    int k;\n    getline(cin, s);\n    cin >> k;\n    for (int i = 0; i < s.size(); i++)\n    {\n        char c = s[i];\n        if (c >= 'A' && c <= 'Z')\n            c = (c - 'A' + k) % 26 + 'A';\n        else if (c >= 'a' && c <= 'z')\n            c = (c - 'a' + k) % 26 + 'a';\n        cout << c;\n    }\n    cout << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 遍历字符串，对大写字母 c = (c - 'A' + k) % 26 + 'A'，小写字母同理，非字母不变。",
+      "question_type": "programming",
+      "pid": "cie202608L3T10",
+      "url": "https://fslong.iok.la/problem/cie202608L3T10",
+      "title": "密文传送",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "遍历字符串，对大写字母 c = (c - 'A' + k) % 26 + 'A'，小写字母同理，非字母不变。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    string s;\n    int k;\n    getline(cin, s);\n    cin >> k;\n    for (int i = 0; i < s.size(); i++)\n    {\n        char c = s[i];\n        if (c >= 'A' && c <= 'Z')\n            c = (c - 'A' + k) % 26 + 'A';\n        else if (c >= 'a' && c <= 'z')\n            c = (c - 'a' + k) % 26 + 'a';\n        cout << c;\n    }\n    cout << endl;\n    return 0;\n}\n```"
     }
   ]
 }

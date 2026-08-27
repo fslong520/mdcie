@@ -325,6 +325,28 @@
       "correct_answer": "参考代码见解析",
       "score": 30,
       "explanation": "用字符串读入两个大整数，逆序存入数组（低位在前），逐位相乘累加到结果数组，再统一处理进位，最后逆序输出并去掉前导0。参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\n#include <vector>\nusing namespace std;\n\nint main() {\n    string a, b;\n    cin >> a >> b;\n    vector<int> A, B, res(a.size() + b.size() + 1, 0);\n    // 低位在前\n    for (int i = a.size() - 1; i >= 0; i--) A.push_back(a[i] - '0');\n    for (int i = b.size() - 1; i >= 0; i--) B.push_back(b[i] - '0');\n    // 逐位相乘\n    for (int i = 0; i < A.size(); i++) {\n        for (int j = 0; j < B.size(); j++) {\n            res[i + j] += A[i] * B[j];\n        }\n    }\n    // 处理进位\n    for (int i = 0; i < res.size(); i++) {\n        if (res[i] >= 10) {\n            res[i + 1] += res[i] / 10;\n            res[i] %= 10;\n        }\n    }\n    // 去掉前导0\n    int k = res.size() - 1;\n    while (k > 0 && res[k] == 0) k--;\n    for (int i = k; i >= 0; i--) cout << res[i];\n    cout << endl;\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 23 题 解码 ★★（30 分）\n\n**【题目描述】**\n\n情报员收到一条用 k 进制数字表示的密文（用数字 0-9 和字母 A-F 表示），请将其转换为十进制数。\n【输入格式】第一行一个整数 k（2≤k≤16）；第二行一个字符串 s，表示 k 进制数。\n【输出格式】一个整数，表示十进制结果。\n【样例输入 1】\n```\n16\nFF\n```\n【样例输出 1】\n```\n255\n```\n【样例输入 2】\n```\n2\n1010\n```\n【样例输出 2】\n```\n10\n```\n【数据范围】2≤k≤16，s 长度 ≤ 30，结果 ≤ 10¹⁸。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    int k;\n    string s;\n    cin >> k >> s;\n    long long ans = 0;\n    for (int i = 0; i < s.size(); i++)\n    {\n        int d;\n        if (s[i] >= '0' && s[i] <= '9') d = s[i] - '0';\n        else d = s[i] - 'A' + 10;\n        ans = ans * k + d;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 按位展开：从左到右 ans = ans × k + 当前位数字（A-F 转 10-15）。",
+      "question_type": "programming",
+      "pid": "cie202608L4T7",
+      "url": "https://fslong.iok.la/problem/cie202608L4T7",
+      "title": "解码",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "按位展开：从左到右 ans = ans × k + 当前位数字（A-F 转 10-15）。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    int k;\n    string s;\n    cin >> k >> s;\n    long long ans = 0;\n    for (int i = 0; i < s.size(); i++)\n    {\n        int d;\n        if (s[i] >= '0' && s[i] <= '9') d = s[i] - '0';\n        else d = s[i] - 'A' + 10;\n        ans = ans * k + d;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 24 题 细胞分裂 ★★★（30 分）\n\n**【题目描述】**\n\n一种细胞每轮分裂一次（1 个变 2 个），初始有 1 个。求 n 轮后有多少个细胞，结果可能很大，请用高精度输出。\n【输入格式】一个整数 n。\n【输出格式】一个整数，表示 2ⁿ 的结果。\n【样例输入 1】\n```\n10\n```\n【样例输出 1】\n```\n1024\n```\n【样例输入 2】\n```\n100\n```\n【样例输出 2】\n```\n1267650600228229401496703205376\n```\n【数据范围】0 ≤ n ≤ 1000。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main()\n{\n    int n;\n    cin >> n;\n    vector<int> a(1, 1);\n    for (int t = 0; t < n; t++)\n    {\n        int carry = 0;\n        for (int i = 0; i < a.size(); i++)\n        {\n            a[i] = a[i] * 2 + carry;\n            carry = a[i] / 10;\n            a[i] %= 10;\n        }\n        if (carry) a.push_back(carry);\n    }\n    for (int i = a.size() - 1; i >= 0; i--) cout << a[i];\n    cout << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 高精度乘以 2：用数组存各位（低位在前），每轮逐位乘 2 并处理进位，循环 n 次。注意 n=0 时输出 1。",
+      "question_type": "programming",
+      "pid": "cie202608L4T8",
+      "url": "https://fslong.iok.la/problem/cie202608L4T8",
+      "title": "细胞分裂",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "高精度乘以 2：用数组存各位（低位在前），每轮逐位乘 2 并处理进位，循环 n 次。注意 n=0 时输出 1。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main()\n{\n    int n;\n    cin >> n;\n    vector<int> a(1, 1);\n    for (int t = 0; t < n; t++)\n    {\n        int carry = 0;\n        for (int i = 0; i < a.size(); i++)\n        {\n            a[i] = a[i] * 2 + carry;\n            carry = a[i] / 10;\n            a[i] %= 10;\n        }\n        if (carry) a.push_back(carry);\n    }\n    for (int i = a.size() - 1; i >= 0; i--) cout << a[i];\n    cout << endl;\n    return 0;\n}\n```"
     }
   ]
 }

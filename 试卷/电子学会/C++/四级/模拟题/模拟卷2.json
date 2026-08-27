@@ -325,6 +325,28 @@
       "correct_answer": "参考代码见解析",
       "score": 30,
       "explanation": "先比较 a、b 大小：位数多者大，位数相同逐位比较。若 a ≥ b 直接算 a-b，否则输出负号并算 b-a。减法从低位对齐，当前位不够减则向高位借 1（加 10），最后去掉前导零。参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\n// a >= b 返回 true（a、b 均无前导0）\nbool cmp(string a, string b) {\n    if (a.size() != b.size()) return a.size() > b.size();\n    return a >= b;\n}\n\n// 计算 a - b，要求 a >= b\nstring sub(string a, string b) {\n    string res = \"\";\n    int i = a.size() - 1, j = b.size() - 1;\n    int borrow = 0;\n    while (i >= 0) {\n        int da = a[i] - '0' - borrow;\n        int db = (j >= 0) ? b[j] - '0' : 0;\n        if (da < db) {\n            da += 10;\n            borrow = 1;\n        } else {\n            borrow = 0;\n        }\n        res += (da - db) + '0';\n        i--;\n        j--;\n    }\n    reverse(res.begin(), res.end());\n    int k = 0;\n    while (k < res.size() - 1 && res[k] == '0') k++;\n    return res.substr(k);\n}\n\nint main() {\n    string a, b;\n    cin >> a >> b;\n    if (cmp(a, b)) {\n        cout << sub(a, b) << endl;\n    } else {\n        cout << \"-\" << sub(b, a) << endl;\n    }\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 23 题 数字信号 ★★（30 分）\n\n**【题目描述】**\n\n一串数字信号用二进制表示，给定 n 个非负整数，请判断每个数的二进制表示中第 k 位（从右往左，最低位为第 0 位）是否为 1。\n【输入格式】第一行两个整数 n、k；第二行 n 个整数。\n【输出格式】n 行，每行 YES 或 NO。\n【样例输入 1】\n```\n3 2\n5 7 8\n```\n【样例输出 1】\n```\nYES\nYES\nNO\n```\n【样例输入 2】\n```\n2 0\n1 2\n```\n【样例输出 2】\n```\nYES\nNO\n```\n【数据范围】1 ≤ n ≤ 100000，0 ≤ 整数 ≤ 10⁹，0 ≤ k ≤ 30。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int n, k, x;\n    cin >> n >> k;\n    while (n--)\n    {\n        cin >> x;\n        cout << ((x >> k) & 1 ? \"YES\" : \"NO\") << endl;\n    }\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 用位运算 x>>k & 1 判断第 k 位是否为 1。",
+      "question_type": "programming",
+      "pid": "cie202608L4T9",
+      "url": "https://fslong.iok.la/problem/cie202608L4T9",
+      "title": "数字信号",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "用位运算 x>>k & 1 判断第 k 位是否为 1。\n\n参考程序：\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int n, k, x;\n    cin >> n >> k;\n    while (n--)\n    {\n        cin >> x;\n        cout << ((x >> k) & 1 ? \"YES\" : \"NO\") << endl;\n    }\n    return 0;\n}\n```"
+    },
+    {
+      "content": "### 第 24 题 二进制编码 ★★（30 分）\n\n**【题目描述】**\n\n给定一个十进制非负整数 n，将其转换为二进制数并输出。\n【输入格式】一个整数 n。\n【输出格式】一个字符串，表示 n 的二进制表示。\n【样例输入 1】\n```\n10\n```\n【样例输出 1】\n```\n1010\n```\n【样例输入 2】\n```\n0\n```\n【样例输出 2】\n```\n0\n```\n【数据范围】0 ≤ n ≤ 10⁹。\n\n**【参考程序】**\n\n```cpp\n#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main()\n{\n    int n;\n    cin >> n;\n    if (n == 0) { cout << 0 << endl; return 0; }\n    vector<int> a;\n    while (n > 0) { a.push_back(n % 2); n /= 2; }\n    for (int i = a.size() - 1; i >= 0; i--) cout << a[i];\n    cout << endl;\n    return 0;\n}\n```\n\n**答案：（见参考程序）**\n\n**解析：** 除 2 取余倒序：n 不断除以 2，余数依次存入数组，最后倒序输出。n=0 时直接输出 0。",
+      "question_type": "programming",
+      "pid": "cie202608L4T10",
+      "url": "https://fslong.iok.la/problem/cie202608L4T10",
+      "title": "二进制编码",
+      "options": {},
+      "correct_answer": "参考代码见解析",
+      "score": 30,
+      "explanation": "除 2 取余倒序：n 不断除以 2，余数依次存入数组，最后倒序输出。n=0 时直接输出 0。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main()\n{\n    int n;\n    cin >> n;\n    if (n == 0) { cout << 0 << endl; return 0; }\n    vector<int> a;\n    while (n > 0) { a.push_back(n % 2); n /= 2; }\n    for (int i = a.size() - 1; i >= 0; i--) cout << a[i];\n    cout << endl;\n    return 0;\n}\n```"
     }
   ]
 }

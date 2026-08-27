@@ -1,0 +1,17 @@
+In file included from mkdata.cpp:2:
+mkin.h: In function ‘void test(int, std::ofstream&)’:
+mkin.h:114:23: warning: ‘void std::random_shuffle(_RAIter, _RAIter) [with _RAIter = __gnu_cxx::__normal_iterator<int*, vector<int> >]’ is deprecated: use 'std::shuffle' instead [-Wdeprecated-declarations]
+  114 |         random_shuffle(ids.begin(), ids.end());
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/15/algorithm:63,
+                 from /usr/include/x86_64-linux-gnu/c++/15/bits/stdc++.h:53,
+                 from mkdata.cpp:1:
+/usr/include/c++/15/bits/stl_algo.h:4537:5: note: declared here
+ 4537 |     random_shuffle(_RandomAccessIterator __first, _RandomAccessIterator __last)
+      |     ^~~~~~~~~~~~~~
+mkin.h:125:23: warning: ‘void std::random_shuffle(_RAIter, _RAIter) [with _RAIter = __gnu_cxx::__normal_iterator<int*, vector<int> >]’ is deprecated: use 'std::shuffle' instead [-Wdeprecated-declarations]
+  125 |         random_shuffle(ids.begin(), ids.end());
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15/bits/stl_algo.h:4537:5: note: declared here
+ 4537 |     random_shuffle(_RandomAccessIterator __first, _RandomAccessIterator __last)
+      |     ^~~~~~~~~~~~~~
