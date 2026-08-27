@@ -19,6 +19,6 @@ void test(int c, ofstream& o){srand(20260826+c*1000003);
  if(c==1)o<<"5 4\n1 3 5 7 9"<<endl; else if(c==2)o<<"4 6\n1 4 7 10"<<endl;
  else if(c==3)o<<"1 5\n5"<<endl; else if(c==4)o<<"5 0\n1 3 5 7 9"<<endl;
  else if(c==5)o<<"5 10\n1 3 5 7 9"<<endl; else if(c==6)o<<"3 5\n5 5 5"<<endl;
- else if(c>=7&&c<=15){int n=1000;o<<n<<" "<<rnd(1,1000000000)<<endl;for(int i=0;i<n;i++){if(i)o<<" ";o<<rnd(1,1000000000);}o<<endl;}
- else {int n=100000;o<<n<<" "<<rnd(1,1000000000)<<endl;for(int i=0;i<n;i++){if(i)o<<" ";o<<rnd(1,1000000000);}o<<endl;}}
+ else if(c>=7&&c<=15){int n=1000;vector<int>v(n);o<<n<<" "<<rnd(1,1000000000)<<endl;for(int i=0;i<n;i++)v[i]=rnd(1,1000000000);sort(v.begin(),v.end());for(int i=0;i<n;i++){if(i)o<<" ";o<<v[i];}o<<endl;}
+ else {int n=100000;vector<int>v(n);o<<n<<" "<<rnd(1,1000000000)<<endl;for(int i=0;i<n;i++)v[i]=rnd(1,1000000000);sort(v.begin(),v.end());for(int i=0;i<n;i++){if(i)o<<" ";o<<v[i];}o<<endl;}}
 #endif

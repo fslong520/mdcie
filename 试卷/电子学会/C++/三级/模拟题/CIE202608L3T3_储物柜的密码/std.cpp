@@ -7,9 +7,10 @@ int main() {
     int cnt[26] = {1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,4,1,2,3,1,2,3,4};
     string s;
     cin >> s;
-    for (char c : s) {
-        int idx = c - 'a';
-        for (int i = 0; i < cnt[idx]; i++) cout << key[idx];
+    for (int i = 0; i < (int)s.size(); i++) {
+        if (i) cout << " ";
+        int idx = s[i] - 'a';
+        for (int j = 0; j < cnt[idx]; j++) cout << key[idx];
     }
     cout << endl;
     return 0;

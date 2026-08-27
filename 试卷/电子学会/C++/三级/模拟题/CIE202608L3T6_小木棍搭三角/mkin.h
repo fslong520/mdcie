@@ -16,10 +16,10 @@ long long rnd_ll(long long lo, long long hi) {
 }
 #define rnd rnd_ll
 void test(int c, ofstream& o){srand(20260826+c*1000003);
- if(c==1)o<<"5"<<endl; else if(c==2)o<<"10"<<endl;
- else if(c==3)o<<"1"<<endl; else if(c==4)o<<"3"<<endl;
- else if(c==5)o<<"100"<<endl; else if(c==6)o<<"200"<<endl;
- else if(c==7)o<<"500"<<endl; else if(c==8)o<<"1000"<<endl;
- else if(c>=9&&c<=20)o<<rnd(1,1000)<<endl;
- else o<<rnd(1,1000)<<endl;}
+ if(c==1)o<<"3"<<endl; else if(c==2)o<<"5"<<endl;
+ else if(c==3)o<<"4"<<endl; else if(c==4)o<<"6"<<endl;
+ else if(c==5)o<<"10"<<endl; else if(c==6)o<<"20"<<endl;
+ else if(c==7)o<<"50"<<endl; else if(c==8)o<<"100"<<endl;
+ else if(c>=9&&c<=20)o<<rnd(3,100)<<endl;
+ else o<<rnd(3,100)<<endl;}
 #endif

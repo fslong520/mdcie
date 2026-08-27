@@ -17,7 +17,7 @@ long long rnd_ll(long long lo, long long hi) {
 #define rnd rnd_ll
 string rndword(){int len=rnd(1,20);string s;for(int i=0;i<len;i++)s+=char('a'+rnd(0,25));return s;}
 void test(int c, ofstream& o){srand(20260826+c*1000003);
- if(c==1)o<<"hello"<<endl; else if(c==2)o<<"world"<<endl;
+ if(c==1)o<<"apple"<<endl; else if(c==2)o<<"bike"<<endl;
  else if(c==3)o<<"a"<<endl; else if(c==4)o<<"zzz"<<endl;
  else if(c==5)o<<"abcdefghijklmnopqrstuvwxyz"<<endl; else if(c==6)o<<"aaaa"<<endl;
  else if(c>=7&&c<=20)o<<rndword()<<endl;
