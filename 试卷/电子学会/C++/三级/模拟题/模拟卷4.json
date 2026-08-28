@@ -1,0 +1,267 @@
+{
+  "title": "2026年8月 电子学会青少年软件编程等级考试 C/C++ 三级 模拟卷4",
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会三级模拟·模拟·数位拆分）\n\n执行以下代码，输出结果是？\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int n = 12345, s = 0;\n    while (n) { s += n % 10; n /= 10; }\n    cout << s;\n    return 0;\n}\n```\n\n- A. 10\n- B. 12\n- C. 15\n- D. 18",
+      "question_type": "single",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "15",
+        "D": "18"
+      },
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 2 题（电子学会三级模拟·嵌套函数调用）\n\n函数定义为 int f(int x) { return x * 2 + 1; }，以下代码输出结果是？\n\n```cpp\ncout << f(f(3));\n```\n\n- A. 7\n- B. 13\n- C. 15\n- D. 14",
+      "question_type": "single",
+      "options": {
+        "A": "7",
+        "B": "13",
+        "C": "15",
+        "D": "14"
+      },
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 3 题（电子学会三级模拟·变量作用域与遮蔽）\n\n执行以下代码，输出结果是？\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int x = 10;\n    {\n        int x = 20;\n        {\n            int x = 30;\n            cout << x;\n        }\n        cout << x;\n    }\n    return 0;\n}\n```\n\n- A. 3020\n- B. 2010\n- C. 3010\n- D. 2020",
+      "question_type": "single",
+      "options": {
+        "A": "3020",
+        "B": "2010",
+        "C": "3010",
+        "D": "2020"
+      },
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 4 题（电子学会三级模拟·递归求值）\n\n执行以下递归函数，f(5) 的返回值是？\n\n```cpp\nint f(int n) {\n    if (n <= 1) return 1;\n    return f(n - 1) + 2 * f(n - 2);\n}\n```\n\n- A. 11\n- B. 21\n- C. 19\n- D. 15",
+      "question_type": "single",
+      "options": {
+        "A": "11",
+        "B": "21",
+        "C": "19",
+        "D": "15"
+      },
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 5 题（电子学会三级模拟·strcpy指针偏移）\n\n执行以下代码，输出结果是？\n\n```cpp\n#include <iostream>\n#include <cstring>\nusing namespace std;\nint main() {\n    char s[20] = \"abcd\";\n    strcpy(s + 1, \"XY\");\n    cout << s;\n    return 0;\n}\n```\n\n- A. abcd\n- B. aXYd\n- C. aXY\n- D. XYcd",
+      "question_type": "single",
+      "options": {
+        "A": "abcd",
+        "B": "aXYd",
+        "C": "aXY",
+        "D": "XYcd"
+      },
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 6 题（电子学会三级模拟·数学库函数复合求值）\n\n执行以下代码，输出结果是？\n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\nint main() {\n    cout << (int)pow(2, 3) + (int)sqrt(50) + (int)floor(4.7);\n    return 0;\n}\n```\n\n- A. 18\n- B. 20\n- C. 19\n- D. 21",
+      "question_type": "single",
+      "options": {
+        "A": "18",
+        "B": "20",
+        "C": "19",
+        "D": "21"
+      },
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 7 题（电子学会三级模拟·枚举法统计）\n\n用枚举法统计 1~1000 之间所有能同时被 3 和 5 整除的数的个数，结果是？\n\n- A. 66\n- B. 33\n- C. 67\n- D. 100",
+      "question_type": "single",
+      "options": {
+        "A": "66",
+        "B": "33",
+        "C": "67",
+        "D": "100"
+      },
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 8 题（电子学会三级模拟·模拟while循环）\n\n执行以下代码，输出结果是？\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int x = 5, cnt = 0;\n    while (x <= 30) {\n        x += 3;\n        cnt++;\n    }\n    cout << cnt;\n    return 0;\n}\n```\n\n- A. 8\n- B. 10\n- C. 9\n- D. 7",
+      "question_type": "single",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "9",
+        "D": "7"
+      },
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 9 题（电子学会三级模拟·静态局部变量）\n\n执行以下代码，输出结果是？\n\n```cpp\n#include <iostream>\nusing namespace std;\nint f() {\n    static int c = 0;\n    return ++c;\n}\nint main() {\n    cout << f();\n    cout << f();\n    cout << f();\n    return 0;\n}\n```\n\n- A. 111\n- B. 123\n- C. 000\n- D. 321",
+      "question_type": "single",
+      "options": {
+        "A": "111",
+        "B": "123",
+        "C": "000",
+        "D": "321"
+      },
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 10 题（电子学会三级模拟·sizeof与strlen区别）\n\n执行以下代码，输出结果是？\n\n```cpp\n#include <iostream>\n#include <cstring>\nusing namespace std;\nint main() {\n    char s[] = \"abc\u0000def\";\n    cout << sizeof(s) << \" \" << strlen(s);\n    return 0;\n}\n```\n\n- A. 3 3\n- B. 8 7\n- C. 7 3\n- D. 8 3",
+      "question_type": "single",
+      "options": {
+        "A": "3 3",
+        "B": "8 7",
+        "C": "7 3",
+        "D": "8 3"
+      },
+      "correct_answer": "D",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 11 题（电子学会三级模拟·递归求值判断）\n\n执行以下递归函数，f(4) 的返回值为 12。\n\n```cpp\nint f(int n) {\n    if (n <= 1) return 1;\n    return f(n - 1) * 2;\n}\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 12 题（电子学会三级模拟·值传递效果）\n\n执行以下代码后，变量 a 的值为 100。\n\n```cpp\nvoid f(int x) { x = 100; }\nint main() {\n    int a = 5;\n    f(a);\n    return 0;\n}\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 13 题（电子学会三级模拟·strcpy后求长度）\n\n执行以下代码，strlen(s) 的返回值为 2。\n\n```cpp\nchar s[10] = \"12345\";\nchar t[3] = \"AB\";\nstrcpy(s, t);\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 14 题（电子学会三级模拟·枚举法统计）\n\n用枚举法统计 100~200（含两端）之间所有能被 4 整除的数的个数，结果为 26。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 15 题（电子学会三级模拟·模拟数字反转）\n\n执行以下代码，输出为 4321。\n\n```cpp\nint n = 1234, r = 0;\nwhile (n) {\n    r = r * 10 + n % 10;\n    n /= 10;\n}\ncout << r;\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 16 题（电子学会三级模拟·数学库函数复合）\n\n执行以下代码，输出为 10。\n\n```cpp\ncout << abs(-7) + (int)floor(3.9);\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 17 题（电子学会三级模拟·函数重载编译）\n\n以下代码可以编译通过，且 cout 输出为 7。\n\n```cpp\nint j17(int x) { return x; }\nint j17(int x, int y) { return x + y; }\nint main() {\n    cout << j17(2) + j17(2, 3);\n    return 0;\n}\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 18 题（电子学会三级模拟·引用传递交换）\n\n执行以下代码，输出为 9 3。\n\n```cpp\nvoid swap(int &a, int &b) {\n    int t = a; a = b; b = t;\n}\nint main() {\n    int x = 3, y = 9;\n    swap(x, y);\n    cout << x << \" \" << y;\n    return 0;\n}\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 19 题（电子学会三级模拟·数组越界访问）\n\n执行以下代码，a[3] 一定输出 0。\n\n```cpp\nint a[3] = {1, 2, 3};\ncout << a[3];\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 20 题（电子学会三级模拟·ceil负值取整）\n\n执行以下代码，输出为 -3。\n\n```cpp\ncout << ceil(-2.5);\n```",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 21 题 快递分装 ★★（30 分）\n\n**【题目描述】**\n\n快递站有 n 个包裹依次排列，重量分别为 w₁, w₂, …, wₙ。有一辆货车，每次最多装重量 W。按顺序装车，若当前包裹放进去后总重超过 W，则换下一辆新车，当前包裹仍装在新车上。问最少需要多少辆车。\n【输入格式】第一行两个整数 n、W；第二行 n 个整数 wᵢ。\n【输出格式】一个整数，表示最少车数。\n【样例输入 1】\n```\n5 5\n2 3 1 4 2\n```\n【样例输出 1】\n```\n3\n```\n【样例输入 2】\n```\n3 10\n3 4 5\n```\n【样例输出 2】\n```\n2\n```\n【数据范围】1 ≤ n ≤ 100000，1 ≤ wᵢ ≤ W ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "cie202608L3T9",
+      "url": "https://fslong.iok.la/problem/cie202608L3T9",
+      "title": "快递分装",
+      "score": 30,
+      "options": [],
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 22 题 出差天数 ★★★（30 分）\n\n**【题目描述】**\n\n输入一个日期（年-月-日）和一个正整数 d，计算 d 天后的日期。注意闰年（能被 400 整除，或能被 4 整除但不能被 100 整除）。\n【输入格式】第一行三个整数 y、m、d，表示当前日期；第二行一个整数 k。\n【输出格式】一行三个整数，表示 k 天后的年、月、日，用空格分隔。\n【样例输入 1】\n```\n2026 2 27\n3\n```\n【样例输出 1】\n```\n2026 3 2\n```\n【样例输入 2】\n```\n2025 12 30\n5\n```\n【样例输出 2】\n```\n2026 1 4\n```\n【数据范围】1 ≤ y ≤ 3000，1 ≤ m ≤ 12，1 ≤ d ≤ 31，1 ≤ k ≤ 10000。",
+      "question_type": "program",
+      "pid": "cie202608L3T12",
+      "url": "https://fslong.iok.la/problem/cie202608L3T12",
+      "title": "出差天数",
+      "score": 30,
+      "options": [],
+      "correct_answer": "",
+      "explanation": ""
+    }
+  ]
+}

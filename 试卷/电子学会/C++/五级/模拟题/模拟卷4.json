@@ -1,0 +1,267 @@
+{
+  "title": "2026年8月 电子学会青少年软件编程等级考试 C/C++ 五级 模拟卷4",
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会五级模拟·快速幂）\n用快速幂计算 `7^6 mod 5` 的结果是？（提示：先求 7 mod 5 = 2，再算 `2^6 mod 5`）\n\n- A. 1\n- B. 2\n- C. 3\n- D. 4",
+      "question_type": "single",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "D",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 2 题（电子学会五级模拟·递推）\n已知 `f(1)=1`，`f(n) = n × f(n-1)`（n≥2），则 `f(5)` 的值是？\n\n- A. 15\n- B. 24\n- C. 60\n- D. 120",
+      "question_type": "single",
+      "options": {
+        "A": "15",
+        "B": "24",
+        "C": "60",
+        "D": "120"
+      },
+      "correct_answer": "D",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 3 题（电子学会五级模拟·贪心）\n有物品重量与价值：物品A(重量2,价值3)、物品B(重量3,价值4)、物品C(重量5,价值8)，背包容量 8。按\"单位重量价值从高到低\"贪心，单位重量价值排序为？（3/2=1.5，4/3≈1.33，8/5=1.6）\n\n- A. A、B、C\n- B. B、A、C\n- C. C、A、B\n- D. C、B、A",
+      "question_type": "single",
+      "options": {
+        "A": "A、B、C",
+        "B": "B、A、C",
+        "C": "C、A、B",
+        "D": "C、B、A"
+      },
+      "correct_answer": "C",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 4 题（电子学会五级模拟·前缀和）\n数组 `a[6] = {2, 5, 1, 8, 3, 4}`，前缀和 `pre[i] = a[1]+...+a[i]`（pre[0]=0）。则区间 [2,5] 的元素和（下标从 1 开始）是？\n\n- A. 16\n- B. 17\n- C. 19\n- D. 23",
+      "question_type": "single",
+      "options": {
+        "A": "16",
+        "B": "17",
+        "C": "19",
+        "D": "23"
+      },
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 5 题（电子学会五级模拟·差分）\n对下标 1..7 的全 0 数组，差分数组执行 `d[2]+=3`、`d[6]-=3`（a[i]=d[1]+...+d[i]）。还原后 `a[5]` 的值是？\n\n- A. 0\n- B. 3\n- C. 5\n- D. 6",
+      "question_type": "single",
+      "options": {
+        "A": "0",
+        "B": "3",
+        "C": "5",
+        "D": "6"
+      },
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 6 题（电子学会五级模拟·二分）\n在升序数组 `{1, 3, 5, 5, 7, 9}` 中，用 `lower_bound` 查找\"第一个不小于 6 的元素\"，其下标（从 0 开始）是？\n\n- A. 3\n- B. 4\n- C. 5\n- D. 6",
+      "question_type": "single",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 7 题（电子学会五级模拟·双指针）\n升序数组 `{2, 4, 6, 8, 10}`，双指针（左指 2，右指 10）求两数之和为 14。第一步 `2+10=12 < 14`，下一步应如何移动？\n\n- A. 左指针右移一位（指 4）\n- B. 右指针左移一位（指 8）\n- C. 两指针同时向内移动\n- D. 停止，不存在答案",
+      "question_type": "single",
+      "options": {
+        "A": "左指针右移一位（指 4）",
+        "B": "右指针左移一位（指 8）",
+        "C": "两指针同时向内移动",
+        "D": "停止，不存在答案"
+      },
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 8 题（电子学会五级模拟·STL）\n执行以下代码，输出是？\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s = \"aabbaa\";\n    cout << s.count('a') << ' ' << s.find(\"bb\");\n    return 0;\n}\n```\n\n- A. 编译错误\n- B. 4 2\n- C. 4 3\n- D. 2 2",
+      "question_type": "single",
+      "options": {
+        "A": "编译错误",
+        "B": "4 2",
+        "C": "4 3",
+        "D": "2 2"
+      },
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 9 题（电子学会五级模拟·STL）\n执行以下代码，输出是？\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    vector<int> v = {3, 1, 2};\n    sort(v.begin(), v.end());\n    do { cout << v[0]; } while (next_permutation(v.begin(), v.end()));\n    return 0;\n}\n```\n\n- A. 112233\n- B. 123132\n- C. 123321\n- D. 111222",
+      "question_type": "single",
+      "options": {
+        "A": "112233",
+        "B": "123132",
+        "C": "123321",
+        "D": "111222"
+      },
+      "correct_answer": "A",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 10 题（电子学会五级模拟·STL）\n执行以下代码，输出是？\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    map<int, int> m;\n    m[2] = 1; m[1] = 2; m[3] = 0;\n    cout << m.size() << ' ' << m[3] << ' ' << (m.count(4) ? \"Y\" : \"N\");\n    return 0;\n}\n```\n\n- A. 3 0 Y\n- B. 3 0 N\n- C. 4 0 N\n- D. 2 0 N",
+      "question_type": "single",
+      "options": {
+        "A": "3 0 Y",
+        "B": "3 0 N",
+        "C": "4 0 N",
+        "D": "2 0 N"
+      },
+      "correct_answer": "B",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 11 题（电子学会五级模拟·快速幂）\n计算 `2^10 mod 1000`，用快速幂求得的结果是 24。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 12 题（电子学会五级模拟·递推）\n二阶递推 `f(0)=1, f(1)=1, f(n)=f(n-1)+f(n-2)`，则 `f(6)=13`。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 13 题（电子学会五级模拟·贪心）\nn 个人排队接水，每人接水时间不同。按接水时间从短到长排队，所有人的总等待时间最短。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 14 题（电子学会五级模拟·前缀和）\n构建一维前缀和数组 `pre` 的时间复杂度为 O(n)。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 15 题（电子学会五级模拟·差分）\n对差分数组执行两次区间加 `[1,3]+2` 和 `[2,5]+1`（下标从 1 开始），还原后 `a[2]` 的值为 3。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 16 题（电子学会五级模拟·二分）\n升序数组 `{2, 2, 3, 3, 3, 5}` 中，`upper_bound` 查找第一个大于 2 的元素，其下标为 2。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 17 题（电子学会五级模拟·双指针）\n用双指针法在无序数组中求两数之和等于目标值，若不先排序，双指针法也能保证正确。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 18 题（电子学会五级模拟·双指针）\n用快慢指针原地去除升序数组中的重复元素，慢指针指向当前已去重部分的末尾，最终慢指针的值等于去重后数组的长度。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 19 题（电子学会五级模拟·STL）\n`priority_queue<int>` 默认是大根堆，其 `top()` 返回的是队列中的最大值。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 20 题（电子学会五级模拟·STL）\n对 `vector` 调用 `sort(v.begin(), v.end())` 后，若原数组含相等元素，则这些相等元素的相对顺序一定保持不变。（ ）",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": ""
+    },
+    {
+      "content": "### 第 21 题 糖果装盒 ★★★（30 分）\n\n**【题目描述】**\n\n有一些糖果，每颗糖果的重量不同。现在要用盒子装糖果，每盒最多装 2 颗，且总重量不能超过盒子限重 W。每次将最轻的糖果和最重的糖果配对，若重量和 ≤ W 则装一盒，否则最重的单独装一盒。求最少需要多少盒子。\n【输入格式】第一行两个整数 n、W；第二行 n 个整数表示糖果重量。\n【输出格式】一个整数，表示最少盒数。\n【样例输入 1】\n```\n5 6\n1 2 3 4 5\n```\n【样例输出 1】\n```\n3\n```\n【样例输入 2】\n```\n4 10\n10 10 10 10\n```\n【样例输出 2】\n```\n4\n```\n【数据范围】1 ≤ n ≤ 100000，1 ≤ wᵢ ≤ W ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "cie202608L5T10",
+      "url": "https://fslong.iok.la/problem/cie202608L5T10",
+      "title": "糖果装盒",
+      "score": 30,
+      "options": [],
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 22 题 投票统计 ★★★（30 分）\n\n**【题目描述】**\n\n班级选举投票，有 n 张选票，每张选票上写着一个候选人的名字。请统计每位候选人的得票数，按得票数从高到低输出，得票相同时按名字字典序升序输出。\n【输入格式】第一行一个整数 n；接下来 n 行，每行一个字符串表示候选人名字。\n【输出格式】每行\"名字 票数\"，按规则排序。\n【样例输入 1】\n```\n5\nAlice\nBob\nAlice\nCharlie\nBob\n```\n【样例输出 1】\n```\nAlice 2\nBob 2\nCharlie 1\n```\n【数据范围】1 ≤ n ≤ 100000，名字长度 ≤ 20。",
+      "question_type": "program",
+      "pid": "cie202608L5T12",
+      "url": "https://fslong.iok.la/problem/cie202608L5T12",
+      "title": "投票统计",
+      "score": 30,
+      "options": [],
+      "correct_answer": "",
+      "explanation": ""
+    }
+  ]
+}
