@@ -5,12 +5,12 @@
       "content": "### 第 1 题（电子学会四级模拟·指针大小）\n在 64 位系统上，sizeof(int*) 与 sizeof(char*) 的值关系是？（ ）\n\n- A. 相同，均为 8\n- B. 不同，char* 更大\n- C. 相同，均为 4\n- D. 不同，int* 更大",
       "question_type": "single",
       "options": {
-        "A": "相同，均为 8",
-        "B": "不同，char* 更大",
-        "C": "相同，均为 4",
-        "D": "不同，int* 更大"
+        "B": "相同，均为 8",
+        "C": "不同，char* 更大",
+        "D": "相同，均为 4",
+        "A": "不同，int* 更大"
       },
-      "correct_answer": "A",
+      "correct_answer": "B",
       "score": 2,
       "explanation": ""
     },
@@ -20,8 +20,8 @@
       "options": {
         "A": "10 20",
         "B": "20 20",
-        "C": "10 10",
-        "D": "20 30"
+        "D": "10 10",
+        "C": "20 30"
       },
       "correct_answer": "A",
       "score": 2,
@@ -31,12 +31,12 @@
       "content": "### 第 3 题（电子学会四级模拟·结构体嵌套与传参）\n\n```cpp\nstruct Inner { int x, y; };\nstruct Outer { Inner in; int tag; };\nvoid f(Outer o) { o.in.x = 99; o.tag = 7; }\nint main() {\n    Outer o; o.in.x = 5; o.in.y = 6; o.tag = 3;\n    f(o);\n    cout << o.in.x << \" \" << o.tag << endl;\n}\n```\n\n以上代码输出结果是？（ ）\n\n- A. 5 3\n- B. 99 7\n- C. 99 3\n- D. 5 7",
       "question_type": "single",
       "options": {
-        "A": "5 3",
-        "B": "99 7",
-        "C": "99 3",
-        "D": "5 7"
+        "C": "5 3",
+        "A": "99 7",
+        "D": "99 3",
+        "B": "5 7"
       },
-      "correct_answer": "A",
+      "correct_answer": "C",
       "score": 2,
       "explanation": ""
     },
@@ -44,12 +44,12 @@
       "content": "### 第 4 题（电子学会四级模拟·类与构造函数重载）\n\n```cpp\nclass C {\npublic:\n    int v;\n    C() { v = 1; }\n    C(int a) { v = a; }\n    C(int a, int b) { v = a + b; }\n};\nint main() {\n    C c1, c2(4), c3(4, 5);\n    cout << c1.v << \" \" << c2.v << \" \" << c3.v << endl;\n}\n```\n\n以上代码输出结果是？（ ）\n\n- A. 1 4 9\n- B. 1 4 5\n- C. 1 1 1\n- D. 编译错误",
       "question_type": "single",
       "options": {
-        "A": "1 4 9",
+        "C": "1 4 9",
         "B": "1 4 5",
-        "C": "1 1 1",
+        "A": "1 1 1",
         "D": "编译错误"
       },
-      "correct_answer": "A",
+      "correct_answer": "C",
       "score": 2,
       "explanation": ""
     },
@@ -57,12 +57,12 @@
       "content": "### 第 5 题（电子学会四级模拟·进制转换分组法）\n采用分组法，将八进制数 273 转换为二进制数，结果是？（ ）\n\n- A. 10111011\n- B. 1011101\n- C. 10101101\n- D. 111011",
       "question_type": "single",
       "options": {
-        "A": "10111011",
-        "B": "1011101",
-        "C": "10101101",
-        "D": "111011"
+        "C": "10111011",
+        "A": "1011101",
+        "D": "10101101",
+        "B": "111011"
       },
-      "correct_answer": "A",
+      "correct_answer": "C",
       "score": 2,
       "explanation": ""
     },
@@ -70,12 +70,12 @@
       "content": "### 第 6 题（电子学会四级模拟·位运算复合赋值）\n\n```cpp\nint x = 8;\nx |= x >> 1;\ncout << x << endl;\n```\n\n以上代码输出结果是？（ ）\n\n- A. 12\n- B. 4\n- C. 8\n- D. 14",
       "question_type": "single",
       "options": {
-        "A": "12",
-        "B": "4",
+        "B": "12",
+        "D": "4",
         "C": "8",
-        "D": "14"
+        "A": "14"
       },
-      "correct_answer": "A",
+      "correct_answer": "B",
       "score": 2,
       "explanation": ""
     },
@@ -96,12 +96,12 @@
       "content": "### 第 8 题（电子学会四级模拟·选择排序）\n对数组 [5, 1, 4, 1] 执行升序选择排序，完成第一趟（选最小元素与首个元素交换）后数组为？（ ）\n\n- A. [1, 5, 4, 1]\n- B. [5, 1, 4, 1]\n- C. [1, 1, 4, 5]\n- D. [1, 4, 5, 1]",
       "question_type": "single",
       "options": {
-        "A": "[1, 5, 4, 1]",
+        "D": "[1, 5, 4, 1]",
         "B": "[5, 1, 4, 1]",
         "C": "[1, 1, 4, 5]",
-        "D": "[1, 4, 5, 1]"
+        "A": "[1, 4, 5, 1]"
       },
-      "correct_answer": "A",
+      "correct_answer": "D",
       "score": 2,
       "explanation": ""
     },
@@ -109,12 +109,12 @@
       "content": "### 第 9 题（电子学会四级模拟·高精度乘法进位）\n高精度乘法计算 123 × 45，从个位向高位逐位相乘并处理进位。处理到十位（被乘数十位 2 × 45 再加低位进位 13）时，本位的数字和向高位的进位分别是？（ ）\n\n- A. 本位 3，进位 10\n- B. 本位 3，进位 1\n- C. 本位 2，进位 10\n- D. 本位 0，进位 11",
       "question_type": "single",
       "options": {
-        "A": "本位 3，进位 10",
-        "B": "本位 3，进位 1",
+        "D": "本位 3，进位 10",
+        "A": "本位 3，进位 1",
         "C": "本位 2，进位 10",
-        "D": "本位 0，进位 11"
+        "B": "本位 0，进位 11"
       },
-      "correct_answer": "A",
+      "correct_answer": "D",
       "score": 2,
       "explanation": ""
     },
@@ -122,12 +122,12 @@
       "content": "### 第 10 题（电子学会四级模拟·高精度减法借位）\n高精度减法计算 2000 - 3，个位不够减需要向高位借位。这一过程中，最终需要连续借位到哪一位才完成？（ ）\n\n- A. 千位\n- B. 百位\n- C. 十位\n- D. 无需借位",
       "question_type": "single",
       "options": {
-        "A": "千位",
-        "B": "百位",
-        "C": "十位",
+        "B": "千位",
+        "C": "百位",
+        "A": "十位",
         "D": "无需借位"
       },
-      "correct_answer": "A",
+      "correct_answer": "B",
       "score": 2,
       "explanation": ""
     },
@@ -176,13 +176,13 @@
       "explanation": ""
     },
     {
-      "content": "### 第 15 题（电子学会四级模拟·进制转换分组法）\n十六进制数 0x5A 转二进制时，每一位十六进制数字对应 4 位二进制，转换结果为 01011010。（ ）",
+      "content": "### 第 15 题（电子学会四级模拟·进制转换分组法）\n十六进制数 0x5A 转二进制时，每一位十六进制数字对应 4 位二进制，转换结果为 1011010。（ ）",
       "question_type": "judge",
       "options": {
         "T": "正确",
         "F": "错误"
       },
-      "correct_answer": "T",
+      "correct_answer": "F",
       "score": 2,
       "explanation": ""
     },
@@ -209,13 +209,13 @@
       "explanation": ""
     },
     {
-      "content": "### 第 18 题（电子学会四级模拟·桶排序复杂度）\n对 n 个元素、取值范围为 0~k 的整数进行计数排序（桶排序的特例），时间复杂度和空间复杂度都为 O(n + k)。（ ）",
+      "content": "### 第 18 题（电子学会四级模拟·桶排序复杂度）\n对 n 个元素、取值范围为 0~k 的整数进行计数排序（桶排序的特例），时间复杂度为 O(n log n)。（ ）",
       "question_type": "judge",
       "options": {
         "T": "正确",
         "F": "错误"
       },
-      "correct_answer": "T",
+      "correct_answer": "F",
       "score": 2,
       "explanation": ""
     },
@@ -258,6 +258,28 @@
       "pid": "CIE202608L4T14",
       "url": "https://fslong.iok.la/problem/CIE202608L4T14",
       "title": "约瑟夫问题",
+      "score": 30,
+      "options": [],
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 23 题 二进制中1的个数\n\n给定 n 个非负整数，请输出每个数二进制表示中 1 的个数。\n\n【输入格式】第一行一个整数 n。第二行 n 个整数。\n【输出格式】n 行，每行一个整数，表示对应数二进制中 1 的个数。\n【样例输入 1】\n```\n3\n7 8 15\n```\n【样例输出 1】\n```\n3\n1\n4\n```\n【样例说明】7=111(3个1)，8=1000(1个1)，15=1111(4个1)。\n【数据范围】1 ≤ n ≤ 1000，0 ≤ 每个数 ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "CIE202608L4T15",
+      "url": "https://fslong.iok.la/problem/CIE202608L4T15",
+      "title": "二进制中1的个数",
+      "score": 30,
+      "options": [],
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 24 题 十六进制转十进制\n\n给定一个十六进制字符串（由数字 0-9 和大写字母 A-F 组成，A=10、B=11、…、F=15），请将其转换为十进制数并输出。\n\n【输入格式】一个十六进制字符串。\n【输出格式】一个十进制整数。\n【样例输入 1】\n```\nA\n```\n【样例输出 1】\n```\n10\n```\n【样例输入 2】\n```\nFF\n```\n【样例输出 2】\n```\n255\n```\n【数据范围】字符串长度 1-8，结果不超过 2³²-1。",
+      "question_type": "program",
+      "pid": "CIE202608L4T16",
+      "url": "https://fslong.iok.la/problem/CIE202608L4T16",
+      "title": "十六进制转十进制",
       "score": 30,
       "options": [],
       "correct_answer": "",
