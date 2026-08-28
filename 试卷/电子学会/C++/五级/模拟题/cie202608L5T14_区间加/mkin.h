@@ -1,0 +1,25 @@
+#pragma once
+#ifndef MKIN_H
+#define MKIN_H
+#include <bits/stdc++.h>
+using namespace std;
+const int TEST_CASES = 25;
+struct SubtaskDef { int id, start, end; };
+const SubtaskDef SUBTASKS[] = {{0,1,2},{1,3,8},{2,9,11},{3,12,20},{4,21,25}};
+const int SUBTASK_COUNT = sizeof(SUBTASKS)/sizeof(SUBTASKS[0]);
+long long rnd_ll(long long lo, long long hi) {
+    return lo + (long long)(((long long)rand() << 15 | rand()) % (hi - lo + 1));
+}
+#define rnd rnd_ll
+void test(int c, ofstream& o){srand(20260826+c*1000003);
+    int n, q;
+    if(c==1){o<<"5 2\n1 3 2\n4 5 1"<<endl; return;}
+    if(c==2){o<<"3 1\n1 3 5"<<endl; return;}
+    if(c>=3&&c<=8){n=rnd(10,100);q=rnd(5,20);}
+    else if(c>=9&&c<=11){n=rnd(100,1000);q=rnd(20,50);}
+    else if(c>=12&&c<=20){n=rnd(1000,100000);q=rnd(50,200);}
+    else{n=rnd(50000,100000);q=rnd(50,200);}
+    o<<n<<" "<<q<<endl;
+    for(int i=0;i<q;i++){int l=rnd(1,n),r=rnd(l,n);long long x=rnd(1,1000000000);o<<l<<" "<<r<<" "<<x<<endl;}
+}
+#endif
