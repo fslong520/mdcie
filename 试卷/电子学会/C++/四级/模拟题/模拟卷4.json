@@ -5,10 +5,10 @@
       "content": "### 第 1 题（电子学会四级模拟·指针大小）\n在 64 位系统上，sizeof(int*) 与 sizeof(char*) 的值关系是？（ ）\n\n- A. 相同，均为 8\n- B. 不同，char* 更大\n- C. 相同，均为 4\n- D. 不同，int* 更大",
       "question_type": "single",
       "options": {
+        "A": "不同，int* 更大",
         "B": "相同，均为 8",
         "C": "不同，char* 更大",
-        "D": "相同，均为 4",
-        "A": "不同，int* 更大"
+        "D": "相同，均为 4"
       },
       "correct_answer": "B",
       "score": 2,
@@ -20,8 +20,8 @@
       "options": {
         "A": "10 20",
         "B": "20 20",
-        "D": "10 10",
-        "C": "20 30"
+        "C": "20 30",
+        "D": "10 10"
       },
       "correct_answer": "A",
       "score": 2,
@@ -31,10 +31,10 @@
       "content": "### 第 3 题（电子学会四级模拟·结构体嵌套与传参）\n\n```cpp\nstruct Inner { int x, y; };\nstruct Outer { Inner in; int tag; };\nvoid f(Outer o) { o.in.x = 99; o.tag = 7; }\nint main() {\n    Outer o; o.in.x = 5; o.in.y = 6; o.tag = 3;\n    f(o);\n    cout << o.in.x << \" \" << o.tag << endl;\n}\n```\n\n以上代码输出结果是？（ ）\n\n- A. 5 3\n- B. 99 7\n- C. 99 3\n- D. 5 7",
       "question_type": "single",
       "options": {
-        "C": "5 3",
         "A": "99 7",
-        "D": "99 3",
-        "B": "5 7"
+        "B": "5 7",
+        "C": "5 3",
+        "D": "99 3"
       },
       "correct_answer": "C",
       "score": 2,
@@ -44,9 +44,9 @@
       "content": "### 第 4 题（电子学会四级模拟·类与构造函数重载）\n\n```cpp\nclass C {\npublic:\n    int v;\n    C() { v = 1; }\n    C(int a) { v = a; }\n    C(int a, int b) { v = a + b; }\n};\nint main() {\n    C c1, c2(4), c3(4, 5);\n    cout << c1.v << \" \" << c2.v << \" \" << c3.v << endl;\n}\n```\n\n以上代码输出结果是？（ ）\n\n- A. 1 4 9\n- B. 1 4 5\n- C. 1 1 1\n- D. 编译错误",
       "question_type": "single",
       "options": {
-        "C": "1 4 9",
-        "B": "1 4 5",
         "A": "1 1 1",
+        "B": "1 4 5",
+        "C": "1 4 9",
         "D": "编译错误"
       },
       "correct_answer": "C",
@@ -57,10 +57,10 @@
       "content": "### 第 5 题（电子学会四级模拟·进制转换分组法）\n采用分组法，将八进制数 273 转换为二进制数，结果是？（ ）\n\n- A. 10111011\n- B. 1011101\n- C. 10101101\n- D. 111011",
       "question_type": "single",
       "options": {
-        "C": "10111011",
         "A": "1011101",
-        "D": "10101101",
-        "B": "111011"
+        "B": "111011",
+        "C": "10111011",
+        "D": "10101101"
       },
       "correct_answer": "C",
       "score": 2,
@@ -70,10 +70,10 @@
       "content": "### 第 6 题（电子学会四级模拟·位运算复合赋值）\n\n```cpp\nint x = 8;\nx |= x >> 1;\ncout << x << endl;\n```\n\n以上代码输出结果是？（ ）\n\n- A. 12\n- B. 4\n- C. 8\n- D. 14",
       "question_type": "single",
       "options": {
+        "A": "14",
         "B": "12",
-        "D": "4",
         "C": "8",
-        "A": "14"
+        "D": "4"
       },
       "correct_answer": "B",
       "score": 2,
@@ -96,10 +96,10 @@
       "content": "### 第 8 题（电子学会四级模拟·选择排序）\n对数组 [5, 1, 4, 1] 执行升序选择排序，完成第一趟（选最小元素与首个元素交换）后数组为？（ ）\n\n- A. [1, 5, 4, 1]\n- B. [5, 1, 4, 1]\n- C. [1, 1, 4, 5]\n- D. [1, 4, 5, 1]",
       "question_type": "single",
       "options": {
-        "D": "[1, 5, 4, 1]",
+        "A": "[1, 4, 5, 1]",
         "B": "[5, 1, 4, 1]",
         "C": "[1, 1, 4, 5]",
-        "A": "[1, 4, 5, 1]"
+        "D": "[1, 5, 4, 1]"
       },
       "correct_answer": "D",
       "score": 2,
@@ -109,10 +109,10 @@
       "content": "### 第 9 题（电子学会四级模拟·高精度乘法进位）\n高精度乘法计算 123 × 45，从个位向高位逐位相乘并处理进位。处理到十位（被乘数十位 2 × 45 再加低位进位 13）时，本位的数字和向高位的进位分别是？（ ）\n\n- A. 本位 3，进位 10\n- B. 本位 3，进位 1\n- C. 本位 2，进位 10\n- D. 本位 0，进位 11",
       "question_type": "single",
       "options": {
-        "D": "本位 3，进位 10",
         "A": "本位 3，进位 1",
+        "B": "本位 0，进位 11",
         "C": "本位 2，进位 10",
-        "B": "本位 0，进位 11"
+        "D": "本位 3，进位 10"
       },
       "correct_answer": "D",
       "score": 2,
@@ -122,9 +122,9 @@
       "content": "### 第 10 题（电子学会四级模拟·高精度减法借位）\n高精度减法计算 2000 - 3，个位不够减需要向高位借位。这一过程中，最终需要连续借位到哪一位才完成？（ ）\n\n- A. 千位\n- B. 百位\n- C. 十位\n- D. 无需借位",
       "question_type": "single",
       "options": {
+        "A": "十位",
         "B": "千位",
         "C": "百位",
-        "A": "十位",
         "D": "无需借位"
       },
       "correct_answer": "B",
@@ -247,7 +247,7 @@
       "pid": "CIE202608L4T13",
       "url": "https://fslong.iok.la/problem/CIE202608L4T13",
       "title": "成绩排序",
-      "score": 30,
+      "score": 15,
       "options": [],
       "correct_answer": "",
       "explanation": ""
@@ -258,7 +258,7 @@
       "pid": "CIE202608L4T14",
       "url": "https://fslong.iok.la/problem/CIE202608L4T14",
       "title": "指针数组反转",
-      "score": 30,
+      "score": 15,
       "options": [],
       "correct_answer": "",
       "explanation": ""
@@ -269,7 +269,7 @@
       "pid": "CIE202608L4T15",
       "url": "https://fslong.iok.la/problem/CIE202608L4T15",
       "title": "二进制中1的个数",
-      "score": 30,
+      "score": 15,
       "options": [],
       "correct_answer": "",
       "explanation": ""
@@ -280,7 +280,7 @@
       "pid": "CIE202608L4T16",
       "url": "https://fslong.iok.la/problem/CIE202608L4T16",
       "title": "十六进制转十进制",
-      "score": 30,
+      "score": 15,
       "options": [],
       "correct_answer": "",
       "explanation": ""
