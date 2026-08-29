@@ -1,0 +1,291 @@
+{
+  "title": "2026年9月 电子学会青少年软件编程等级考试 C/C++ 五级 模拟卷5",
+  "description": "2026年9月 电子学会青少年软件编程等级考试 C/C++ 五级 模拟卷5（单选10×2分 + 判断10×2分 = 40分 + 编程4×15分 = 60分）",
+  "time_limit": 60,
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会五级模拟·快速幂）\n\n用快速幂计算 aⁿ（n 为正整数）的时间复杂度是？",
+      "question_type": "single",
+      "options": {
+        "A": "O(log n)",
+        "B": "O(n)",
+        "C": "O(n log n)",
+        "D": "O(1)"
+      },
+      "correct_answer": "A",
+      "explanation": "每次将指数减半，共 O(log n) 次。",
+      "score": 2
+    },
+    {
+      "content": "### 第 2 题（电子学会五级模拟·贪心）\n\n贪心算法能够保证得到全局最优解所依赖的关键性质是？",
+      "question_type": "single",
+      "options": {
+        "A": "重叠子问题",
+        "B": "贪心选择性质",
+        "C": "结果的随机性",
+        "D": "递归深度较大"
+      },
+      "correct_answer": "B",
+      "explanation": "贪心选择性质保证局部最优可推向全局最优。",
+      "score": 2
+    },
+    {
+      "content": "### 第 3 题（电子学会五级模拟·递推）\n\n已知 f(1)=1，且 f(n)=f(n-1)+2（n>1），则 f(5) 的值是？",
+      "question_type": "single",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "correct_answer": "C",
+      "explanation": "1,3,5,7,9，f(5)=9。",
+      "score": 2
+    },
+    {
+      "content": "### 第 4 题（电子学会五级模拟·前缀和）\n\n设 pre[i] = a₁+a₂+…+aᵢ，则区间 [l, r] 的元素和为？",
+      "question_type": "single",
+      "options": {
+        "A": "pre[r] - pre[l]",
+        "B": "pre[r] + pre[l-1]",
+        "C": "pre[r] - pre[l-1]",
+        "D": "pre[l] - pre[r]"
+      },
+      "correct_answer": "C",
+      "explanation": "前缀和求区间和的标准式。",
+      "score": 2
+    },
+    {
+      "content": "### 第 5 题（电子学会五级模拟·差分）\n\n使用差分数组 d，对区间 [l, r] 整体加 v，需要执行的操作是？",
+      "question_type": "single",
+      "options": {
+        "A": "d[l]+=v, d[r]-=v",
+        "B": "d[l]+=v, d[r+1]-=v",
+        "C": "d[l]-=v, d[r+1]+=v",
+        "D": "d[l]+=v, d[r]+=v"
+      },
+      "correct_answer": "B",
+      "explanation": "差分区间修改的标准操作。",
+      "score": 2
+    },
+    {
+      "content": "### 第 6 题（电子学会五级模拟·二分）\n\n二分查找能够在 O(log n) 时间内找到目标的前提是序列？",
+      "question_type": "single",
+      "options": {
+        "A": "有序",
+        "B": "无序",
+        "C": "含负数",
+        "D": "元素互异"
+      },
+      "correct_answer": "A",
+      "explanation": "二分依赖有序性折半。",
+      "score": 2
+    },
+    {
+      "content": "### 第 7 题（电子学会五级模拟·双指针）\n\n对有序数组用双指针（头尾相向）查找两数之和等于定值，时间复杂度是？",
+      "question_type": "single",
+      "options": {
+        "A": "O(n²)",
+        "B": "O(n)",
+        "C": "O(log n)",
+        "D": "O(n log n)"
+      },
+      "correct_answer": "B",
+      "explanation": "两指针各最多移动 n 次。",
+      "score": 2
+    },
+    {
+      "content": "### 第 8 题（电子学会五级模拟·STL）\n\nvector 在尾部插入元素应使用的成员函数是？",
+      "question_type": "single",
+      "options": {
+        "A": "push_front",
+        "B": "insert_back",
+        "C": "push_back",
+        "D": "append"
+      },
+      "correct_answer": "C",
+      "explanation": "vector 尾插用 push_back。",
+      "score": 2
+    },
+    {
+      "content": "### 第 9 题（电子学会五级模拟·STL）\n\n关于 set 容器，下列说法正确的是？",
+      "question_type": "single",
+      "options": {
+        "A": "可以存放重复元素",
+        "B": "元素无序存储",
+        "C": "只能存放 int 类型",
+        "D": "元素不重复且自动排序"
+      },
+      "correct_answer": "D",
+      "explanation": "set 去重且按 key 有序。",
+      "score": 2
+    },
+    {
+      "content": "### 第 10 题（电子学会五级模拟·STL）\n\nmap 容器中的元素默认按什么方式组织？",
+      "question_type": "single",
+      "options": {
+        "A": "按插入顺序",
+        "B": "随机顺序",
+        "C": "按值降序",
+        "D": "按键升序"
+      },
+      "correct_answer": "D",
+      "explanation": "map 按 key 升序（红黑树）组织。",
+      "score": 2
+    },
+    {
+      "content": "### 第 11 题（电子学会五级模拟·快速幂）\n\n快速幂算法的核心思想是将幂次不断折半（平方分治）。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "aⁿ = (a^(n/2))² 分治。",
+      "score": 2
+    },
+    {
+      "content": "### 第 12 题（电子学会五级模拟·贪心）\n\n任何问题使用贪心法都一定能得到全局最优解。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "须满足贪心选择性质，否则可能失优。",
+      "score": 2
+    },
+    {
+      "content": "### 第 13 题（电子学会五级模拟·递推）\n\n递推法从已知的初始值出发，逐步推出后续各项。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "递推即由边界顺推。",
+      "score": 2
+    },
+    {
+      "content": "### 第 14 题（电子学会五级模拟·前缀和）\n\n预处理前缀和后，单次区间和查询的时间复杂度为 O(1)。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "两次前缀和相减即可。",
+      "score": 2
+    },
+    {
+      "content": "### 第 15 题（电子学会五级模拟·差分）\n\n对差分数组求前缀和可以还原出原数组。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "差分与前缀和互为逆运算。",
+      "score": 2
+    },
+    {
+      "content": "### 第 16 题（电子学会五级模拟·二分）\n\n二分答案法要求判定问题具有单调性。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "单调才可折半判定。",
+      "score": 2
+    },
+    {
+      "content": "### 第 17 题（电子学会五级模拟·双指针）\n\n双指针技巧只能应用于有序数组。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "滑动窗口等场景无需有序。",
+      "score": 2
+    },
+    {
+      "content": "### 第 18 题（电子学会五级模拟·STL）\n\nvector 会在元素数量超过容量时自动扩容。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "vector 动态扩容特性。",
+      "score": 2
+    },
+    {
+      "content": "### 第 19 题（电子学会五级模拟·STL）\n\nset 容器中允许存放重复元素。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "set 自动去重。",
+      "score": 2
+    },
+    {
+      "content": "### 第 20 题（电子学会五级模拟·STL）\n\nstring 的 size() 和 length() 两个函数返回值不同。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "二者完全等价。",
+      "score": 2
+    },
+    {
+      "content": "### 第 21 题 生产计划\n\n工厂接到一笔 m 个零件的订单。厂里有 n 台机器，第 i 台机器每天能生产 aᵢ 个零件，且每台机器从投产起累计最多只能生产 bᵢ 个零件（达到 bᵢ 后报废停产）。所有机器从第 1 天起同时开工。问至少需要多少天，才能使累计产量不少于 m？若永远无法完成订单，输出 -1。\n\n【输入格式】第一行两个整数 n 和 m。第二行 2n 个整数 a₁ b₁ a₂ b₂ … aₙ bₙ。\n【输出格式】一行一个整数，表示最少天数；无解输出 -1。\n【样例输入 1】\n```\n2 10\n2 5 3 100\n```\n【样例输出 1】\n```\n2\n```\n【样例说明】第 1 天机器 1 产 2、机器 2 产 3；第 2 天机器 1 再产 2、机器 2 再产 3，累计 2×2+3×2=10，恰好在第 2 天完成。\n【样例输入 2】\n```\n1 100\n5 10\n```\n【样例输出 2】\n```\n-1\n```\n【数据范围】1 ≤ n ≤ 10⁵，1 ≤ m ≤ 10¹⁸，1 ≤ aᵢ, bᵢ ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "CIE202608L5T17",
+      "url": "https://fslong.iok.la/problem/CIE202608L5T17",
+      "title": "生产计划",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 22 题 最短积分连续段\n\n小爱连续 n 天打卡，第 i 天获得 aᵢ 个积分（积分均为正整数）。他想知道：选出连续的若干天，使这些天的积分之和不小于 s，这样的连续段最短是多少天？若不存在这样的连续段，输出 0。\n\n【输入格式】第一行两个整数 n 和 s。第二行 n 个正整数 a₁ … aₙ。\n【输出格式】一行一个整数，表示最短连续段长度；不存在输出 0。\n【样例输入 1】\n```\n5 10\n5 1 2 3 7\n```\n【样例输出 1】\n```\n2\n```\n【样例说明】第 4~5 天积分 3+7=10 ≥ 10，长度 2 为最短。\n【样例输入 2】\n```\n3 100\n1 2 3\n```\n【样例输出 2】\n```\n0\n```\n【数据范围】1 ≤ n ≤ 10⁵，1 ≤ s ≤ 10¹⁴，1 ≤ aᵢ ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "CIE202608L5T18",
+      "url": "https://fslong.iok.la/problem/CIE202608L5T18",
+      "title": "最短积分连续段",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 23 题 电影排行\n\n电影节收到 n 部电影的参评信息，每部电影有名称、评分（0~100 的整数）和投票数。排行规则：\n\n1. 评分高的排前面；\n2. 评分相同的，投票数多的排前面；\n3. 评分和投票数都相同的，按名称字典序升序排列。\n\n输出排行榜前 k 部电影的名称。\n\n【输入格式】第一行两个整数 n 和 k。接下来 n 行，每行为：电影名称（不含空格，长度不超过 20）、评分、投票数。\n【输出格式】共 k 行，每行一个电影名称，按排行顺序输出。\n【样例输入 1】\n```\n4 2\nA 90 100\nB 90 200\nC 95 1\nD 85 999\n```\n【样例输出 1】\n```\nC\nB\n```\n【数据范围】1 ≤ k ≤ n ≤ 10⁵，0 ≤ 评分 ≤ 100，0 ≤ 投票数 ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "CIE202608L5T19",
+      "url": "https://fslong.iok.la/problem/CIE202608L5T19",
+      "title": "电影排行",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 24 题 自动找零\n\n自动售货机需要找零。可用的纸币面额为 1 元、5 元、10 元、50 元、100 元，每种面额数量不限。对每次找零金额，用这些面额凑出该金额，求最少需要多少张纸币。\n\n【输入格式】第一行一个整数 T，表示询问次数。接下来 T 行，每行一个正整数 m，表示需要找零的金额。\n【输出格式】共 T 行，每行一个整数，表示最少纸币张数。\n【样例输入 1】\n```\n3\n67\n5\n999999999\n```\n【样例输出 1】\n```\n5\n1\n9999999\n```\n【样例说明】67 = 50+10+5+1+1，共 5 张；999999999 = 9999999 张 100 元再加 99 元的 10 张，共 10000009 张。\n【数据范围】1 ≤ T ≤ 10⁵，1 ≤ m ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "CIE202608L5T20",
+      "url": "https://fslong.iok.la/problem/CIE202608L5T20",
+      "title": "自动找零",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "title": "2026年9月 电子学会青少年软件编程等级考试 C/C++ 三级 模拟卷5",
+  "description": "2026年9月 电子学会青少年软件编程等级考试 C/C++ 三级 模拟卷5（单选10×2分 + 判断10×2分 = 40分 + 编程4×15分 = 60分）",
+  "time_limit": 60,
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会三级模拟·函数基础）\n\n在 C++ 中，定义一个返回 int 类型、无参数的函数 f，下列写法正确的是？",
+      "question_type": "single",
+      "options": {
+        "A": "int f() { return 0; }",
+        "B": "int f { return 0; }",
+        "C": "f() { return 0; }",
+        "D": "int f = 0;"
+      },
+      "correct_answer": "A",
+      "explanation": "函数定义需要返回类型、函数名、括号和函数体。",
+      "score": 2
+    },
+    {
+      "content": "### 第 2 题（电子学会三级模拟·函数基础）\n\n已定义函数 int square(int x) { return x * x; }，函数体中的 return 语句在什么时候被执行？",
+      "question_type": "single",
+      "options": {
+        "A": "程序编译时",
+        "B": "函数被调用时",
+        "C": "程序结束时",
+        "D": "定义函数时"
+      },
+      "correct_answer": "B",
+      "explanation": "函数体在被调用时才执行。",
+      "score": 2
+    },
+    {
+      "content": "### 第 3 题（电子学会三级模拟·参数传递）\n\n有如下代码：\n```cpp\nvoid g(int x) { x = 10; }\nint main() {\n    int a = 5;\n    g(a);\n    cout << a;\n    return 0;\n}\n```\n输出结果是？",
+      "question_type": "single",
+      "options": {
+        "A": "10",
+        "B": "0",
+        "C": "5",
+        "D": "15"
+      },
+      "correct_answer": "C",
+      "explanation": "值传递中形参的改变不影响实参。",
+      "score": 2
+    },
+    {
+      "content": "### 第 4 题（电子学会三级模拟·递归）\n\n下列哪一项不属于设计递归函数必须考虑的要素？",
+      "question_type": "single",
+      "options": {
+        "A": "递归出口",
+        "B": "递推关系",
+        "C": "逐步逼近出口",
+        "D": "循环变量自增"
+      },
+      "correct_answer": "D",
+      "explanation": "循环变量自增是循环的要素，不是递归的要素。",
+      "score": 2
+    },
+    {
+      "content": "### 第 5 题（电子学会三级模拟·递归）\n\n有递归函数：\n```cpp\nint f(int n) {\n    if (n <= 1) return 1;\n    return n * f(n - 1);\n}\n```\nf(4) 的返回值是？",
+      "question_type": "single",
+      "options": {
+        "A": "6",
+        "B": "24",
+        "C": "12",
+        "D": "10"
+      },
+      "correct_answer": "B",
+      "explanation": "f(4)=4×f(3)=4×3×f(2)=4×3×2×f(1)=24。",
+      "score": 2
+    },
+    {
+      "content": "### 第 6 题（电子学会三级模拟·字符数组）\n\n表达式 strlen(\"hello\") 的值是？",
+      "question_type": "single",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct_answer": "B",
+      "explanation": "strlen 统计不含结尾符的实际字符个数。",
+      "score": 2
+    },
+    {
+      "content": "### 第 7 题（电子学会三级模拟·数学库函数）\n\n设 x 为 double 型且值为 3.2，则 ceil(x) + floor(3.8) 的值是？（ceil 为向上取整，floor 为向下取整）",
+      "question_type": "single",
+      "options": {
+        "A": "7",
+        "B": "6",
+        "C": "8",
+        "D": "5"
+      },
+      "correct_answer": "A",
+      "explanation": "ceil(3.2)=4，floor(3.8)=3，和为 7。",
+      "score": 2
+    },
+    {
+      "content": "### 第 8 题（电子学会三级模拟·模拟）\n\n执行以下代码后 s 的值是？\n```cpp\nint s = 0;\nfor (int i = 1; i <= 5; i++) s += i;\n```",
+      "question_type": "single",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "15",
+        "D": "20"
+      },
+      "correct_answer": "C",
+      "explanation": "1+2+3+4+5=15。",
+      "score": 2
+    },
+    {
+      "content": "### 第 9 题（电子学会三级模拟·模拟）\n\n一杯 100 摄氏度的水，每分钟降温 2 摄氏度，至少经过多少分钟水温不高于 40 摄氏度？",
+      "question_type": "single",
+      "options": {
+        "A": "28",
+        "B": "32",
+        "C": "30",
+        "D": "34"
+      },
+      "correct_answer": "C",
+      "explanation": "(100-40)/2=30 分钟。",
+      "score": 2
+    },
+    {
+      "content": "### 第 10 题（电子学会三级模拟·枚举）\n\n1 到 100 中既能被 3 整除又能被 5 整除的数有多少个？",
+      "question_type": "single",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "7",
+        "D": "6"
+      },
+      "correct_answer": "D",
+      "explanation": "即 15 的倍数：15,30,45,60,75,90，共 6 个。",
+      "score": 2
+    },
+    {
+      "content": "### 第 11 题（电子学会三级模拟·函数基础）\n\n一个已经定义好的函数，在程序中可以被多次调用。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "函数可重复调用，这正是封装复用的意义。",
+      "score": 2
+    },
+    {
+      "content": "### 第 12 题（电子学会三级模拟·函数基础）\n\n函数必须定义在 main 函数之后才能被调用。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "定义在 main 之前、或先声明后定义，均可调用。",
+      "score": 2
+    },
+    {
+      "content": "### 第 13 题（电子学会三级模拟·递归）\n\n递归函数必须有递归出口，否则会无限递归。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "没有出口的递归将无限调用自身导致栈溢出。",
+      "score": 2
+    },
+    {
+      "content": "### 第 14 题（电子学会三级模拟·递归）\n\n任何递归程序都不能改写成循环实现。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "递归与循环常可相互转化。",
+      "score": 2
+    },
+    {
+      "content": "### 第 15 题（电子学会三级模拟·递归）\n\n函数直接或间接调用自身，称为递归调用。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "递归的本质是自我调用。",
+      "score": 2
+    },
+    {
+      "content": "### 第 16 题（电子学会三级模拟·字符数组）\n\nstrlen 函数返回的长度包含字符串结尾符 '\\0'。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "strlen 不计结尾符。",
+      "score": 2
+    },
+    {
+      "content": "### 第 17 题（电子学会三级模拟·字符数组）\n\ncin.getline 可以读入包含空格的一整行字符存入字符数组。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "getline 默认以换行为结束，可保留空格。",
+      "score": 2
+    },
+    {
+      "content": "### 第 18 题（电子学会三级模拟·模拟）\n\nwhile 语句的条件不满足时，循环体也会执行一次。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "while 先判断后执行，条件不满足则一次都不执行。",
+      "score": 2
+    },
+    {
+      "content": "### 第 19 题（电子学会三级模拟·枚举）\n\n枚举法适合解决所有可能情况有限、可一一列举的问题。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "枚举的前提是解空间有限且可遍历。",
+      "score": 2
+    },
+    {
+      "content": "### 第 20 题（电子学会三级模拟·模拟）\n\nfor (int i = 1; i <= 3; i++) 的循环体共执行 3 次。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "i 依次取 1、2、3，共 3 次。",
+      "score": 2
+    },
+    {
+      "content": "### 第 21 题 统计单词个数\n\n输入一行英文句子（仅含小写字母和空格），单词之间由一个或多个空格分隔，句首句尾也可能有空格。请统计句子中单词的个数。\n\n【输入格式】一行字符串，长度不超过 1000。\n【输出格式】一个整数，表示单词个数。\n【样例输入 1】\n```\nhello world\n```\n【样例输出 1】\n```\n2\n```\n【样例输入 2】\n```\n  i   love  cpp  \n```\n【样例输出 2】\n```\n3\n```\n【数据范围】字符串长度不超过 1000，至少含一个单词。",
+      "question_type": "program",
+      "pid": "CIE202608L3T17",
+      "url": "https://fslong.iok.la/problem/CIE202608L3T17",
+      "title": "统计单词个数",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 22 题 子串出现次数\n\n给定文本串 s 和模式串 t，统计 t 在 s 中的出现次数。每次找到一处出现后，从该处右侧（即跳过整个 t）继续查找。可以使用 C++ 内置的 strstr 函数。\n\n【输入格式】第一行文本串 s。第二行模式串 t。均为小写字母，s 长度不超过 1000，t 长度不超过 100。\n【输出格式】一个整数，表示出现次数。\n【样例输入 1】\n```\nababab\naba\n```\n【样例输出 1】\n```\n1\n```\n【样例说明】aba 在位置 1 出现一次，跳过后剩余 bab 中不再出现。\n【样例输入 2】\n```\naaaa\naa\n```\n【样例输出 2】\n```\n2\n```\n【数据范围】s 长度 ≤ 1000，t 长度 ≤ 100。",
+      "question_type": "program",
+      "pid": "CIE202608L3T18",
+      "url": "https://fslong.iok.la/problem/CIE202608L3T18",
+      "title": "子串出现次数",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 23 题 数字反转\n\n给定一个整数 n，将它各位数字反转后输出。反转后产生的前导零应舍去（如 1200 反转为 0021，输出 21）；负数反转后保留负号（如 -380 反转为 -83）。\n\n【输入格式】一行一个整数 n。\n【输出格式】一行一个整数，表示反转结果。\n【样例输入 1】\n```\n123\n```\n【样例输出 1】\n```\n321\n```\n【样例输入 2】\n```\n-380\n```\n【样例输出 2】\n```\n-83\n```\n【样例输入 3】\n```\n1200\n```\n【样例输出 3】\n```\n21\n```\n【数据范围】-10⁹ ≤ n ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "CIE202608L3T19",
+      "url": "https://fslong.iok.la/problem/CIE202608L3T19",
+      "title": "数字反转",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 24 题 击鼓传花\n\nn 个小朋友围成一圈，编号 1 到 n，从 1 号开始按编号顺序报数，报到 m 的小朋友出列表演节目；他的下一位小朋友从 1 重新开始报数。依次进行，直到所有小朋友都出列。请输出出列顺序。\n\n【输入格式】一行两个整数 n 和 m。\n【输出格式】一行 n 个整数，表示出列顺序，相邻数用一个空格分隔。\n【样例输入 1】\n```\n5 3\n```\n【样例输出 1】\n```\n3 1 5 2 4\n```\n【样例说明】1 报 1、2 报 2、3 报 3 出列；4 报 1、5 报 2、1 报 3 出列；依此类推。\n【样例输入 2】\n```\n1 1\n```\n【样例输出 2】\n```\n1\n```\n【数据范围】1 ≤ n ≤ 1000，1 ≤ m ≤ 1000。",
+      "question_type": "program",
+      "pid": "CIE202608L3T20",
+      "url": "https://fslong.iok.la/problem/CIE202608L3T20",
+      "title": "击鼓传花",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "title": "2026年9月 电子学会青少年软件编程等级考试 C/C++ 四级 模拟卷5",
+  "description": "2026年9月 电子学会青少年软件编程等级考试 C/C++ 四级 模拟卷5（单选10×2分 + 判断10×2分 = 40分 + 编程4×15分 = 60分）",
+  "time_limit": 60,
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会四级模拟·指针）\n\n有代码 int a[5]; int *p = a;，则 *p 访问的是？",
+      "question_type": "single",
+      "options": {
+        "A": "a[0] 的值",
+        "B": "a[1] 的值",
+        "C": "a[5] 的值",
+        "D": "数组 a 的地址"
+      },
+      "correct_answer": "A",
+      "explanation": "数组名即首元素地址，*p 即 a[0]。",
+      "score": 2
+    },
+    {
+      "content": "### 第 2 题（电子学会四级模拟·指针）\n\n设 p 指向 int 数组某元素，执行 p++ 后，p 指向？",
+      "question_type": "single",
+      "options": {
+        "A": "前一个元素",
+        "B": "下一个元素",
+        "C": "数组末尾后仍不变",
+        "D": "地址不变"
+      },
+      "correct_answer": "B",
+      "explanation": "指针自增按元素大小移动，指向下一元素。",
+      "score": 2
+    },
+    {
+      "content": "### 第 3 题（电子学会四级模拟·结构体）\n\n已知结构体变量 s 含成员 age，访问该成员正确的写法是？",
+      "question_type": "single",
+      "options": {
+        "A": "s->age",
+        "B": "s.age",
+        "C": "*s.age",
+        "D": "s[age]"
+      },
+      "correct_answer": "B",
+      "explanation": "结构体变量用点运算符访问成员。",
+      "score": 2
+    },
+    {
+      "content": "### 第 4 题（电子学会四级模拟·类）\n\nclass 中未写访问修饰符的成员默认是？",
+      "question_type": "single",
+      "options": {
+        "A": "public",
+        "B": "protected",
+        "C": "private",
+        "D": "static"
+      },
+      "correct_answer": "C",
+      "explanation": "class 默认 private，struct 默认 public。",
+      "score": 2
+    },
+    {
+      "content": "### 第 5 题（电子学会四级模拟·进制转换）\n\n二进制数 1011 对应的十进制数是？",
+      "question_type": "single",
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "12",
+        "D": "11"
+      },
+      "correct_answer": "D",
+      "explanation": "8+0+2+1=11。",
+      "score": 2
+    },
+    {
+      "content": "### 第 6 题（电子学会四级模拟·位运算）\n\n表达式 6 & 3 的值是？（6=(110)₂, 3=(011)₂）",
+      "question_type": "single",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "1",
+        "D": "0"
+      },
+      "correct_answer": "A",
+      "explanation": "按位与 110&011=010=2。",
+      "score": 2
+    },
+    {
+      "content": "### 第 7 题（电子学会四级模拟·排序）\n\n对 n 个数做冒泡排序（升序），最多需要多少趟？",
+      "question_type": "single",
+      "options": {
+        "A": "n",
+        "B": "n+1",
+        "C": "n-1",
+        "D": "n/2"
+      },
+      "correct_answer": "C",
+      "explanation": "最多 n-1 趟即可完全有序。",
+      "score": 2
+    },
+    {
+      "content": "### 第 8 题（电子学会四级模拟·排序）\n\n快速排序的平均时间复杂度是？",
+      "question_type": "single",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n log n)",
+        "C": "O(n²)",
+        "D": "O(log n)"
+      },
+      "correct_answer": "B",
+      "explanation": "快排平均 O(n log n)，最坏 O(n²)。",
+      "score": 2
+    },
+    {
+      "content": "### 第 9 题（电子学会四级模拟·高精度）\n\n高精度加法计算两个大整数时，通常如何对齐两个数？",
+      "question_type": "single",
+      "options": {
+        "A": "最高位对齐",
+        "B": "随机对齐",
+        "C": "不需要对齐",
+        "D": "个位对齐（按低位对齐）"
+      },
+      "correct_answer": "D",
+      "explanation": "从个位（低位）开始逐位相加并处理进位。",
+      "score": 2
+    },
+    {
+      "content": "### 第 10 题（电子学会四级模拟·高精度）\n\n两个不超过 100 位的非负整数相加，和最多有多少位？",
+      "question_type": "single",
+      "options": {
+        "A": "99",
+        "B": "100",
+        "C": "101",
+        "D": "200"
+      },
+      "correct_answer": "C",
+      "explanation": "两数相加至多产生一位进位，最多 101 位。",
+      "score": 2
+    },
+    {
+      "content": "### 第 11 题（电子学会四级模拟·指针）\n\n指针变量中存储的是另一个变量的内存地址。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "指针即地址。",
+      "score": 2
+    },
+    {
+      "content": "### 第 12 题（电子学会四级模拟·指针）\n\nint *p; *p = 5; 在未给 p 赋初值时是安全的。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "野指针解引用是未定义行为。",
+      "score": 2
+    },
+    {
+      "content": "### 第 13 题（电子学会四级模拟·结构体）\n\n结构体的成员可以是不同的数据类型。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "结构体是不同类型成员的集合。",
+      "score": 2
+    },
+    {
+      "content": "### 第 14 题（电子学会四级模拟·类）\n\n用 class 定义的类，其成员默认访问权限是 public。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "class 默认 private。",
+      "score": 2
+    },
+    {
+      "content": "### 第 15 题（电子学会四级模拟·进制转换）\n\n二进制数 1101 等于十进制数 13。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "8+4+0+1=13。",
+      "score": 2
+    },
+    {
+      "content": "### 第 16 题（电子学会四级模拟·位运算）\n\n表达式 5 | 2 的值是 7。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "101|010=111=7。",
+      "score": 2
+    },
+    {
+      "content": "### 第 17 题（电子学会四级模拟·排序）\n\n冒泡排序是稳定的排序算法。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "相等元素不交换，次序保持。",
+      "score": 2
+    },
+    {
+      "content": "### 第 18 题（电子学会四级模拟·排序）\n\n选择排序每一趟从未排序部分选出最小值放到已排序部分末尾。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "选择排序的基本过程。",
+      "score": 2
+    },
+    {
+      "content": "### 第 19 题（电子学会四级模拟·高精度）\n\n读入并保存一个 100 位的大整数，使用 long long 类型即可。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "long long 约 19 位，100 位须用字符串/数组存储。",
+      "score": 2
+    },
+    {
+      "content": "### 第 20 题（电子学会四级模拟·高精度）\n\n高精度乘法中，可以不逐位处理、直接把整个大数相乘存入一个 int 变量。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "int 会溢出，必须逐位模拟竖式乘法。",
+      "score": 2
+    },
+    {
+      "content": "### 第 21 题 二进制回文数\n\n给定一个正整数 n，把它写成二进制表示（不含前导零），判断该二进制串是否为回文串（正读反读相同）。是输出 YES，否输出 NO。\n\n【输入格式】一行一个正整数 n。\n【输出格式】一行，YES 或 NO。\n【样例输入 1】\n```\n5\n```\n【样例输出 1】\n```\nYES\n```\n【样例说明】5 的二进制为 101，是回文。\n【样例输入 2】\n```\n6\n```\n【样例输出 2】\n```\nNO\n```\n【样例说明】6 的二进制为 110，不是回文。\n【数据范围】1 ≤ n ≤ 10⁹。",
+      "question_type": "program",
+      "pid": "CIE202608L4T17",
+      "url": "https://fslong.iok.la/problem/CIE202608L4T17",
+      "title": "二进制回文数",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 22 题 开关灯\n\n走廊上有 n 盏灯，编号 0 到 n-1，初始时全部关闭。进行 m 次操作，第 i 次操作给定编号 k，将编号为 k 的灯状态取反（开着变关闭，关闭变开着）。求 m 次操作后每盏灯的状态。\n\n【输入格式】第一行两个整数 n 和 m。接下来 m 行，每行一个整数 k，表示本次取反的灯编号。\n【输出格式】一行 n 个整数（0 表示关闭，1 表示打开），从灯 0 到灯 n-1，相邻数用一个空格分隔。\n【样例输入 1】\n```\n5 3\n0\n2\n0\n```\n【样例输出 1】\n```\n0 0 1 0 0\n```\n【样例说明】灯 0 被取反两次仍关闭，灯 2 取反一次打开，其余始终关闭。\n【数据范围】1 ≤ n ≤ 30，1 ≤ m ≤ 10⁵，0 ≤ k < n。",
+      "question_type": "program",
+      "pid": "CIE202608L4T18",
+      "url": "https://fslong.iok.la/problem/CIE202608L4T18",
+      "title": "开关灯",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 23 题 高精度加法\n\n天文望远镜记录了两个超大整数的观测编号，它们都可能长达 500 位。请计算这两个非负整数的和。\n\n【输入格式】共两行，每行一个非负整数（不含前导零，可以为 0）。\n【输出格式】一行，表示两数之和。\n【样例输入 1】\n```\n12345678901234567890\n98765432109876543210\n```\n【样例输出 1】\n```\n111111111011111111100\n```\n【样例输入 2】\n```\n0\n0\n```\n【样例输出 2】\n```\n0\n```\n【数据范围】两个整数均不超过 500 位。",
+      "question_type": "program",
+      "pid": "CIE202608L4T19",
+      "url": "https://fslong.iok.la/problem/CIE202608L4T19",
+      "title": "高精度加法",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 24 题 评委打分\n\n歌唱比赛中有 n 位评委给选手打分（均为 0 到 100 的整数）。计分规则：去掉一个最高分和一个最低分后，取剩余分数的平均值（保留 2 位小数）。请计算该选手的最终得分。\n\n【输入格式】第一行一个整数 n（n ≥ 3）。第二行 n 个整数，表示各评委的打分。\n【输出格式】一行，一个保留 2 位小数的小数，表示最终得分。\n【样例输入 1】\n```\n5\n90 80 85 70 95\n```\n【样例输出 1】\n```\n85.00\n```\n【样例说明】去掉最高分 95 和最低分 70，剩余 90、80、85，平均分 85.00。\n【样例输入 2】\n```\n3\n100 100 100\n```\n【样例输出 2】\n```\n100.00\n```\n【数据范围】3 ≤ n ≤ 1000，0 ≤ 每个分数 ≤ 100。",
+      "question_type": "program",
+      "pid": "CIE202608L4T20",
+      "url": "https://fslong.iok.la/problem/CIE202608L4T20",
+      "title": "评委打分",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    }
+  ]
+}
