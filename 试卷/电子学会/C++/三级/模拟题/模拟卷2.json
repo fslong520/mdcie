@@ -311,7 +311,7 @@
       "url": "https://fslong.iok.la/problem/cie202608L3T3",
       "title": "储物柜的密码",
       "correct_answer": "参考代码见解析",
-      "score": 30,
+      "score": 15,
       "explanation": "预置两个数组：key[] 记录每个字母所在的数字键，cnt[] 记录该字母是键内第几个（即需按的次数）。对每个字母输出 key[i] 重复 cnt[i] 次，空格分隔。参考程序：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int key[26] = {2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7,7,7,8,8,8,9,9,9,9};\n    int cnt[26] = {1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,4,1,2,3,1,2,3,4};\n    string s;\n    cin >> s;\n    for (char c : s) {\n        int i = c - 'a';\n        for (int j = 0; j < cnt[i]; j++) cout << key[i];\n        cout << \" \";\n    }\n    cout << endl;\n    return 0;\n}\n```",
       "options": {}
     },
@@ -322,7 +322,7 @@
       "url": "https://fslong.iok.la/problem/cie202608L3T4",
       "title": "电梯的旅程",
       "correct_answer": "参考代码见解析",
-      "score": 30,
+      "score": 15,
       "explanation": "用变量 cur 记录当前楼层，依次读取每个目标楼层 x，累加 |x - cur| 并更新 cur = x。从 1 楼出发。参考程序：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    cin >> n;\n    int cur = 1, ans = 0;\n    for (int i = 0; i < n; i++) {\n        int x;\n        cin >> x;\n        ans += abs(x - cur);\n        cur = x;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```",
       "options": {}
     },
@@ -334,7 +334,7 @@
       "title": "快递分装",
       "options": {},
       "correct_answer": "参考代码见解析",
-      "score": 30,
+      "score": 15,
       "explanation": "模拟顺序装车：当前车已经装总重 cur，若 cur+wᵢ ≤ W 则装（cur+=wᵢ），否则新车计数+1 且 cur=wᵢ。初始车数=1。\n\n参考程序：\n\n```cpp\n#include <iostream>\nusing namespace std;\n\ntypedef long long ll;\n\nint main()\n{\n    int n, ans = 1;\n    ll W, cur = 0, w;\n    cin >> n >> W;\n    for (int i = 0; i < n; i++)\n    {\n        cin >> w;\n        if (cur + w <= W) cur += w;\n        else { ans++; cur = w; }\n    }\n    cout << ans << endl;\n    return 0;\n}\n```"
     },
     {
@@ -345,7 +345,7 @@
       "title": "密文传送",
       "options": {},
       "correct_answer": "参考代码见解析",
-      "score": 30,
+      "score": 15,
       "explanation": "遍历字符串，对大写字母 c = (c - 'A' + k) % 26 + 'A'，小写字母同理，非字母不变。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    string s;\n    int k;\n    getline(cin, s);\n    cin >> k;\n    for (int i = 0; i < s.size(); i++)\n    {\n        char c = s[i];\n        if (c >= 'A' && c <= 'Z')\n            c = (c - 'A' + k) % 26 + 'A';\n        else if (c >= 'a' && c <= 'z')\n            c = (c - 'a' + k) % 26 + 'a';\n        cout << c;\n    }\n    cout << endl;\n    return 0;\n}\n```"
     }
   ]

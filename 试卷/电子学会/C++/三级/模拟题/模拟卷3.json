@@ -311,7 +311,7 @@
       "url": "https://fslong.iok.la/problem/cie202608L3T5",
       "title": "超市的幸运小票",
       "correct_answer": "参考代码见解析",
-      "score": 30,
+      "score": 15,
       "explanation": "枚举 i 从 1 到 n。先求出 i 的位数：用循环将 t 不断除以 10 得到 10^k（k 为位数）。判断 i×i 对 10^k 取余是否等于 i，相等则 i 为幸运数。注意用 long long 防溢出。参考程序：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    cin >> n;\n    bool found = false;\n    for (int i = 1; i <= n; i++) {\n        int p = 1, t = i;\n        while (t) { p *= 10; t /= 10; }\n        if (1LL * i * i % p == i) {\n            cout << i << endl;\n            found = true;\n        }\n    }\n    if (!found) cout << \"none\" << endl;\n    return 0;\n}\n```",
       "options": {}
     },
@@ -322,7 +322,7 @@
       "url": "https://fslong.iok.la/problem/cie202608L3T6",
       "title": "小木棍搭三角",
       "correct_answer": "参考代码见解析",
-      "score": 30,
+      "score": 15,
       "explanation": "用三重循环逐一枚举 a、b、c：a 从 1 到 n，b 从 a 到 n 保证 a ≤ b，c 从 b 到 n 保证 b ≤ c。若 a + b > c 则计数加一。参考程序：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    cin >> n;\n    int cnt = 0;\n    for (int a = 1; a <= n; a++) {\n        for (int b = a; b <= n; b++) {\n            for (int c = b; c <= n; c++) {\n                if (a + b > c) cnt++;\n            }\n        }\n    }\n    cout << cnt << endl;\n    return 0;\n}\n```",
       "options": {}
     },
@@ -334,7 +334,7 @@
       "title": "电梯送客",
       "options": {},
       "correct_answer": "参考代码见解析",
-      "score": 30,
+      "score": 15,
       "explanation": "从 1 楼开始，对每个目标楼层，累加 |当前楼层 - 目标楼层|，然后更新当前楼层为目标楼层。\n\n参考程序：\n\n```cpp\n#include <iostream>\n#include <cstdlib>\nusing namespace std;\n\nint main()\n{\n    int n, cur = 1;\n    long long ans = 0;\n    cin >> n;\n    for (int i = 0; i < n; i++)\n    {\n        int f;\n        cin >> f;\n        ans += abs(cur - f);\n        cur = f;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```"
     },
     {
@@ -345,7 +345,7 @@
       "title": "出差天数",
       "options": {},
       "correct_answer": "参考代码见解析",
-      "score": 30,
+      "score": 15,
       "explanation": "打表每月天数（闰年 2 月 29 天），先加 k 天到当前日，然后循环减月天数进位：若当前日 > 该月天数，则日-该月天数、月+1，月>12 则年+1 月=1。\n\n参考程序：\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint days[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};\n\nbool isLeap(int y)\n{\n    return y % 400 == 0 || (y % 4 == 0 && y % 100 != 0);\n}\n\nint main()\n{\n    int y, m, d, k;\n    cin >> y >> m >> d >> k;\n    d += k;\n    while (true)\n    {\n        int dm = days[m];\n        if (m == 2 && isLeap(y)) dm = 29;\n        if (d <= dm) break;\n        d -= dm;\n        m++;\n        if (m > 12) { m = 1; y++; }\n    }\n    cout << y << \" \" << m << \" \" << d << endl;\n    return 0;\n}\n```"
     }
   ]
