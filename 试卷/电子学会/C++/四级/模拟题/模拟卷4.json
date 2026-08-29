@@ -248,7 +248,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L4T13",
       "title": "成绩排序",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -259,7 +259,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L4T14",
       "title": "指针数组反转",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -270,7 +270,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L4T15",
       "title": "二进制中1的个数",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -281,7 +281,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L4T16",
       "title": "十六进制转十进制",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     }

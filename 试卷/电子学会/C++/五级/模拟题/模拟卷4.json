@@ -248,7 +248,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L5T13",
       "title": "区间和查询",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -259,7 +259,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L5T14",
       "title": "区间加",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -270,7 +270,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L5T15",
       "title": "数字出现次数",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -281,7 +281,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L5T16",
       "title": "数列分段",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     }

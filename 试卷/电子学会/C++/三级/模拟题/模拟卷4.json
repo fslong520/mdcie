@@ -248,7 +248,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L3T13",
       "title": "回文判断",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -259,7 +259,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L3T14",
       "title": "素数统计",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -270,7 +270,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L3T15",
       "title": "逢7过",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     },
@@ -281,7 +281,7 @@
       "url": "https://fslong.iok.la/problem/CIE202608L3T16",
       "title": "斐波那契数列",
       "score": 15,
-      "options": [],
+      "options": {},
       "correct_answer": "",
       "explanation": ""
     }
