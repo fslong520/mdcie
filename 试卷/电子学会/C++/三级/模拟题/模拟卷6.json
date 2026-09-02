@@ -1,0 +1,291 @@
+{
+  "title": "2026年10月 电子学会青少年软件编程等级考试 C/C++ 三级 模拟卷6",
+  "description": "2026年10月 电子学会青少年软件编程等级考试 C/C++ 三级 模拟卷6（单选10×2分 + 判断10×2分 = 40分 + 编程4×15分 = 60分）",
+  "time_limit": 60,
+  "questions": [
+    {
+      "content": "### 第 1 题（电子学会三级模拟·函数基础）\n\n一个无返回值、无参数的函数 f 定义后，在 main 函数中调用它的正确语句是？",
+      "question_type": "single",
+      "options": {
+        "A": "int f;",
+        "B": "f();",
+        "C": "f;",
+        "D": "return f();"
+      },
+      "correct_answer": "B",
+      "explanation": "调用无参数函数直接写函数名加括号，即 f();。",
+      "score": 2
+    },
+    {
+      "content": "### 第 2 题（电子学会三级模拟·函数基础）\n\n函数定义时，函数名后面括号里声明的变量，通常称为？",
+      "question_type": "single",
+      "options": {
+        "A": "形参",
+        "B": "实参",
+        "C": "返回值",
+        "D": "全局变量"
+      },
+      "correct_answer": "A",
+      "explanation": "函数定义时括号内声明的变量称为形参，调用时传入的值称为实参。",
+      "score": 2
+    },
+    {
+      "content": "### 第 3 题（电子学会三级模拟·参数传递）\n\n有如下代码：\n```cpp\nvoid change(int x) { x = x + 10; }\nint main() {\n    int a = 8;\n    change(a);\n    cout << a;\n    return 0;\n}\n```\n输出结果是？",
+      "question_type": "single",
+      "options": {
+        "A": "18",
+        "B": "0",
+        "C": "8",
+        "D": "10"
+      },
+      "correct_answer": "C",
+      "explanation": "值传递中形参 x 的改变不影响实参 a，a 仍为 8。",
+      "score": 2
+    },
+    {
+      "content": "### 第 4 题（电子学会三级模拟·递归）\n\n有递归函数：\n```cpp\nint f(int n) {\n    if (n == 0 || n == 1) return 1;\n    return 2 * f(n - 1) + f(n - 2);\n}\n```\nf(3) 的返回值是？",
+      "question_type": "single",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "9",
+        "D": "7"
+      },
+      "correct_answer": "D",
+      "explanation": "f(0)=f(1)=1，f(2)=2·f(1)+f(0)=3，f(3)=2·f(2)+f(1)=7。",
+      "score": 2
+    },
+    {
+      "content": "### 第 5 题（电子学会三级模拟·递归）\n\n递归编程思想的核心是？",
+      "question_type": "single",
+      "options": {
+        "A": "在函数内部使用循环",
+        "B": "函数直接或间接地调用自身",
+        "C": "用全局变量保存中间结果",
+        "D": "用 goto 语句跳转"
+      },
+      "correct_answer": "B",
+      "explanation": "递归的本质是函数直接或间接地调用自身，并逐步向出口推进。",
+      "score": 2
+    },
+    {
+      "content": "### 第 6 题（电子学会三级模拟·字符数组）\n\n执行 `strcpy(a, b);` 之后，下列说法正确的是？",
+      "question_type": "single",
+      "options": {
+        "A": "比较 a 与 b 的字典序大小",
+        "B": "求出 b 的字符长度",
+        "C": "把 b 的内容复制到 a 中",
+        "D": "把 a 接到 b 的后面"
+      },
+      "correct_answer": "C",
+      "explanation": "strcpy 将 b 的内容（含结尾符\\0）复制到 a 中。",
+      "score": 2
+    },
+    {
+      "content": "### 第 7 题（电子学会三级模拟·数学库函数）\n\n设 double 型变量 x = 3.7，则 `cout << (int)x + 1` 的输出是？",
+      "question_type": "single",
+      "options": {
+        "A": "4",
+        "B": "3",
+        "C": "4.7",
+        "D": "5"
+      },
+      "correct_answer": "A",
+      "explanation": "(int)x 将 3.7 截断为 3，再加 1 得 4。",
+      "score": 2
+    },
+    {
+      "content": "### 第 8 题（电子学会三级模拟·模拟）\n\n执行以下代码，输出结果是？\n```cpp\nint cnt = 0;\nfor (int i = 1; i <= 100; i++)\n    if (i % 7 == 0 || i % 11 == 0) cnt++;\ncout << cnt;\n```",
+      "question_type": "single",
+      "options": {
+        "A": "21",
+        "B": "23",
+        "C": "20",
+        "D": "22"
+      },
+      "correct_answer": "D",
+      "explanation": "7 的倍数 14 个，11 的倍数 9 个，减去重复的 77，共 14+9-1=22。",
+      "score": 2
+    },
+    {
+      "content": "### 第 9 题（电子学会三级模拟·枚举）\n\n用枚举法统计 1~200 中能被 6 整除的数的个数，结果是？",
+      "question_type": "single",
+      "options": {
+        "A": "32",
+        "B": "33",
+        "C": "34",
+        "D": "36"
+      },
+      "correct_answer": "B",
+      "explanation": "6,12,...,198，共 200÷6=33 个。",
+      "score": 2
+    },
+    {
+      "content": "### 第 10 题（电子学会三级模拟·枚举）\n\n下列问题中，更适合用枚举法解决的是？",
+      "question_type": "single",
+      "options": {
+        "A": "求一个整数序列的最大值",
+        "B": "模拟一个报数游戏",
+        "C": "在 1~1000 内找出所有满足某性质的数",
+        "D": "计算两点之间的直线距离"
+      },
+      "correct_answer": "C",
+      "explanation": "枚举法适合在有限范围内穷举并筛选所有满足条件的情况。",
+      "score": 2
+    },
+    {
+      "content": "### 第 11 题（电子学会三级模拟·函数基础）\n\n一个函数可以定义在 main 函数之前，也可以定义在其后（只要在调用前有声明）。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "函数可定义在任一位置，前提是调用前已有定义或声明。",
+      "score": 2
+    },
+    {
+      "content": "### 第 12 题（电子学会三级模拟·函数基础）\n\n函数定义的参数列表中，参数类型可以省略不写，默认为 int。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "C/C++ 参数必须写明类型，不能省略。",
+      "score": 2
+    },
+    {
+      "content": "### 第 13 题（电子学会三级模拟·参数传递）\n\n值传递时，实参与形参占用不同的内存空间，函数内修改形参不影响实参。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "值传递会复制实参给形参，二者内存独立，互不影响。",
+      "score": 2
+    },
+    {
+      "content": "### 第 14 题（电子学会三级模拟·递归）\n\n每次递归调用时，系统都会为本次调用分配独立的内存空间（用于保存本次调用的参数与局部变量）。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "每次函数调用都会创建独立栈帧，存放该次调用的参数与局部变量。",
+      "score": 2
+    },
+    {
+      "content": "### 第 15 题（电子学会三级模拟·递归）\n\n递归函数中的递归调用语句，必须写在函数体的最后一行。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "递归调用可出现在函数体任意位置，不一定在最后一行。",
+      "score": 2
+    },
+    {
+      "content": "### 第 16 题（电子学会三级模拟·字符数组）\n\n用 `==` 直接比较两个字符数组，可以判断它们的内容是否相同。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "字符数组用 == 比较的是首元素地址而非内容，须用 strcmp 比较。",
+      "score": 2
+    },
+    {
+      "content": "### 第 17 题（电子学会三级模拟·字符数组）\n\n`strcmp` 函数按字符的 ASCII 码大小，逐个比较两个字符串。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "strcmp 逐字符按 ASCII 码比较，用于判断字典序。",
+      "score": 2
+    },
+    {
+      "content": "### 第 18 题（电子学会三级模拟·枚举）\n\n枚举法的时间复杂度通常与候选空间的大小成正比。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "枚举遍历整个候选空间，规模越大耗时越多。",
+      "score": 2
+    },
+    {
+      "content": "### 第 19 题（电子学会三级模拟·模拟）\n\n用模拟法解题时，不必关心程序的运行时间，过程模拟得越复杂越好。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "F",
+      "explanation": "模拟也应控制复杂度，过细模拟可能超时。",
+      "score": 2
+    },
+    {
+      "content": "### 第 20 题（电子学会三级模拟·枚举）\n\n在枚举过程中，通过剪枝（提前排除明显不满足条件的候选值）可以提高效率。",
+      "question_type": "judge",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      },
+      "correct_answer": "T",
+      "explanation": "剪枝能显著减少不必要的枚举次数。",
+      "score": 2
+    },
+    {
+      "content": "### 第 21 题 字母频率统计\n\n输入一个由小写字母组成的字符串（不含空格），请统计每个小写字母出现的最多次数，找出出现次数最多的字母并输出该字母及其出现次数。若有多个字母出现次数相同且均为最多，则输出其中字母序最小的那个。\n\n【输入格式】一行一个字符串 s，仅由小写字母组成，长度不超过 1000。\n【输出格式】一行，格式为「字母:次数」，字母为出现次数最多的字母，次数为其出现次数。\n【样例输入 1】\n```\naabbbcc\n```\n【样例输出 1】\n```\nb:3\n```\n【样例说明】a 出现 2 次，b 出现 3 次，c 出现 2 次，最多为 b。\n【样例输入 2】\n```\nabc\n```\n【样例输出 2】\n```\na:1\n```\n【样例说明】a、b、c 各出现 1 次，并列最多，取字母序最小的 a。\n【样例输入 3】\n```\nzzzyy\n```\n【样例输出 3】\n```\nz:3\n```\n【数据范围】1 ≤ |s| ≤ 1000，s 仅含小写字母。",
+      "question_type": "program",
+      "pid": "CIE202608L3T21",
+      "url": "https://fslong.iok.la/problem/CIE202608L3T21",
+      "title": "字母频率统计",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 22 题 单词排序\n\n输入 n 个由小写字母组成的单词，请按字典序（字母顺序）从小到大将它们排序并输出。本题鼓励使用 C 风格字符串与 `strcmp` 函数实现。\n\n【输入格式】第一行一个整数 n。接下来 n 行，每行一个单词，仅含小写字母，长度不超过 20。\n【输出格式】按字典序从小到大输出 n 行，每行一个单词。若存在相同单词，排序后它们相邻，需输出全部（含重复）。\n【样例输入 1】\n```\n3\nbanana\napple\ncat\n```\n【样例输出 1】\n```\napple\nbanana\ncat\n```\n【样例输入 2】\n```\n2\nbbb\naaa\n```\n【样例输出 2】\n```\naaa\nbbb\n```\n【样例输入 3】\n```\n4\nzebra\napple\nmango\napple\n```\n【样例输出 3】\n```\napple\napple\nmango\nzebra\n```\n【样例说明】若存在相同单词，排序后它们相邻输出；本题输出每个单词（含重复）。\n【数据范围】1 ≤ n ≤ 50，每个单词长度 ≤ 20，仅含小写字母。",
+      "question_type": "program",
+      "pid": "CIE202608L3T22",
+      "url": "https://fslong.iok.la/problem/CIE202608L3T22",
+      "title": "单词排序",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 23 题 机器人漫步\n\n一个机器人从点 (0, 0) 出发。给出一串长度为 n 的移动指令，每个字符表示向一个方向移动一个单位：`U` 向上（y 加 1），`D` 向下（y 减 1），`L` 向左（x 减 1），`R` 向右（x 加 1）。请统计机器人经过的不同格子的数量（起点 (0, 0) 也计为一个格子）。若多次经过同一格子，只计一次。\n\n【输入格式】第一行一个整数 n。第二行一个长度为 n 的字符串，仅由 `U`、`D`、`L`、`R` 组成。\n【输出格式】一个整数，表示经过的不同格子数。\n【样例输入 1】\n```\n4\nUUDR\n```\n【样例输出 1】\n```\n4\n```\n【样例说明】依次到达 (0,0)→(0,1)→(0,2)→(0,1)→(1,1)，不同格子为 (0,0)、(0,1)、(0,2)、(1,1)，共 4 个。\n【样例输入 2】\n```\n3\nLRL\n```\n【样例输出 2】\n```\n2\n```\n【样例说明】(0,0)→(−1,0)→(0,0)→(−1,0)，不同的格子只有 (0,0) 和 (−1,0)。\n【样例输入 3】\n```\n5\nUUULL\n```\n【样例输出 3】\n```\n6\n```\n【数据范围】1 ≤ n ≤ 1000，坐标绝对值不超过 n。",
+      "question_type": "program",
+      "pid": "CIE202608L3T23",
+      "url": "https://fslong.iok.la/problem/CIE202608L3T23",
+      "title": "机器人漫步",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    },
+    {
+      "content": "### 第 24 题 数位和统计\n\n一个正整数各位数字之和，等于把它每一位数字相加所得的结果。例如 123 的各位数字之和是 1 + 2 + 3 = 6。\n给定三个整数 L、R、k，请统计区间 [L, R] 内各位数字之和恰好等于 k 的整数个数。\n\n【输入格式】一行三个整数 L、R、k，满足 1 ≤ L ≤ R ≤ 100000，0 ≤ k ≤ 100。\n【输出格式】一个整数，表示个数。\n【样例输入 1】\n```\n1 10 1\n```\n【样例输出 1】\n```\n2\n```\n【样例说明】1 的各位和为 1；10 的各位和为 1+0=1。共 2 个。\n【样例输入 2】\n```\n20 20 2\n```\n【样例输出 2】\n```\n1\n```\n【样例说明】20 的各位和为 2+0=2。\n【样例输入 3】\n```\n1 5 3\n```\n【样例输出 3】\n```\n1\n```\n【数据范围】1 ≤ L ≤ R ≤ 100000，0 ≤ k ≤ 100。注意 0 的各位数字之和为 0（本题 L ≥ 1，不会出现 0）。",
+      "question_type": "program",
+      "pid": "CIE202608L3T24",
+      "url": "https://fslong.iok.la/problem/CIE202608L3T24",
+      "title": "数位和统计",
+      "score": 15,
+      "options": {},
+      "correct_answer": "",
+      "explanation": ""
+    }
+  ]
+}
