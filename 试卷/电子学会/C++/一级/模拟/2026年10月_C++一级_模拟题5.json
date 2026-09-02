@@ -1,0 +1,300 @@
+{
+  "title": "2026年10月 电子学会青少年软件编程等级考试 C/C++ 一级 模拟卷5",
+  "description": "2026年10月 电子学会青少年软件编程等级考试 C/C++ 一级 模拟卷5（单选10×4分 + 判断10×2分 = 60分 + 编程2×20分 = 40分，总分100分）——表4一级考点：开发环境2单1判、变量基础1单1判、基本运算1单1判、输入输出1单1判、数学函数1单2判、顺序结构1单1判1编、逻辑运算1单1判、循环语句2单2判1编；编程：停车收费（分支分段计费）、存钱计划（循环倍增累加）",
+  "time_limit": 120,
+  "pass_score": 60,
+  "questions": [
+    {
+      "content": "### 第 1 题（程序入口）一个完整的 C++ 程序，必须包含以下哪个函数作为程序执行的入口？（ ）\n\n- A. main()\n- B. start()\n- C. begin()\n- D. first()",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 1 题",
+      "correct_answer": "A",
+      "score": 4,
+      "explanation": "C++ 程序总是从 main() 函数开始执行，它是程序的入口，缺少 main() 程序无法运行。",
+      "options": {
+        "A": "main()",
+        "B": "start()",
+        "C": "begin()",
+        "D": "first()"
+      }
+    },
+    {
+      "content": "### 第 2 题（关键字）以下哪个是 C++ 的关键字，**不能**用作变量名？（ ）\n\n- A. sum\n- B. my_score\n- C. double\n- D. _a1",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 2 题",
+      "correct_answer": "C",
+      "score": 4,
+      "explanation": "double 是表示双精度浮点类型的关键字，关键字有专门的含义，不能用作变量名；sum、my_score、_a1 都是合法的变量名。",
+      "options": {
+        "A": "sum",
+        "B": "my_score",
+        "C": "double",
+        "D": "_a1"
+      }
+    },
+    {
+      "content": "### 第 3 题（复合赋值）执行以下代码，输出的结果是？（ ）\n\n```cpp\nint x = 7;\nx %= 3;\ncout << x;\n```\n\n- A. 2\n- B. 1\n- C. 3\n- D. 2.33",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 3 题",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "x %= 3 等价于 x = x % 3，7 除以 3 的余数是 1，所以输出 1。",
+      "options": {
+        "A": "2",
+        "B": "1",
+        "C": "3",
+        "D": "2.33"
+      }
+    },
+    {
+      "content": "### 第 4 题（输出拼接）执行以下代码，输出的结果是？（ ）\n\n```cpp\ncout << \"sum=\" << 3 + 2;\n```\n\n- A. sum=3+2\n- B. 3+2\n- C. sum=5\n- D. sum=32",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 4 题",
+      "correct_answer": "C",
+      "score": 4,
+      "explanation": "cout 会先输出字符串 sum=，再计算算术表达式 3+2 得 5 并输出，所以结果是 sum=5。",
+      "options": {
+        "A": "sum=3+2",
+        "B": "3+2",
+        "C": "sum=5",
+        "D": "sum=32"
+      }
+    },
+    {
+      "content": "### 第 5 题（函数组合）执行以下代码，输出的结果是？（ ）\n\n```cpp\ncout << max(4, 7) + min(2, 5);\n```\n\n- A. 6\n- B. 7\n- C. 11\n- D. 9",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 5 题",
+      "correct_answer": "D",
+      "score": 4,
+      "explanation": "max(4, 7) 取较大值 7，min(2, 5) 取较小值 2，7+2=9。",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "11",
+        "D": "9"
+      }
+    },
+    {
+      "content": "### 第 6 题（顺序执行）执行以下代码，输出的结果是？（ ）\n\n```cpp\nint a = 3;\ncout << a;\na = 8;\n```\n\n- A. 8\n- B. 3\n- C. 38\n- D. 11",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 6 题",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "程序按书写顺序执行：先输出 a 当时的值 3，之后 a=8 只是再赋值，不会再输出。体现了顺序结构。",
+      "options": {
+        "A": "8",
+        "B": "3",
+        "C": "38",
+        "D": "11"
+      }
+    },
+    {
+      "content": "### 第 7 题（逻辑运算）执行以下代码，输出的结果是？（ ）\n\n```cpp\nint r = (3 > 5) || (2 < 4);\ncout << r;\n```\n\n- A. 1\n- B. 0\n- C. true\n- D. 报错",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 7 题",
+      "correct_answer": "A",
+      "score": 4,
+      "explanation": "3>5 为假，2<4 为真，逻辑或 || 只要有一个为真结果就为真，布尔值真在输出时显示为 1。",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "true",
+        "D": "报错"
+      }
+    },
+    {
+      "content": "### 第 8 题（for循环）执行以下代码，输出的结果是？（ ）\n\n```cpp\nfor (int i = 2; i <= 10; i += 2)\n    cout << i;\n```\n\n- A. 2468\n- B. 246810\n- C. 13579\n- D. 210",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 8 题",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "i 从 2 开始，每次加 2，依次为 2、4、6、8、10，条件 i<=10 都满足，逐个输出得 246810。",
+      "options": {
+        "A": "2468",
+        "B": "246810",
+        "C": "13579",
+        "D": "210"
+      }
+    },
+    {
+      "content": "### 第 9 题（循环嵌套）执行以下代码，输出的结果是？（ ）\n\n```cpp\nint cnt = 0;\nfor (int i = 1; i <= 3; i++)\n    for (int j = 1; j <= 2; j++)\n        cnt++;\ncout << cnt;\n```\n\n- A. 3\n- B. 2\n- C. 6\n- D. 5",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 9 题",
+      "correct_answer": "C",
+      "score": 4,
+      "explanation": "外层循环 3 次，每次外层内层循环都完整执行 2 次，所以 cnt 共增加 3×2=6。",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "6",
+        "D": "5"
+      }
+    },
+    {
+      "content": "### 第 10 题（死循环辨析）执行以下代码，发生的现象是？（ ）\n\n```cpp\nint i = 10;\nwhile (i > 0)\n    i++;\n```\n\n- A. 输出 10\n- B. 循环执行 10 次\n- C. 循环执行 1 次\n- D. 无限循环，程序停不下来",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 10 题",
+      "correct_answer": "D",
+      "score": 4,
+      "explanation": "i 从 10 开始不断加 1，越来越大，永远满足 i>0，循环条件一直成立，形成死循环。",
+      "options": {
+        "A": "输出 10",
+        "B": "循环执行 10 次",
+        "C": "循环执行 1 次",
+        "D": "无限循环，程序停不下来"
+      }
+    },
+    {
+      "content": "### 第 11 题 编译的作用是把 C++ 源代码翻译成计算机能直接执行的机器指令。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 11 题",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "编译器把高级语言源代码翻译成机器指令，之后才能被计算机执行。",
+      "options": {}
+    },
+    {
+      "content": "### 第 12 题 在 C++ 中，Sum 和 sum 是两个不同的变量。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 12 题",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "C++ 区分大小写，Sum 与 sum 是两个不同的变量名。",
+      "options": {}
+    },
+    {
+      "content": "### 第 13 题 C++ 中，表达式 `9 % 4` 的计算结果是 2.25。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 13 题",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "% 是取余运算，结果必须是整数，9 % 4 = 1。2.25 是 9÷4 的小数商。",
+      "options": {}
+    },
+    {
+      "content": "### 第 14 题 执行 `cin >> a >> b;` 时，输入的两个数据之间必须用逗号分隔。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 14 题",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "cin >> a >> b 默认用空格或回车分隔两个数据，不能使用逗号。",
+      "options": {}
+    },
+    {
+      "content": "### 第 15 题 表达式 `sqrt(16.0)` 的计算结果是 4。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 15 题",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "sqrt 是开平方函数，16 的平方根是 4。",
+      "options": {}
+    },
+    {
+      "content": "### 第 16 题 表达式 `max(3, 5)` 的计算结果是 3。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 16 题",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "max 返回两个数中较大的一个，max(3, 5) 的结果是 5。",
+      "options": {}
+    },
+    {
+      "content": "### 第 17 题 C++ 程序总是从 main() 函数的第一条语句开始执行。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 17 题",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "无论 main() 写在程序的什么位置，程序都从它的第一条语句开始执行。",
+      "options": {}
+    },
+    {
+      "content": "### 第 18 题 表达式 `(1 > 2) && (5 > 4)` 的结果为 true。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 18 题",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "1>2 为假，逻辑与 && 要求两边都为真结果才为真，所以整体为 false。",
+      "options": {}
+    },
+    {
+      "content": "### 第 19 题 循环体中如果没有改变循环条件的语句，可能造成死循环。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 19 题",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "例如 while(i>0) i++ 中 i 一直增大，条件永远成立，就成了死循环。",
+      "options": {}
+    },
+    {
+      "content": "### 第 20 题 执行 `int i = 1; while (i < 5) i += 2;` 后，循环体一共执行 2 次。（ ）",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 20 题",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "i 从 1 开始：1<5 执行第 1 次（i 变 3），3<5 执行第 2 次（i 变 5），5<5 不成立结束，共 2 次。",
+      "options": {}
+    },
+    {
+      "content": "### 第 21 题 停车收费（20 分）\n\n**题目描述**\n\n某停车场按小时收费：**前 2 小时**（含第 2 小时）每小时 5 元；**超过 2 小时的部分**，每小时 8 元。停车时长不足 1 小时的部分按 1 小时计算（向上取整）。\n\n小码停车了 h 小时 m 分钟（0 ≤ m ≤ 59）。请计算他一共需要付多少元停车费。\n\n**输入格式**\n\n一行两个整数 h、m，用空格分隔，表示停车 h 小时 m 分钟。\n\n**输出格式**\n\n一个整数，表示需要支付的停车费（元）。\n\n**样例输入 1**\n\n```\n1 30\n```\n\n**样例输出 1**\n\n```\n10\n```\n\n**样例输入 2**\n\n```\n4 20\n```\n\n**样例输出 2**\n\n```\n34\n```\n\n**样例说明**\n\n样例 1：1 小时 30 分钟向上取整为 2 小时，未超过 2 小时，费用 2×5=10 元。\n样例 2：4 小时 20 分钟向上取整为 5 小时，前 2 小时 5×2=10 元，超出 3 小时 8×3=24 元，共 34 元。\n\n**数据范围**\n\n0 ≤ h ≤ 24，0 ≤ m ≤ 59，且 h、m 不同时为 0。\n\n---",
+      "question_type": "programming",
+      "pid": "cie202608L1T9",
+      "url": "https://fslong.iok.la/problem/cie202608L1T9",
+      "title": "第 21 题 停车收费",
+      "correct_answer": "见解析",
+      "score": 20,
+      "explanation": "先把时分向上取整成整小时 t（有分钟就加 1），再分段计费：t≤2 时费用 t×5，否则 2×5+(t-2)×8。分支结构+向上取整。",
+      "options": {}
+    },
+    {
+      "content": "### 第 22 题 存钱计划（20 分）\n\n**题目描述**\n\n小码给自己定了一个存钱计划：第 1 天存 1 元，从第 2 天起，每天存的钱是**前一天存钱的 2 倍**。也就是说：第 1 天存 1 元、第 2 天存 2 元、第 3 天存 4 元、第 4 天存 8 元……\n\n请你算一算，按这个计划存满 n 天时，小码一共存了多少元。\n\n**输入格式**\n\n一行一个整数 n，表示存钱的天数。\n\n**输出格式**\n\n一个整数，表示 n 天一共存下的钱数（元）。\n\n**样例输入 1**\n\n```\n3\n```\n\n**样例输出 1**\n\n```\n7\n```\n\n**样例输入 2**\n\n```\n4\n```\n\n**样例输出 2**\n\n```\n15\n```\n\n**样例说明**\n\n样例 1：1 + 2 + 4 = 7。\n样例 2：1 + 2 + 4 + 8 = 15。\n\n**数据范围**\n\n1 ≤ n ≤ 30。\n\n**提示**\n\n存的第 i 天的钱是 2^(i-1) 元。n 取到 30 时总数很大，建议使用 long long 类型保存总和。\n\n---",
+      "question_type": "programming",
+      "pid": "cie202608L1T10",
+      "url": "https://fslong.iok.la/problem/cie202608L1T10",
+      "title": "第 22 题 存钱计划",
+      "correct_answer": "见解析",
+      "score": 20,
+      "explanation": "循环 n 天，变量 day 表示当天存的钱（从 1 开始每天乘 2），累加到 sum。注意 2^30 级别总数超 int，须用 long long。循环+倍增累加。",
+      "options": {}
+    }
+  ]
+}
