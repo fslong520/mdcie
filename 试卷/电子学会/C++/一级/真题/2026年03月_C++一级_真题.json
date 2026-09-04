@@ -1,0 +1,330 @@
+{
+  "title": "【电子学会】 C++等级考试1级 2026年03月 真题",
+  "description": "2026年03月 电子学会青少年软件编程等级考试 C/C++ 一级 真题（单选10 + 判断10 + 编程2）",
+  "time_limit": 40,
+  "pass_score": 100,
+  "questions": [
+    {
+      "content": "### 第 1 题（2026年03月真题·开发环境）以下哪个软件不能用于C++程序的编写与编译运行？\n\n- A. Dev-C++\n- B. Visual Studio\n- C. 微软 Word\n- D. Code::Blocks",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 1 题（电子学会一级真题）开发环境",
+      "correct_answer": "C",
+      "score": 4,
+      "explanation": "微软 Word 是文字处理软件，不能编写编译运行 C++ 程序；其余三个均为 IDE。",
+      "options": {
+        "A": "Dev-C++",
+        "B": "Visual Studio",
+        "C": "微软 Word",
+        "D": "Code::Blocks"
+      }
+    },
+    {
+      "content": "### 第 2 题（2026年03月真题·源文件后缀）一个C++源程序文件，以下哪个后缀名是标准合法的？\n\n- A. .txt\n- B. .cpp\n- C. .doc\n- D. .exe",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 2 题（电子学会一级真题）源文件后缀",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "C++ 源文件标准后缀 .cpp；.txt/.doc 为文档，.exe 为可执行文件。",
+      "options": {
+        "A": ".txt",
+        "B": ".cpp",
+        "C": ".doc",
+        "D": ".exe"
+      }
+    },
+    {
+      "content": "### 第 3 题（2026年03月真题·变量命名）以下C++变量命名中，合法的一项？\n\n- A. 123num\n- B. my-age\n- C. int\n- D. _score_2026",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 3 题（电子学会一级真题）变量命名",
+      "correct_answer": "D",
+      "score": 4,
+      "explanation": "标识符不能以数字开头（A），不能含连字符-（B），不能用关键字 int（C）；D 合法。",
+      "options": {
+        "A": "123num",
+        "B": "my-age",
+        "C": "int",
+        "D": "_score_2026"
+      }
+    },
+    {
+      "content": "### 第 4 题（2026年03月真题·运算符优先级）C++表达式 `8 + 3 * 5 % 2` 的计算结果？\n\n- A. 9\n- B. 13\n- C. 55\n- D. 0",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 4 题（电子学会一级真题）运算符优先级",
+      "correct_answer": "A",
+      "score": 4,
+      "explanation": "3*5=15，15%2=1，8+1=9；*、% 同级先算，均高于 +。",
+      "options": {
+        "A": "9",
+        "B": "13",
+        "C": "55",
+        "D": "0"
+      }
+    },
+    {
+      "content": "### 第 5 题（2026年03月真题·输入输出）执行代码，输入 15 并回车后，输出结果？\n\n- A. result=15\n- B. result=30\n- C. 30=30\n- D. 编译报错",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 5 题（电子学会一级真题）输入输出",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "cin 读入 a=15，cout 输出字面量 result= 与 a*2=30，拼接为 result=30。",
+      "options": {
+        "A": "result=15",
+        "B": "result=30",
+        "C": "30=30",
+        "D": "编译报错"
+      }
+    },
+    {
+      "content": "### 第 6 题（2026年03月真题·平方根函数）以下哪个C++函数可以用于计算一个数的平方根？\n\n- A. abs()\n- B. sqrt()\n- C. pow()\n- D. max()",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 6 题（电子学会一级真题）平方根函数",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "sqrt() 求平方根；abs 取绝对值，pow 求幂，max 取最大值。",
+      "options": {
+        "A": "abs()",
+        "B": "sqrt()",
+        "C": "pow()",
+        "D": "max()"
+      }
+    },
+    {
+      "content": "### 第 7 题（2026年03月真题·变量运算）代码执行后，变量 b 的最终值？\n\n- A. 3\n- B. 5\n- C. 10\n- D. 15",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 7 题（电子学会一级真题）变量运算",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "a=10+5=15，b=15/3=5（整数除法）。",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "10",
+        "D": "15"
+      }
+    },
+    {
+      "content": "### 第 8 题（2026年03月真题·逻辑与）代码执行后，输出结果？\n\n- A. YES\n- B. NO\n- C. 1\n- D. 0",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 8 题（电子学会一级真题）逻辑与",
+      "correct_answer": "A",
+      "score": 4,
+      "explanation": "a>3 与 b<15 均为 true，&& 两侧同真输出 YES。",
+      "options": {
+        "A": "YES",
+        "B": "NO",
+        "C": "1",
+        "D": "0"
+      }
+    },
+    {
+      "content": "### 第 9 题（2026年03月真题·for循环次数）循环体一共会执行多少次？\n\n- A. 5\n- B. 6\n- C. 10\n- D. 无限次",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 9 题（电子学会一级真题）for循环次数",
+      "correct_answer": "A",
+      "score": 4,
+      "explanation": "i=0,2,4,6,8 共执行 5 次；i=10 时 i<10 不成立退出。",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "10",
+        "D": "无限次"
+      }
+    },
+    {
+      "content": "### 第 10 题（2026年03月真题·累加求和）代码执行后，输出的结果？\n\n- A. 5\n- B. 10\n- C. 15\n- D. 20",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 10 题（电子学会一级真题）累加求和",
+      "correct_answer": "C",
+      "score": 4,
+      "explanation": "1+2+3+4+5=15。",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      }
+    },
+    {
+      "content": "### 第 11 题（2026年03月真题）顺序结构的程序，会按照代码书写的先后顺序依次执行。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 11 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "顺序结构即按书写顺序逐条执行。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 12 题（2026年03月真题）C++程序必须经过编译、链接生成可执行文件后，才能在计算机上运行。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 12 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "C++ 为编译型语言，源码须编译链接为可执行文件。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 13 题（2026年03月真题）在 C++ 中，变量可以先使用，后定义。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 13 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "变量必须先定义后使用。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 14 题（2026年03月真题）C++中，5 / 2 的计算结果是2.5。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 14 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "两个整数相除结果仍为整数，5/2=2。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 15 题（2026年03月真题）cin 是 C++ 中用于输出的标准流对象。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 15 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "cin 是标准输入流对象，标准输出是 cout。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 16 题（2026年03月真题）pow(2.0, 3.0) 的计算结果是 8.0。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 16 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "pow(2.0,3.0)=2³=8.0。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 17 题（2026年03月真题）abs(-5) 和 abs(5) 的返回值相同，都是 5。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 17 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "abs 取绝对值，-5 与 5 的绝对值都是 5。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 18 题（2026年03月真题）C++中，! (5 > 3) 的逻辑结果为 true。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 18 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "5>3 为 true，!true 为 false。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 19 题（2026年03月真题）while 循环的循环体至少会执行一次。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 19 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "while 先判断后执行，条件不成立则一次不执行；do-while 至少执行一次。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 20 题（2026年03月真题）for(i = 0; i < 10; i++) 循环结束后，变量 i 的值是 10。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 20 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "i 自增到 10 时条件 i<10 不成立退出，i 保持 10。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 21 题（2026年03月真题·分支）夹心饼干\n\n**题目描述**\n\n三个整数组成的三元组，恰好两个数相等、剩余一个数不同时，我们称其为\"夹心饼干\"。\n\n给定三个整数 a、b、c，若能组成夹心饼干，输出 `Yes`，否则输出 `No`。\n\n**输入格式**\n\n输入三个整数 a、b、c。\n\n**输出格式**\n\n输出组成结果。\n\n**样例输入 1**\n\n```\n3 3 2\n```\n\n**样例输出 1**\n\n```\nYes\n```\n\n**样例输入 2**\n\n```\n2 2 2\n```\n\n**样例输出 2**\n\n```\nNo\n```\n\n**数据范围**\n\n1 <= a、b、c <= 9。",
+      "question_type": "programming",
+      "pid": "CIE202603L1A",
+      "url": "https://fslong.iok.la/problem/CIE202603L1A",
+      "title": "第 21 题（电子学会一级真题）分支",
+      "correct_answer": "参考代码见解析",
+      "score": 20,
+      "explanation": "见参考程序。\n\n参考程序：\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int a, b, c;\n    cin >> a >> b >> c;\n    if(a == b && a == c) { //三个相等的情况\n        cout << \"No\";\n    } else { //三个不相等的情况中有两个相等\n        if(a == b || a == c || b == c) {\n            cout << \"Yes\";\n        } else {\n            cout << \"No\";\n        }\n    }\n    return 0;\n}\n```",
+      "options": {}
+    },
+    {
+      "content": "### 第 22 题（2026年03月真题·循环）偶数求和\n\n**题目描述**\n\n给定两个整数 a、b，计算 a 到 b 之间（包括 a、b）所有偶数的和，并输出结果。\n\n**输入格式**\n\n输入两个整数 a、b。\n\n**输出格式**\n\n输出 a 到 b 之间所有偶数的和。\n\n**样例输入 1**\n\n```\n1 10\n```\n\n**样例输出 1**\n\n```\n30\n```\n\n**样例输入 2**\n\n```\n-10 10\n```\n\n**样例输出 2**\n\n```\n0\n```\n\n**数据范围**\n\n-10000 <= a <= b <= 10000。",
+      "question_type": "programming",
+      "pid": "CIE202603L1B",
+      "url": "https://fslong.iok.la/problem/CIE202603L1B",
+      "title": "第 22 题（电子学会一级真题）循环",
+      "correct_answer": "参考代码见解析",
+      "score": 20,
+      "explanation": "见参考程序。\n\n参考程序：\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int a, b, s = 0;\n    cin >> a >> b;\n    for(int i=a; i<=b; i++) {\n        if(i % 2 == 0)\n            s += i;\n    }\n    cout << s;\n    return 0;\n}\n```",
+      "options": {}
+    }
+  ]
+}

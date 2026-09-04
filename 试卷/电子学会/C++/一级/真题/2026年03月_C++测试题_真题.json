@@ -1,0 +1,330 @@
+{
+  "title": "【电子学会】 C++等级考试1级 2026年03月 测试题真题",
+  "description": "2026年03月 电子学会青少年软件编程等级考试 C/C++ 一级 测试题真题（单选10 + 判断10 + 编程2）",
+  "time_limit": 40,
+  "pass_score": 100,
+  "questions": [
+    {
+      "content": "### 第 1 题（2026年03月测试题真题·程序入口）以下哪个是C++程序中入口函数？\n\n- A. init()\n- B. main()\n- C. start()\n- D. begin()",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 1 题（电子学会一级真题）程序入口",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "C++ 程序入口是 main() 函数。",
+      "options": {
+        "A": "init()",
+        "B": "main()",
+        "C": "start()",
+        "D": "begin()"
+      }
+    },
+    {
+      "content": "### 第 2 题（2026年03月测试题真题·可执行文件扩展名）编译后生成的可执行文件，在Windows操作系统下默认扩展名是？\n\n- A. cpp\n- B. exe\n- C. obj\n- D. h",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 2 题（电子学会一级真题）可执行文件扩展名",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "Windows 可执行文件扩展名为 .exe；cpp 源文件，obj 目标文件，h 头文件。",
+      "options": {
+        "A": "cpp",
+        "B": "exe",
+        "C": "obj",
+        "D": "h"
+      }
+    },
+    {
+      "content": "### 第 3 题（2026年03月测试题真题·开发流程）以下哪个步骤不是C程序开发的流程？\n\n- A. 编写源代码\n- B. 编译生成目标文件\n- C. 链接生成可执行文件\n- D. 运行源文件",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 3 题（电子学会一级真题）开发流程",
+      "correct_answer": "D",
+      "score": 4,
+      "explanation": "开发流程为编写→编译→链接→运行可执行文件；源文件不能直接运行。",
+      "options": {
+        "A": "编写源代码",
+        "B": "编译生成目标文件",
+        "C": "链接生成可执行文件",
+        "D": "运行源文件"
+      }
+    },
+    {
+      "content": "### 第 4 题（2026年03月测试题真题·标识符）以下哪个不是合法的C++标识符？\n\n- A. _var\n- B. var123\n- C. 123 var\n- D. VarName",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 4 题（电子学会一级真题）标识符",
+      "correct_answer": "C",
+      "score": 4,
+      "explanation": "标识符不能以数字开头且不能含空格，123 var 非法。",
+      "options": {
+        "A": "_var",
+        "B": "var123",
+        "C": "123 var",
+        "D": "VarName"
+      }
+    },
+    {
+      "content": "### 第 5 题（2026年03月测试题真题·整数除法）表达式 5/2 在C++中的结果是？\n\n- A. 2\n- B. 2.5\n- C. 3\n- D. 2.0",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 5 题（电子学会一级真题）整数除法",
+      "correct_answer": "A",
+      "score": 4,
+      "explanation": "整数相除取整数部分，5/2=2。",
+      "options": {
+        "A": "2",
+        "B": "2.5",
+        "C": "3",
+        "D": "2.0"
+      }
+    },
+    {
+      "content": "### 第 6 题（2026年03月测试题真题·输出语句）哪个语句可以输出整数变量 a 和 b 的值，中间用空格分隔？\n\n- A. cout << a << \" \" << b;\n- B. cout << a, b;\n- C. printf(\"%d%d\", a, b);\n- D. printf(a + \" \" + b);",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 6 题（电子学会一级真题）输出语句",
+      "correct_answer": "A",
+      "score": 4,
+      "explanation": "A 用 \" \" 分隔正确；B 逗号不是流运算，C 无空格，D 类型错误。",
+      "options": {
+        "A": "cout << a << \" \" << b;",
+        "B": "cout << a, b;",
+        "C": "printf(\"%d%d\", a, b);",
+        "D": "printf(a + \" \" + b);"
+      }
+    },
+    {
+      "content": "### 第 7 题（2026年03月测试题真题·绝对值函数）abs(-5)的返回值是？\n\n- A. -5\n- B. 5\n- C. 0\n- D. 1",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 7 题（电子学会一级真题）绝对值函数",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "abs 取绝对值，返回 5。",
+      "options": {
+        "A": "-5",
+        "B": "5",
+        "C": "0",
+        "D": "1"
+      }
+    },
+    {
+      "content": "### 第 8 题（2026年03月测试题真题·复合赋值）执行代码后，z的值是？\n\n- A. 26\n- B. 50\n- C. 25\n- D. 23",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 8 题（电子学会一级真题）复合赋值",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "z *= 2+3 即 z=z*(2+3)=10*5=50；+ 优先级高于 *= 的右侧整体先算。",
+      "options": {
+        "A": "26",
+        "B": "50",
+        "C": "25",
+        "D": "23"
+      }
+    },
+    {
+      "content": "### 第 9 题（2026年03月测试题真题·强制类型转换）代码的输出是？\n\n- A. 3.14159\n- B. 3\n- C. 4\n- D. 3.0",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 9 题（电子学会一级真题）强制类型转换",
+      "correct_answer": "B",
+      "score": 4,
+      "explanation": "(int) 将 double 截断取整，输出 3。",
+      "options": {
+        "A": "3.14159",
+        "B": "3",
+        "C": "4",
+        "D": "3.0"
+      }
+    },
+    {
+      "content": "### 第 10 题（2026年03月测试题真题·变量交换）执行代码后，a 和 b 的值分别是？\n\n- A. 5,10\n- B. 10,10\n- C. 10,5\n- D. 5,5",
+      "question_type": "single",
+      "pid": "",
+      "url": "",
+      "title": "第 10 题（电子学会一级真题）变量交换",
+      "correct_answer": "C",
+      "score": 4,
+      "explanation": "借助临时变量 t 交换，a=10，b=5。",
+      "options": {
+        "A": "5,10",
+        "B": "10,10",
+        "C": "10,5",
+        "D": "5,5"
+      }
+    },
+    {
+      "content": "### 第 11 题（2026年03月测试题真题）注释语句会影响程序的执行速度。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 11 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "注释在编译前被去除，不进入可执行文件，不影响执行速度。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 12 题（2026年03月测试题真题）一个C++源文件可以包含多个 main() 函数。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 12 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "一个程序只能有一个 main() 入口。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 13 题（2026年03月测试题真题）变量名可以以数字开头。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 13 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "标识符只能以字母或下划线开头。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 14 题（2026年03月测试题真题）const int a=10; 定义了一个常量，其值不能改变。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 14 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "const 修饰的变量为常量，不可再赋值。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 15 题（2026年03月测试题真题）赋值运算符 = 的优先级高于算术运算符。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 15 题（电子学会一级真题）",
+      "correct_answer": "F",
+      "score": 2,
+      "explanation": "赋值优先级很低，低于算术运算符。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 16 题（2026年03月测试题真题）a += b 效果等价于 a = a + b。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 16 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "+= 是复合赋值运算符，两者等价。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 17 题（2026年03月测试题真题）cin 和 cout 是C++标准输入输出流对象，使用时需要包含 iostream 头文件。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 17 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "cin/cout 定义于 iostream。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 18 题（2026年03月测试题真题）`cout << fixed << setprecision(2) << 3.1415926;` 的运行结果是3.14。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 18 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "fixed 配合 setprecision(2) 保留两位小数，输出 3.14。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 19 题（2026年03月测试题真题）sqrt(b/(a-a)) 会运行错误。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 19 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "a-a=0，除数为 0 运行出错。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 20 题（2026年03月测试题真题）顺序结构是程序的三大基本执行结构之一。\n\n- T. 正确\n- F. 错误",
+      "question_type": "judge",
+      "pid": "",
+      "url": "",
+      "title": "第 20 题（电子学会一级真题）",
+      "correct_answer": "T",
+      "score": 2,
+      "explanation": "三大结构：顺序、分支、循环。",
+      "options": {
+        "T": "正确",
+        "F": "错误"
+      }
+    },
+    {
+      "content": "### 第 21 题（2026年03月测试题真题·输出）欢迎来到程序世界\n\n**题目描述**\n\n请你编写一个简单的程序，输出指定的欢迎语句。\n\n**输入**\n\n本题没有输入。\n\n**输出**\n\n请严格按照以下格式输出两行文字：\n\n第一行：`Hello, C++ World!`\n第二行：`Let's start coding!`\n\n注意：大小写、标点和空格必须完全一致。\n\n**样例输入 1**\n\n（无输入）\n\n**样例输出 1**\n\n```\nHello, C++ World!\nLet's start coding!\n```\n\n**数据范围**\n\n本题没有输入。",
+      "question_type": "programming",
+      "pid": "CIE202603L1TEST1",
+      "url": "https://fslong.iok.la/problem/CIE202603L1TEST1",
+      "title": "第 21 题（电子学会一级真题）输出",
+      "correct_answer": "参考代码见解析",
+      "score": 20,
+      "explanation": "见参考程序。\n\n参考程序：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    cout << \"Hello, C++ World!\" << endl;\n    cout << \"Let's start coding!\" << endl;\n    return 0;\n}\n```",
+      "options": {}
+    },
+    {
+      "content": "### 第 22 题（2026年03月测试题真题·循环）重复的数列\n\n**题目描述**\n\n有一个数列，按如下顺序排列：\n\n```\n1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,……\n```\n\n请问，该数列第 n 个数字是多少？\n\n**输入**\n\n单个整数：n。\n\n**输出**\n\n单个整数：表示该数列的第 n 个数字的值。\n\n**样例输入 1**\n\n```\n1\n```\n\n**样例输出 1**\n\n```\n1\n```\n\n**样例输入 2**\n\n```\n10\n```\n\n**样例输出 2**\n\n```\n0\n```\n\n**数据范围**\n\n1 ≤ n ≤ 1000000。",
+      "question_type": "programming",
+      "pid": "CIE202603L1TEST2",
+      "url": "https://fslong.iok.la/problem/CIE202603L1TEST2",
+      "title": "第 22 题（电子学会一级真题）循环",
+      "correct_answer": "参考代码见解析",
+      "score": 20,
+      "explanation": "见参考程序。\n\n参考程序：\n\n```cpp\n#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    cin >> n;\n    cout << n % 5;\n    return 0;\n}\n```",
+      "options": {}
+    }
+  ]
+}
